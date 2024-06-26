@@ -27,7 +27,7 @@ export default function Button({
         },
         style as ViewStyle,
       ]}>
-      <Text color="white" textAlign="center" variant="semibold">
+      <Text color="white" textAlign="center" variant="medium">
         {label}
       </Text>
     </Pressable>

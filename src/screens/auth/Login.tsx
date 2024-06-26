@@ -1,39 +1,60 @@
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {Text, View} from '../../components';
+import {Image, useWindowDimensions} from 'react-native';
+import {
+  View,
+  ScreenContainer,
+  SafeAreaContainer,
+  Button,
+} from '../../components';
 import SVGS from '../../constants/svgs';
+import IMAGES from '../../constants/images';
 import LinearGradient from 'react-native-linear-gradient';
 import useTheme from '../../hooks/useTheme';
-import {Image, ImageBackground, useWindowDimensions} from 'react-native';
-import IMAGES from '../../constants/images';
 
 export default function Login() {
-  const insets = useSafeAreaInsets();
-  const theme = useTheme();
   const {width, height} = useWindowDimensions();
+  const theme = useTheme();
   return (
-    <View
-      flex={1}
-      backgroundColor="black"
-      alignItems="center"
-      style={{
-        paddingTop: insets.top,
-      }}>
-      <View>
-        <SVGS.Logo />
-      </View>
-
-      <LinearGradient
-        colors={['rgba(0,0,0,0)', 'rgba(0,0,0,0)', 'rgba(0,0,0,1)']}
-        style={{width: 200, height: 200}}>
+    <SafeAreaContainer backgroundColor="black">
+      <ScreenContainer>
+        <View
+          style={{
+            position: 'absolute',
+            width: '100%',
+          }}
+          justifyContent="center"
+          alignItems="center"
+          pt="md">
+          <SVGS.Logo />
+        </View>
         <Image
           source={IMAGES.LoginBackground}
           style={{
-            width: 200,
-            height: 200,
+            width,
+            height,
             aspectRatio: 1,
+            resizeMode: 'contain',
           }}
         />
-      </LinearGradient>
-    </View>
+
+        <View
+          style={{
+            position: 'absolute',
+            bottom: 20,
+            zIndex: 10,
+            width: '100%',
+          }}
+          alignItems="center"
+          justifyContent="center">
+          <Button label="Get Connected" style={{width: '90%'}} />
+        </View>
+
+        <View style={{position: 'absolute', bottom: 0, left: 0, right: 0}}>
+          <LinearGradient
+            colors={['transparent', 'rgba(0,0,0,0.9)', theme.colors.black]}
+            style={{height: 200}}
+          />
+        </View>
+      </ScreenContainer>
+    </SafeAreaContainer>
   );
 }
