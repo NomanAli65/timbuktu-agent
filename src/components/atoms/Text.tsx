@@ -18,8 +18,6 @@ export default function Text({
   variant,
   ...rest
 }: IProps) {
-  console.log({variant});
-
   return (
     <RNText
       {...rest}
@@ -29,6 +27,7 @@ export default function Text({
           textAlign,
           fontSize: size ? theme.fontSizes[size] : theme.fontSizes.body,
           fontFamily: variant ? FontFamily[variant] : FontFamily.regular,
+          letterSpacing: 0.75,
         },
         style,
       ]}>
