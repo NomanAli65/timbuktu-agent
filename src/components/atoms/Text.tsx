@@ -18,6 +18,8 @@ export default function Text({
   variant,
   ...rest
 }: IProps) {
+  console.log({variant});
+
   return (
     <RNText
       {...rest}
