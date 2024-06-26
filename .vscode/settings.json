@@ -1,0 +1,6 @@
+{
+  "explorer.decorations.badges": true,
+  "explorer.excludeGitIgnore": false,
+  "explorer.expandSingleFolderWorkspaces": true,
+  "explorer.fileNesting.enabled": false
+}
