@@ -22,7 +22,7 @@ export default function Button({
         {
           backgroundColor: theme.colors.primary,
           padding: theme.spacing.xl,
-          borderRadius: 30,
+          borderRadius: 20,
           width: '100%',
         },
         style as ViewStyle,

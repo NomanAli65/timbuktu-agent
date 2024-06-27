@@ -1,0 +1,30 @@
+export type IconVector =
+  | 'Feather'
+  | 'Ionicons'
+  | 'EvilIcons'
+  | 'Entypo'
+  | 'FontAwesome'
+  | 'FontAwesome6'
+  | 'FontAwesome5'
+  | 'MaterialCommunityIcons'
+  | 'MaterialIcons'
+  | 'Fontisto'
+  | 'Foundation'
+  | 'FontAwesome5Pro'
+  | 'FontAwesome6Pro'
+  | 'Octicons';
+
+export type Field = {
+  name: string;
+  label: string;
+  placeholder: string;
+  leftIconName?: string;
+  rightIconName?: string;
+  vector?: IconVector;
+};
+
+export type TFormTabHeader = {
+  title: string;
+  id: number;
+  onPress: () => any;
+};

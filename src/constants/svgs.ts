@@ -1,5 +1,4 @@
 import Logo from '../assets/svgs/Logo.svg';
-
 const SVGS = {
   Logo,
 };

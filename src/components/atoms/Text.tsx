@@ -2,7 +2,7 @@ import React from 'react';
 import {Text as RNText, TextProps} from 'react-native';
 import theme, {FontFamily} from '../../styles/theme/theme';
 
-interface IProps extends TextProps {
+export interface ICustomTextProps extends TextProps {
   size?: keyof typeof theme.fontSizes;
   color?: keyof typeof theme.colors;
   textAlign?: 'center' | 'auto' | 'left' | 'right' | 'justify';
@@ -17,7 +17,7 @@ export default function Text({
   style,
   variant,
   ...rest
-}: IProps) {
+}: ICustomTextProps) {
   return (
     <RNText
       {...rest}

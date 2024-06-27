@@ -4,12 +4,12 @@ import {PropsWithChildren} from 'react';
 import theme from '../../styles/theme/theme';
 
 interface IProps extends PropsWithChildren {
-  backgroundColor: keyof typeof theme.colors;
+  backgroundColor?: keyof typeof theme.colors;
 }
 
 export default function SafeAreaContainer({
   children,
-  backgroundColor = 'white',
+  backgroundColor = undefined,
 }: IProps) {
   const insets = useSafeAreaInsets();
   return (
