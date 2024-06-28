@@ -16,11 +16,12 @@ const colors = {
   primary: '#C1371D',
   white: '#fff',
   black: '#000000',
-  shadow: '#0000001A',
+  shadow: '#00000029',
   gray: '#C5C5C5',
   gray2: '#999B9F',
   gray3: '#F9F9FC',
   gray4: '#323131',
+  gray5: '#F6F5F5',
   tags: '#3DB9FB',
 };
 

@@ -1,11 +1,12 @@
-import {useState} from 'react';
 import {BlurContainer, View} from '../atoms';
 import {Form} from '../organisms';
 import {FormTabsHeader} from '../molecules';
 import {Field} from '../types';
-import {AuthScreenProp, AuthStackNavigationProp} from '../../navigation/types';
+import {AuthStackNavigationProp} from '../../navigation/types';
 import SCREENS from '../../constants/screens';
 import {useNavigation} from '@react-navigation/native';
+import {useAppDispatch} from '../../hooks/useAppDispatch';
+import {loginAsync} from '../../redux/slices/auth/authThunks';
 
 export default function LoginForm() {
   const signInFields: Field[] = [
@@ -26,8 +27,9 @@ export default function LoginForm() {
   ];
 
   const navigation = useNavigation<AuthStackNavigationProp>();
+  const dispatch = useAppDispatch();
 
-  const onSignIn = () => {};
+  const onSignIn = () => dispatch(loginAsync());
   const onRegister = () => navigation.navigate(SCREENS.REGISTER);
 
   return (
@@ -50,7 +52,7 @@ export default function LoginForm() {
         />
         <Form
           fields={signInFields}
-          onSubmit={state => console.log({state})}
+          onSubmit={onSignIn}
           submitButtonLabel="Sign in"
           formType="login"
           justifyContent="space-evenly"

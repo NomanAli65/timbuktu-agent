@@ -8,6 +8,7 @@ import {
   Onboarding,
   Register,
   ForgotPassword,
+  ChangePassword,
 } from '../components/screens';
 import SCREENS from '../constants/screens';
 import {AuthStackParamsList} from './types';
@@ -35,6 +36,10 @@ const AuthNavigation = () => {
         <Stack.Screen
           name={SCREENS.FORGOT_PASSWORD}
           component={ForgotPassword}
+        />
+        <Stack.Screen
+          name={SCREENS.CHANGE_PASSWORD}
+          component={ChangePassword}
         />
       </Stack.Group>
     </Stack.Navigator>

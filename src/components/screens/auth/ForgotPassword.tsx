@@ -5,7 +5,7 @@ import {
   ScreenContainer,
   View,
 } from '../../atoms';
-import ForgotPasswordForm from '../../templates/ForgotPasswordForm';
+import {ForgotPasswordForm} from '../../templates';
 
 export default function ForgotPassword() {
   const isFocused = useIsFocused();

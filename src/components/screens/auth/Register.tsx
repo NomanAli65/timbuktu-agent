@@ -5,7 +5,7 @@ import {
   ScreenContainer,
   View,
 } from '../../atoms';
-import SignupForm from '../../templates/SignupForm';
+import {SignupForm} from '../../templates';
 
 export default function Register() {
   const isFocused = useIsFocused();
@@ -14,7 +14,7 @@ export default function Register() {
       <ScreenContainer>
         <SafeAreaContainer>
           <View flex={1} justifyContent="flex-end" alignItems="center">
-            <View flex={0.8} style={{width: '95%'}}>
+            <View flex={0.8} style={{width: '90%'}}>
               <FadeInContainer>
                 <SignupForm />
               </FadeInContainer>

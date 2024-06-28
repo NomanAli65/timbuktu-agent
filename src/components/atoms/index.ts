@@ -7,9 +7,13 @@ import BlurContainer from './BlurContainer';
 import Icon from './Icon';
 import TextInput from './TextInput';
 import FadeInContainer from './FadeInContainer';
+import ShadowContainer from './ShadowContainer';
+import Avatar from './Avatar';
 
 export {
   Text,
+  Avatar,
+  ShadowContainer,
   FadeInContainer,
   View,
   TextInput,

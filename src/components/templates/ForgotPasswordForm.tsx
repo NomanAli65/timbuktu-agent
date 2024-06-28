@@ -1,8 +1,15 @@
+import {useNavigation} from '@react-navigation/native';
+import SCREENS from '../../constants/screens';
+import {AuthStackNavigationProp} from '../../navigation/types';
 import {BlurContainer, Button, Text, View} from '../atoms';
 import {ActiveLineText, LabeledIconInput} from '../molecules';
-import {Form} from '../organisms';
 
 export default function ForgotPasswordForm() {
+  const navigation = useNavigation<AuthStackNavigationProp>();
+
+  const onPress = () => {
+    navigation.navigate(SCREENS.CHANGE_PASSWORD);
+  };
   return (
     <BlurContainer>
       <View p="lg" flex={1}>
@@ -19,7 +26,7 @@ export default function ForgotPasswordForm() {
             placeholder="Enter your email"
             leftIconName="mail"
           />
-          <Button label="Continue" />
+          <Button label="Continue" onPress={onPress} />
         </View>
       </View>
     </BlurContainer>
