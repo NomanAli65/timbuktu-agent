@@ -1,8 +1,8 @@
 import React from 'react';
-import {Avatar, Text, View} from '../atoms';
+import {Avatar, Text, View} from '../../atoms';
 import {TextInput} from 'react-native';
-import useTheme from '../../hooks/useTheme';
-import {FontFamily} from '../../styles/theme/theme';
+import useTheme from '../../../hooks/useTheme';
+import {FontFamily} from '../../../styles/theme/theme';
 
 export default function PostCardComment() {
   const theme = useTheme();

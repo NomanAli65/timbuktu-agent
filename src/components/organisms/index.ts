@@ -1,5 +1,5 @@
 import Form from './Form';
 import TabHeader from './TabHeader';
-import PostCardHeader from './PostCardHeader';
+import PostCard from './PostCard';
 
-export {Form, TabHeader, PostCardHeader};
+export {Form, TabHeader, PostCard};

@@ -1,5 +1,5 @@
 import {configureStore} from '@reduxjs/toolkit';
-import {authApi} from './services/authApi';
+import {authApi} from './slices/auth/authApi';
 import {setupListeners} from '@reduxjs/toolkit/query';
 
 export const store = configureStore({

@@ -1,7 +1,7 @@
-import {moderateScale} from '../../helpers/metrics';
-import useTheme from '../../hooks/useTheme';
-import {Avatar, Icon, Text, View} from '../atoms';
-import PostTimeLabel from '../molecules/PostTimeLabel';
+import {moderateScale} from '../../../helpers/metrics';
+import useTheme from '../../../hooks/useTheme';
+import {Avatar, Icon, Text, View} from '../../atoms';
+import PostTimeLabel from './PostTimeLabel';
 
 export default function PostCardHeader() {
   const theme = useTheme();

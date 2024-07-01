@@ -1,9 +1,14 @@
 import React from 'react';
-import {Text, View} from '../atoms';
+import {Text, View} from '../../atoms';
 import {Image} from 'react-native';
-import IMAGES from '../../constants/images';
+import IMAGES from '../../../constants/images';
 
-export default function PostCardContent() {
+interface IProps {
+  image: any;
+  description: string;
+  tags: string[];
+}
+export default function PostCardContent({image, description, tags}: IProps) {
   return (
     <View gap={10} mv="md">
       <Text size="sm">
@@ -13,7 +18,7 @@ export default function PostCardContent() {
         </Text>
       </Text>
       <Image
-        source={IMAGES.House1}
+        source={image}
         style={{
           width: '100%',
           height: 250,

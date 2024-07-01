@@ -1701,6 +1701,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@gorhom/bottom-sheet@npm:^4":
+  version: 4.6.3
+  resolution: "@gorhom/bottom-sheet@npm:4.6.3"
+  dependencies:
+    "@gorhom/portal": 1.0.14
+    invariant: ^2.2.4
+  peerDependencies:
+    "@types/react": "*"
+    "@types/react-native": "*"
+    react: "*"
+    react-native: "*"
+    react-native-gesture-handler: ">=1.10.1"
+    react-native-reanimated: ">=2.2.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    "@types/react-native":
+      optional: true
+  checksum: 718c55a89b0e18581eae6080d1d21caabf4895088e01f0dfe17b5891835a110d7aee1d0cb1b9e623efc16b598fdb28c2ec929e0ed74bfbca283306191d8a5c41
+  languageName: node
+  linkType: hard
+
+"@gorhom/portal@npm:1.0.14":
+  version: 1.0.14
+  resolution: "@gorhom/portal@npm:1.0.14"
+  dependencies:
+    nanoid: ^3.3.1
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 227bb96a2db854ab29bb9da8d4f3823c7f7448358de459709dd1b78522110da564c9a8734c6bc7d7153ed7c99320e0fb5d60b420c2ebb75ecaf2f0d757f410f9
+  languageName: node
+  linkType: hard
+
 "@hapi/hoek@npm:^9.0.0, @hapi/hoek@npm:^9.3.0":
   version: 9.3.0
   resolution: "@hapi/hoek@npm:9.3.0"
@@ -2339,6 +2373,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-community/slider@npm:^4.5.2":
+  version: 4.5.2
+  resolution: "@react-native-community/slider@npm:4.5.2"
+  checksum: 99023660756a1a876fc3d9c1a7cec13f7e414abee3452e1e03d2794bc7f46a9d689740bed5c3889914adf6ed85a55c6017e2f0d73b5de353025ba52bba6e79e1
+  languageName: node
+  linkType: hard
+
 "@react-native/assets-registry@npm:0.73.1":
   version: 0.73.1
   resolution: "@react-native/assets-registry@npm:0.73.1"
@@ -2599,9 +2640,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/drawer@npm:^6.6.15":
-  version: 6.6.15
-  resolution: "@react-navigation/drawer@npm:6.6.15"
+"@react-navigation/drawer@npm:^6.7.0":
+  version: 6.7.0
+  resolution: "@react-navigation/drawer@npm:6.7.0"
   dependencies:
     "@react-navigation/elements": ^1.3.30
     color: ^4.2.3
@@ -2614,7 +2655,7 @@ __metadata:
     react-native-reanimated: ">= 1.0.0"
     react-native-safe-area-context: ">= 3.0.0"
     react-native-screens: ">= 3.0.0"
-  checksum: fa04c4e5804e6cf11192c0a69587673a99f97885a6a8fe39fa2b163a6c0e939c83cf4991bc95b0b880f3bd01452ef0554ea3724a3d9ab049d5ea20fe79245bbe
+  checksum: 9c6cd11ba3082a7cbfbcafe1e5553cb727c4fd86a07a5ace4c0a2727e6d373dbb1b66e21b2b0a8173177d025763243058bd5b9f79b9748b8b20fb94cec81ba40
   languageName: node
   linkType: hard
 
@@ -3211,13 +3252,15 @@ __metadata:
     "@babel/core": ^7.20.0
     "@babel/preset-env": ^7.20.0
     "@babel/runtime": ^7.20.0
+    "@gorhom/bottom-sheet": ^4
     "@react-native-community/blur": ^4.4.0
+    "@react-native-community/slider": ^4.5.2
     "@react-native/babel-preset": 0.73.21
     "@react-native/eslint-config": 0.73.2
     "@react-native/metro-config": 0.73.5
     "@react-native/typescript-config": 0.73.1
     "@react-navigation/bottom-tabs": ^6.5.20
-    "@react-navigation/drawer": ^6.6.15
+    "@react-navigation/drawer": ^6.7.0
     "@react-navigation/native": ^6.1.17
     "@react-navigation/stack": ^6.3.29
     "@reduxjs/toolkit": ^2.2.5
@@ -7737,7 +7780,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.23":
+"nanoid@npm:^3.1.23, nanoid@npm:^3.3.1":
   version: 3.3.7
   resolution: "nanoid@npm:3.3.7"
   bin:

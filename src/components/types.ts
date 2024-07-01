@@ -28,3 +28,25 @@ export type TFormTabHeader = {
   id: number;
   onPress: () => any;
 };
+
+export type TPost = {
+  id: number;
+  name: string;
+  time: string;
+  description: string;
+  tags: string[];
+  imageUrl: any;
+};
+
+export interface IFilterOption {
+  id: number;
+  label: string;
+  minRange?: number;
+  maxRange?: number;
+}
+
+export interface IFilter {
+  title: string;
+  options: IFilterOption[];
+  type?: 'slider' | 'default';
+}

@@ -1,12 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import AuthNavigation from './AuthNavigation';
 import MainNavigator from './MainNavigator';
+import {useLoginUserMutation} from '../redux/slices/auth/authApi';
+
 const AppNavigation = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [_, {data}] = useLoginUserMutation({
+    fixedCacheKey: 'authentication',
+  });
+
+  console.log({data});
+
   return (
     <NavigationContainer>
-      {isLoggedIn ? <MainNavigator /> : <AuthNavigation />}
+      {data ? <MainNavigator /> : <AuthNavigation />}
     </NavigationContainer>
   );
 };

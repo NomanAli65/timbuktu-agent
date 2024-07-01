@@ -1,7 +1,7 @@
 import React from 'react';
-import {Icon, Text, View} from '../atoms';
-import {moderateScale} from '../../helpers/metrics';
-import useTheme from '../../hooks/useTheme';
+import {Icon, Text, View} from '../../atoms';
+import {moderateScale} from '../../../helpers/metrics';
+import useTheme from '../../../hooks/useTheme';
 
 export default function PostCardActions() {
   const theme = useTheme();

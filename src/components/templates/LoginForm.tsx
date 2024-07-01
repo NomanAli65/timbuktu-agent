@@ -1,12 +1,11 @@
-import {BlurContainer, View} from '../atoms';
+import {BlurContainer, Text, View} from '../atoms';
 import {Form} from '../organisms';
 import {FormTabsHeader} from '../molecules';
 import {Field} from '../types';
 import {AuthStackNavigationProp} from '../../navigation/types';
 import SCREENS from '../../constants/screens';
 import {useNavigation} from '@react-navigation/native';
-import {useAppDispatch} from '../../hooks/useAppDispatch';
-import {loginAsync} from '../../redux/slices/auth/authThunks';
+import {useLoginUserMutation} from '../../redux/slices/auth/authApi';
 
 export default function LoginForm() {
   const signInFields: Field[] = [
@@ -26,10 +25,14 @@ export default function LoginForm() {
     },
   ];
 
+  const [login] = useLoginUserMutation({
+    fixedCacheKey: 'authentication',
+  });
   const navigation = useNavigation<AuthStackNavigationProp>();
-  const dispatch = useAppDispatch();
-
-  const onSignIn = () => dispatch(loginAsync());
+  const onSignIn = async () => {
+    const result = await login({});
+    console.log({result});
+  };
   const onRegister = () => navigation.navigate(SCREENS.REGISTER);
 
   return (

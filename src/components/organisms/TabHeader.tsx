@@ -6,12 +6,16 @@ import IMAGES from '../../constants/images';
 import {moderateScale} from '../../helpers/metrics';
 import useTheme from '../../hooks/useTheme';
 import {TabHeaderHeight} from '../../constants/values';
+import {useNavigation} from '@react-navigation/native';
+import {MainStackNavigation} from '../../navigation/types';
+import SCREENS from '../../constants/screens';
 
 export default function TabHeader() {
   const insets = useSafeAreaInsets();
   const {width} = useWindowDimensions();
   const theme = useTheme();
   const radius = 40;
+  const navigation = useNavigation<MainStackNavigation>();
 
   return (
     <View
@@ -85,6 +89,10 @@ export default function TabHeader() {
 
       <TextInput
         placeholder="Search..."
+        editable={false}
+        onPressIn={() => {
+          navigation.navigate(SCREENS.SEARCH_FILTERS);
+        }}
         style={{
           shadowColor: '#00000047',
           shadowOffset: {width: 0, height: 3},

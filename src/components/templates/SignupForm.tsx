@@ -5,8 +5,6 @@ import {Form} from '../organisms';
 import {Field} from '../types';
 import {useNavigation} from '@react-navigation/native';
 import {AuthStackNavigationProp} from '../../navigation/types';
-import {useAppDispatch} from '../../hooks/useAppDispatch';
-import {login} from '../../redux/slices/auth/authSlice';
 
 export default function SignupForm() {
   const registerFields: Field[] = [
@@ -75,8 +73,7 @@ export default function SignupForm() {
   ];
 
   const navigation = useNavigation<AuthStackNavigationProp>();
-  const dispatch = useAppDispatch();
-  const onSubmit = () => dispatch(login());
+  const onSubmit = () => {};
 
   return (
     <BlurContainer>
