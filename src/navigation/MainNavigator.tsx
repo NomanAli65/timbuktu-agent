@@ -14,6 +14,7 @@ import {
   MyProperties,
   MyTransactions,
   MyTransactionsTab,
+  Notifications,
   PostProperty,
   PrivacyPolicy,
   Profile,
@@ -135,6 +136,7 @@ const MainStackNavigator = () => {
       />
       <Stack.Screen name={SCREENS.MESSAGING} component={Messaging} />
       <Stack.Screen name={SCREENS.MESSAGES} component={Messages} />
+      <Stack.Screen name={SCREENS.NOTIFICATIONS} component={Notifications} />
     </Stack.Navigator>
   );
 };

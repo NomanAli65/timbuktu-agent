@@ -37,6 +37,7 @@ export type MainStackParamsList = {
   Messages: {
     messages: Message[];
   };
+  Notifications: undefined;
 };
 
 export type MainStackScreensProp = StackScreenProps<MainStackParamsList>;

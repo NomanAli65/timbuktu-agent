@@ -14,7 +14,8 @@ export default function MessageInputContainer() {
       style={{
         position: isOpen ? 'absolute' : 'relative',
         bottom: keyboardHeight,
-      }}>
+      }}
+      p={isOpen ? 'none' : 'md'}>
       <View flex={1}>
         <MessageInput />
       </View>

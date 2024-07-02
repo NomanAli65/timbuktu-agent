@@ -28,6 +28,7 @@ const SCREENS = {
   SEARCH_FILTERS: 'SearchFilters',
   MESSAGING: 'Messaging',
   MESSAGES: 'Messages',
+  NOTIFICATIONS: 'Notifications',
 } as const;
 
 export default SCREENS;

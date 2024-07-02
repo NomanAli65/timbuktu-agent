@@ -1,16 +1,20 @@
 import React from 'react';
-import {Image} from 'react-native';
+import {Image, ImageSourcePropType} from 'react-native';
 import IMAGES from '../../constants/images';
 import {horizontalScale} from '../../helpers/metrics';
 
 interface IProps {
   width?: number;
+  source?: ImageSourcePropType;
 }
 
-export default function Avatar({width = horizontalScale(40)}: IProps) {
+export default function Avatar({
+  width = horizontalScale(40),
+  source = IMAGES.Avatar,
+}: IProps) {
   return (
     <Image
-      source={IMAGES.Avatar}
+      source={source}
       style={{
         width,
         height: undefined,

@@ -64,3 +64,10 @@ export interface IMessages {
   messages: Message[];
   unreadCount: number;
 }
+
+export type Notification = {
+  time: string;
+  title: string;
+  avatar: any;
+  new: boolean;
+};

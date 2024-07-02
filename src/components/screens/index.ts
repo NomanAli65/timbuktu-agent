@@ -11,6 +11,7 @@ import Profile from './Profile';
 import PostProperty from './PostProperty';
 import Messaging from './Messaging';
 import Messages from './Messages';
+import Notifications from './Notifications';
 
 import MyTransactions from './drawer/MyTransactions';
 import MyProperties from './drawer/MyProperties';
@@ -48,4 +49,5 @@ export {
   Messaging,
   Messages,
   SearchFilters,
+  Notifications,
 };

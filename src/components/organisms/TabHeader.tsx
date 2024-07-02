@@ -88,7 +88,9 @@ export default function TabHeader() {
                 color={theme.colors.white}
               />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity
+              //@ts-ignore
+              onPress={() => navigation.navigate(SCREENS.NOTIFICATIONS)}>
               <Icon
                 vector="MaterialCommunityIcons"
                 name="bell"

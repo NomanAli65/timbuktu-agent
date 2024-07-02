@@ -8,7 +8,7 @@ interface IProps {
 
 export default function MessagesListTemp({messages}: IProps) {
   return (
-    <View flex={1} ph="xs">
+    <View flex={1}>
       <MessagesList messages={messages} />
       <MessageInputContainer />
     </View>

@@ -4,6 +4,7 @@ import FormTabsHeader from './FormTabsHeader';
 import CustomBottomSheet from './CustomBottomSheet';
 import HeaderBackButton from './HeaderBackButton';
 import {FilterContainer, FilterOptionsContainer, FitlerOption} from './Filter';
+import NotificationCard from './NotificationCard';
 
 import {
   PostCardActions,
@@ -33,6 +34,7 @@ export {
   PostCardContent,
   FilterOptionsContainer,
   FitlerOption,
+  NotificationCard,
   PostCardHeader,
   PostCardActions,
   FilterContainer,
