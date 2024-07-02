@@ -6,11 +6,18 @@ import SCREENS from '../constants/screens';
 import {
   AdsCenter,
   Home,
+  Listings,
+  Messages,
+  Messaging,
   MyClients,
   MyDocuments,
   MyProperties,
   MyTransactions,
+  MyTransactionsTab,
+  PostProperty,
   PrivacyPolicy,
+  Profile,
+  SearchFilters,
   TermsConditions,
 } from '../components/screens';
 import {
@@ -23,7 +30,6 @@ import {
   createStackNavigator,
 } from '@react-navigation/stack';
 import {TabHeader} from '../components/organisms';
-import SearchFilters from '../components/screens/home/SearchFilters';
 import {
   DrawerNavigationOptions,
   createDrawerNavigator,
@@ -38,19 +44,79 @@ const Stack = createStackNavigator<MainStackParamsList>();
 const Tab = createBottomTabNavigator<MainTabsParamsList>();
 const Drawer = createDrawerNavigator<DrawerParmasList>();
 
-const tabOptions: BottomTabNavigationOptions = {
+const getTabBarOptions = (
+  route: RouteProp<MainTabsParamsList, keyof MainTabsParamsList>,
+): BottomTabNavigationOptions => ({
   tabBarStyle: {
     borderTopWidth: 0,
+    shadowColor: theme.colors.shadow,
+    shadowOffset: {width: 0, height: -3},
+    shadowOpacity: 1,
+    shadowRadius: 6,
+    elevation: 1,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    height: 80,
+    position: 'absolute',
+    bottom: 0,
+    backgroundColor: 'white',
+  },
+  tabBarShowLabel: false,
+  tabBarIcon(props) {
+    let iconName = '';
+
+    switch (route.name) {
+      case SCREENS.HOME: {
+        iconName = 'home';
+        break;
+      }
+
+      case SCREENS.LISTINGS: {
+        iconName = 'file-document';
+        break;
+      }
+
+      case SCREENS.POST_PROPERTY: {
+        iconName = 'plus-circle';
+        break;
+      }
+
+      case SCREENS.MY_TRANSACTIONS_TAB: {
+        iconName = 'account-group';
+        break;
+      }
+
+      case SCREENS.PROFILE: {
+        iconName = 'account';
+        break;
+      }
+    }
+
+    return (
+      <Icon
+        name={iconName}
+        size={moderateScale(28)}
+        vector="MaterialCommunityIcons"
+        color={props.focused ? theme.colors.black : theme.colors.gray2}
+      />
+    );
   },
   header: () => {
     return <TabHeader />;
   },
-};
+});
 
 function TabNavigator() {
   return (
-    <Tab.Navigator screenOptions={tabOptions}>
+    <Tab.Navigator screenOptions={({route}) => getTabBarOptions(route)}>
       <Tab.Screen name={SCREENS.HOME} component={Home} />
+      <Tab.Screen name={SCREENS.LISTINGS} component={Listings} />
+      <Tab.Screen name={SCREENS.POST_PROPERTY} component={PostProperty} />
+      <Tab.Screen
+        name={SCREENS.MY_TRANSACTIONS_TAB}
+        component={MyTransactionsTab}
+      />
+      <Tab.Screen name={SCREENS.PROFILE} component={Profile} />
     </Tab.Navigator>
   );
 }
@@ -67,6 +133,8 @@ const MainStackNavigator = () => {
         component={SearchFilters}
         options={{presentation: 'transparentModal'}}
       />
+      <Stack.Screen name={SCREENS.MESSAGING} component={Messaging} />
+      <Stack.Screen name={SCREENS.MESSAGES} component={Messages} />
     </Stack.Navigator>
   );
 };

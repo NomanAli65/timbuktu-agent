@@ -7,6 +7,7 @@ import {
 import {Avatar, Text, View} from '../components/atoms';
 import useTheme from '../hooks/useTheme';
 import SCREENS from '../constants/screens';
+import {Rating} from '@kolking/react-native-rating';
 
 export default function CustomDrawer({
   navigation,
@@ -20,6 +21,23 @@ export default function CustomDrawer({
         <Text variant="bold" size="lg">
           Stellar Kane
         </Text>
+        <View
+          flexDirection="row"
+          alignItems="center"
+          gap={4}
+          backgroundColor="gray6"
+          p="xxs"
+          rounded>
+          <Rating
+            size={14}
+            rating={1}
+            maxRating={1}
+            fillColor={theme.colors.gray4}
+          />
+          <Text size="xs" color="gray4">
+            5.00
+          </Text>
+        </View>
       </View>
       <DrawerItemList navigation={navigation} {...rest} />
       <View mt="xxl">

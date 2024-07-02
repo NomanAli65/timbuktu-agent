@@ -4,7 +4,13 @@ import Register from './auth/Register';
 import ForgotPassword from './auth/ForgotPassword';
 import ChangePassword from './auth/ChangePassword';
 
-import Home from './home/Home';
+import {Home, SearchFilters} from './home';
+import Listings from './listings';
+import MyTransactionsTab from './MyTransactionsTab';
+import Profile from './Profile';
+import PostProperty from './PostProperty';
+import Messaging from './Messaging';
+import Messages from './Messages';
 
 import MyTransactions from './drawer/MyTransactions';
 import MyProperties from './drawer/MyProperties';
@@ -24,6 +30,10 @@ export {
 
   // TABS
   Home,
+  Listings,
+  PostProperty,
+  MyTransactionsTab,
+  Profile,
 
   // DRAWER
   MyTransactions,
@@ -33,4 +43,9 @@ export {
   AdsCenter,
   PrivacyPolicy,
   TermsConditions,
+
+  // MAIN STACK
+  Messaging,
+  Messages,
+  SearchFilters,
 };

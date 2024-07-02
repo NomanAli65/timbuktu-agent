@@ -14,6 +14,8 @@ import FontAwesome5Pro from 'react-native-vector-icons/FontAwesome5Pro';
 import FontAwesome6Pro from 'react-native-vector-icons/FontAwesome6Pro';
 import Octicons from 'react-native-vector-icons/Octicons';
 import {IconProps} from 'react-native-vector-icons/Icon';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
 import {IconVector} from '../types';
 
 interface IProps extends IconProps {
@@ -76,6 +78,9 @@ export default function Icon({vector = 'Ionicons', ...rest}: IProps) {
 
     case 'Octicons': {
       return <Octicons {...rest} />;
+    }
+    case 'AntDesign': {
+      return <AntDesign {...rest} />;
     }
   }
 }

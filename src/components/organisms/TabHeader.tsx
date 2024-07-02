@@ -1,13 +1,16 @@
 import React from 'react';
 import {Icon, Text, TextInput, View} from '../atoms';
-import {ImageBackground, useWindowDimensions} from 'react-native';
+import {
+  ImageBackground,
+  TouchableOpacity,
+  useWindowDimensions,
+} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import IMAGES from '../../constants/images';
 import {moderateScale} from '../../helpers/metrics';
 import useTheme from '../../hooks/useTheme';
 import {TabHeaderHeight} from '../../constants/values';
 import {useNavigation} from '@react-navigation/native';
-import {MainStackNavigation} from '../../navigation/types';
 import SCREENS from '../../constants/screens';
 
 export default function TabHeader() {
@@ -15,7 +18,7 @@ export default function TabHeader() {
   const {width} = useWindowDimensions();
   const theme = useTheme();
   const radius = 40;
-  const navigation = useNavigation<MainStackNavigation>();
+  const navigation = useNavigation();
 
   return (
     <View
@@ -57,12 +60,16 @@ export default function TabHeader() {
           flexDirection="row"
           alignItems="center"
           justifyContent="space-between">
-          <Icon
-            name="menu"
-            size={moderateScale(30)}
-            color={theme.colors.white}
-            style={{flex: 0.2}}
-          />
+          <TouchableOpacity
+            //@ts-ignore
+            onPress={() => navigation.toggleDrawer()}
+            style={{flex: 0.2}}>
+            <Icon
+              name="menu"
+              size={moderateScale(30)}
+              color={theme.colors.white}
+            />
+          </TouchableOpacity>
           <Text
             color="white"
             variant="bold"
@@ -71,18 +78,24 @@ export default function TabHeader() {
             Timbuktu
           </Text>
           <View flexDirection="row" alignItems="center" gap={10} flex={0.2}>
-            <Icon
-              vector="MaterialCommunityIcons"
-              name="message-text"
-              size={moderateScale(30)}
-              color={theme.colors.white}
-            />
-            <Icon
-              vector="MaterialCommunityIcons"
-              name="bell"
-              size={moderateScale(30)}
-              color={theme.colors.white}
-            />
+            <TouchableOpacity
+              //@ts-ignore
+              onPress={() => navigation.navigate(SCREENS.MESSAGING)}>
+              <Icon
+                vector="MaterialCommunityIcons"
+                name="message-text"
+                size={moderateScale(30)}
+                color={theme.colors.white}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Icon
+                vector="MaterialCommunityIcons"
+                name="bell"
+                size={moderateScale(30)}
+                color={theme.colors.white}
+              />
+            </TouchableOpacity>
           </View>
         </View>
       </ImageBackground>
@@ -91,6 +104,7 @@ export default function TabHeader() {
         placeholder="Search..."
         editable={false}
         onPressIn={() => {
+          //@ts-ignore
           navigation.navigate(SCREENS.SEARCH_FILTERS);
         }}
         style={{

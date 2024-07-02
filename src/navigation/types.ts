@@ -2,7 +2,9 @@ import {
   BottomTabNavigationProp,
   BottomTabScreenProps,
 } from '@react-navigation/bottom-tabs';
+import {DrawerNavigationProp} from '@react-navigation/drawer';
 import {StackNavigationProp, StackScreenProps} from '@react-navigation/stack';
+import {IMessages, Message} from '../components/types';
 
 // STACK NAVIGATION - AUTH
 export type AuthStackParamsList = {
@@ -19,14 +21,22 @@ export type AuthStackNavigationProp = StackNavigationProp<AuthStackParamsList>;
 // TABS
 export type MainTabsParamsList = {
   Home: undefined;
+  Listings: undefined;
+  PostProperty: undefined;
+  MyTransactionsTab: undefined;
+  Profile: undefined;
 };
 export type TabScreensProp = BottomTabScreenProps<MainTabsParamsList>;
 export type TabStackNavigation = BottomTabNavigationProp<MainTabsParamsList>;
 
 // STACK NAVIGATION - AUTHENTICATED
 export type MainStackParamsList = {
-  SearchFilters: undefined;
   MainTabs: undefined;
+  SearchFilters: undefined;
+  Messaging: undefined;
+  Messages: {
+    messages: Message[];
+  };
 };
 
 export type MainStackScreensProp = StackScreenProps<MainStackParamsList>;
@@ -43,3 +53,5 @@ export type DrawerParmasList = {
   PrivacyPolicy: undefined;
   TermsConditions: undefined;
 };
+
+export type DrawerNavigation = DrawerNavigationProp<DrawerParmasList>;

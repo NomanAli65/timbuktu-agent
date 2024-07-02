@@ -19,9 +19,15 @@ const SCREENS = {
 
   // MAIN TABS
   HOME: 'Home',
+  LISTINGS: 'Listings',
+  POST_PROPERTY: 'PostProperty',
+  MY_TRANSACTIONS_TAB: 'MyTransactionsTab',
+  PROFILE: 'Profile',
 
   // MAIN STACK
   SEARCH_FILTERS: 'SearchFilters',
+  MESSAGING: 'Messaging',
+  MESSAGES: 'Messages',
 } as const;
 
 export default SCREENS;

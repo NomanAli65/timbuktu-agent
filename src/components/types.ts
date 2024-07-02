@@ -12,7 +12,8 @@ export type IconVector =
   | 'Foundation'
   | 'FontAwesome5Pro'
   | 'FontAwesome6Pro'
-  | 'Octicons';
+  | 'Octicons'
+  | 'AntDesign';
 
 export type Field = {
   name: string;
@@ -49,4 +50,17 @@ export interface IFilter {
   title: string;
   options: IFilterOption[];
   type?: 'slider' | 'default';
+}
+
+export type Message = {
+  userId: number;
+  message: string;
+};
+
+export interface IMessages {
+  id: number;
+  avatar: any;
+  time: string;
+  messages: Message[];
+  unreadCount: number;
 }

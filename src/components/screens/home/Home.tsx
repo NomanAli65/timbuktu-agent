@@ -1,5 +1,5 @@
 import IMAGES from '../../../constants/images';
-import {ScreenContainer} from '../../atoms';
+import {BottomTabBarPadding, ScreenContainer} from '../../atoms';
 import PostsListsTemplate from '../../templates/PostsList';
 import {TPost} from '../../types';
 
@@ -46,8 +46,9 @@ const posts: TPost[] = [
 
 export default function Home() {
   return (
-    <ScreenContainer backgroundColor="white" p="md">
+    <ScreenContainer backgroundColor="white">
       <PostsListsTemplate posts={posts} />
+      <BottomTabBarPadding />
     </ScreenContainer>
   );
 }

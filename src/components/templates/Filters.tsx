@@ -1,7 +1,7 @@
 import React from 'react';
 import {IFilter} from '../types';
 import {ScrollView} from 'react-native';
-import FiltersList from '../organisms/FiltersList';
+import {FiltersList} from '../organisms';
 import useTheme from '../../hooks/useTheme';
 
 interface IProps {

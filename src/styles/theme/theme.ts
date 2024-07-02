@@ -22,6 +22,9 @@ const colors = {
   gray3: '#F9F9FC',
   gray4: '#323131',
   gray5: '#F6F5F5',
+  gray6: '#F4F4F4',
+  gray7: '#F2F3F8',
+  gray8: '#9692A5',
   tags: '#3DB9FB',
 };
 
