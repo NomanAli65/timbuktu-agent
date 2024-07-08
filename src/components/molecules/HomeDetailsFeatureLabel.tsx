@@ -13,7 +13,11 @@ export default function HomeDetailsFeatureLabel({
 }: IProps) {
   const theme = useTheme();
   return (
-    <View justifyContent="center" alignItems="center" style={{width: '30%'}}>
+    <View
+      justifyContent="center"
+      alignItems="center"
+      style={{width: '33.3%'}}
+      mt="xs">
       <Icon
         name={iconName}
         vector={iconVector}

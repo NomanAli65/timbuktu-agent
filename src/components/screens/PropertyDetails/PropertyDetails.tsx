@@ -58,6 +58,43 @@ export default function PropertyDetails({navigation}: MainStackScreensProp) {
       iconVector: 'MaterialIcons',
     },
   ];
+  const exteriorFeatures: IHomeFeature[] = [
+    {
+      id: 1,
+      title: 'Garage',
+      available: true,
+      iconName: 'garage',
+      iconVector: 'MaterialCommunityIcons',
+    },
+    {
+      id: 2,
+      title: 'LOT Hillside',
+      available: true,
+      iconName: 'slope-uphill',
+      iconVector: 'MaterialCommunityIcons',
+    },
+    {
+      id: 3,
+      title: 'Basement',
+      available: true,
+      iconName: 'home-floor-b',
+      iconVector: 'MaterialCommunityIcons',
+    },
+    {
+      id: 4,
+      title: 'Swimming Pool',
+      available: true,
+      iconName: 'swimming-pool',
+      iconVector: 'FontAwesome5',
+    },
+    {
+      id: 5,
+      title: 'Parking',
+      available: true,
+      iconName: 'car-tunnel',
+      iconVector: 'FontAwesome6',
+    },
+  ];
 
   const onPress = () => navigation.navigate(SCREENS.MESSAGES, {messages: []});
 
@@ -147,7 +184,7 @@ export default function PropertyDetails({navigation}: MainStackScreensProp) {
           </View>
           <View mb="md">
             <HomeDetailsFeaturesContainer
-              items={interiorFeatures}
+              items={exteriorFeatures}
               title="Exterior Features"
             />
           </View>
