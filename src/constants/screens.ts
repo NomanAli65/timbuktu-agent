@@ -29,6 +29,9 @@ const SCREENS = {
   MESSAGING: 'Messaging',
   MESSAGES: 'Messages',
   NOTIFICATIONS: 'Notifications',
+  PROPERTY_DETAILS: 'PropertyDetails',
+  REFERRAL_AGENT_DETAILS: 'ReferralAgentDetails',
+  LEAD_DETAILS: 'LeadDetails',
 } as const;
 
 export default SCREENS;

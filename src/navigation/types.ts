@@ -38,6 +38,9 @@ export type MainStackParamsList = {
     messages: Message[];
   };
   Notifications: undefined;
+  PropertyDetails: undefined;
+  ReferralAgentDetails: undefined;
+  LeadDetails: undefined;
 };
 
 export type MainStackScreensProp = StackScreenProps<MainStackParamsList>;

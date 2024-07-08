@@ -18,8 +18,11 @@ import {
   PostProperty,
   PrivacyPolicy,
   Profile,
+  PropertyDetails,
   SearchFilters,
   TermsConditions,
+  LeadDetails,
+  ReferralAgentDetails,
 } from '../components/screens';
 import {
   DrawerParmasList,
@@ -96,9 +99,17 @@ const getTabBarOptions = (
     return (
       <Icon
         name={iconName}
-        size={moderateScale(28)}
+        size={moderateScale(route.name === SCREENS.POST_PROPERTY ? 40 : 28)}
         vector="MaterialCommunityIcons"
-        color={props.focused ? theme.colors.black : theme.colors.gray2}
+        color={
+          props.focused
+            ? route.name === SCREENS.POST_PROPERTY
+              ? theme.colors.primary
+              : theme.colors.black
+            : route.name === SCREENS.POST_PROPERTY
+            ? theme.colors.primary
+            : theme.colors.gray2
+        }
       />
     );
   },
@@ -116,6 +127,7 @@ function TabNavigator() {
       <Tab.Screen
         name={SCREENS.MY_TRANSACTIONS_TAB}
         component={MyTransactionsTab}
+        options={{headerShown: false}}
       />
       <Tab.Screen name={SCREENS.PROFILE} component={Profile} />
     </Tab.Navigator>
@@ -137,6 +149,15 @@ const MainStackNavigator = () => {
       <Stack.Screen name={SCREENS.MESSAGING} component={Messaging} />
       <Stack.Screen name={SCREENS.MESSAGES} component={Messages} />
       <Stack.Screen name={SCREENS.NOTIFICATIONS} component={Notifications} />
+      <Stack.Screen
+        name={SCREENS.PROPERTY_DETAILS}
+        component={PropertyDetails}
+      />
+      <Stack.Screen
+        name={SCREENS.REFERRAL_AGENT_DETAILS}
+        component={ReferralAgentDetails}
+      />
+      <Stack.Screen name={SCREENS.LEAD_DETAILS} component={LeadDetails} />
     </Stack.Navigator>
   );
 };

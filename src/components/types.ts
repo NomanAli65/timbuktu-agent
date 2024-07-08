@@ -1,3 +1,5 @@
+import {ImageSourcePropType} from 'react-native';
+
 export type IconVector =
   | 'Feather'
   | 'Ionicons'
@@ -71,3 +73,48 @@ export type Notification = {
   avatar: any;
   new: boolean;
 };
+
+export interface ITabMenuItem {
+  id: number;
+  label: string;
+  onPress: () => any;
+}
+
+export interface IPropertyDetails {
+  id: number;
+  title: string;
+  price: number;
+  beds: number;
+  image: any;
+  baths: number;
+  sqft: number;
+}
+
+export interface IReferralAgent {
+  id: number;
+  address: string;
+  rating: number;
+  image: any;
+}
+export interface IMyLead {
+  id: number;
+  type: 'buyer' | 'seller';
+  address: string;
+  image: any;
+}
+
+export interface IHomeFeature {
+  id: number;
+  title: string;
+  iconName: string;
+  iconVector: IconVector;
+  available: boolean;
+}
+
+export interface IMyReferral {
+  id: number;
+  name: string;
+  referredTo: string;
+  image: ImageSourcePropType;
+  image2: ImageSourcePropType;
+}

@@ -5,18 +5,23 @@ import {Text, View} from '../atoms';
 interface IProps {
   goBack?: boolean;
   title: string;
+  transparent?: boolean;
 }
 
-export default function Header({goBack = true, title}: IProps) {
+export default function Header({
+  goBack = true,
+  title,
+  transparent = false,
+}: IProps) {
   return (
     <View
       style={{position: 'relative'}}
-      backgroundColor="white"
+      backgroundColor={!transparent ? 'white' : undefined}
       alignItems="center"
       justifyContent="center"
       p="md">
       {goBack && <HeaderBackButton />}
-      <Text textAlign="center" variant="semibold">
+      <Text textAlign="center" variant="semibold" size="sm">
         {title.toUpperCase()}
       </Text>
     </View>

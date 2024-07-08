@@ -75,7 +75,7 @@ export default function TabHeader() {
             variant="bold"
             style={{flex: 0.6}}
             textAlign="center">
-            Timbuktu
+            TIMBUKTU
           </Text>
           <View flexDirection="row" alignItems="center" gap={10} flex={0.2}>
             <TouchableOpacity

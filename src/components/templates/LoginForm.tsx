@@ -5,7 +5,8 @@ import {Field} from '../types';
 import {AuthStackNavigationProp} from '../../navigation/types';
 import SCREENS from '../../constants/screens';
 import {useNavigation} from '@react-navigation/native';
-import {useLoginUserMutation} from '../../redux/slices/auth/authApi';
+import {useAppDispatch} from '../../hooks/useAppDispatch';
+import {loginAsync} from '../../redux/slices/auth/authThunks';
 
 export default function LoginForm() {
   const signInFields: Field[] = [
@@ -25,13 +26,11 @@ export default function LoginForm() {
     },
   ];
 
-  const [login] = useLoginUserMutation({
-    fixedCacheKey: 'authentication',
-  });
+  const dispatch = useAppDispatch();
+
   const navigation = useNavigation<AuthStackNavigationProp>();
   const onSignIn = async () => {
-    const result = await login({});
-    console.log({result});
+    dispatch(loginAsync());
   };
   const onRegister = () => navigation.navigate(SCREENS.REGISTER);
 

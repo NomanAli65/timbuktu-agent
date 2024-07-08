@@ -1,9 +1,11 @@
-import {PayloadAction, SerializedError, createSlice} from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
+import {loginAsync, signupAsync} from './authThunks';
+import {isPendingAction, isRejectedAction} from '../utils';
 
 type InitialState = {
   loading: boolean;
   isLoggedIn: boolean;
-  error: SerializedError | null;
+  error: string | null | undefined;
 };
 
 const initialState: InitialState = {
@@ -15,12 +17,24 @@ const initialState: InitialState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {
-    setLoggedIn: (state, action: PayloadAction<boolean>) => {
-      state.isLoggedIn = action.payload;
-    },
+  reducers: {},
+  extraReducers: builder => {
+    builder
+      .addCase(loginAsync.fulfilled, state => {
+        state.loading = false;
+        state.isLoggedIn = true;
+      })
+      .addCase(signupAsync.fulfilled, state => {
+        state.loading = false;
+        state.isLoggedIn = true;
+      })
+      .addMatcher(isPendingAction, state => {
+        state.loading = true;
+      })
+      .addMatcher(isRejectedAction, (state, action) => {
+        state.error = action.error as string;
+      });
   },
 });
 
 export default authSlice.reducer;
-export const {setLoggedIn} = authSlice.actions;

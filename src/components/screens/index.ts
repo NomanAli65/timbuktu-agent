@@ -5,13 +5,16 @@ import ForgotPassword from './auth/ForgotPassword';
 import ChangePassword from './auth/ChangePassword';
 
 import {Home, SearchFilters} from './home';
-import Listings from './listings';
+import Listings from './Listings';
 import MyTransactionsTab from './MyTransactionsTab';
 import Profile from './Profile';
 import PostProperty from './PostProperty';
 import Messaging from './Messaging';
 import Messages from './Messages';
 import Notifications from './Notifications';
+import PropertyDetails from './PropertyDetails';
+import ReferralAgentDetails from './ReferralAgentDetails';
+import LeadDetails from './LeadDetails';
 
 import MyTransactions from './drawer/MyTransactions';
 import MyProperties from './drawer/MyProperties';
@@ -49,5 +52,8 @@ export {
   Messaging,
   Messages,
   SearchFilters,
+  LeadDetails,
+  PropertyDetails,
   Notifications,
+  ReferralAgentDetails,
 };

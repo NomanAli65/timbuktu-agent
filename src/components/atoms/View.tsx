@@ -105,7 +105,7 @@ export default function View({
       justifyContent,
       alignItems,
       flexDirection,
-      borderRadius: rounded ? 20 : 0,
+      borderRadius: rounded ? 10 : 0,
       gap,
     },
     getMargin(),

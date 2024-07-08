@@ -26,6 +26,7 @@ const colors = {
   gray7: '#F2F3F8',
   gray8: '#9692A5',
   tags: '#3DB9FB',
+  info: '#3658FF',
 };
 
 const theme = {

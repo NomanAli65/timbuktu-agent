@@ -22,12 +22,12 @@ export default function Button({
         {
           backgroundColor: theme.colors.primary,
           padding: theme.spacing.xl,
-          borderRadius: 20,
+          borderRadius: 10,
           width: '100%',
         },
         style as ViewStyle,
       ]}>
-      <Text color="white" textAlign="center" variant="medium">
+      <Text color="white" textAlign="center" variant="medium" size="sm">
         {label}
       </Text>
     </Pressable>
