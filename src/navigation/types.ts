@@ -41,6 +41,9 @@ export type MainStackParamsList = {
   PropertyDetails: undefined;
   ReferralAgentDetails: undefined;
   LeadDetails: undefined;
+  EditProfile: undefined;
+  MyTimbuktuPage: undefined;
+  ChangePasswordProfile: undefined;
 };
 
 export type MainStackScreensProp = StackScreenProps<MainStackParamsList>;

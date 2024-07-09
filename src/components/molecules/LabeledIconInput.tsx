@@ -4,12 +4,15 @@ import {IconVector} from '../types';
 import {moderateScale} from '../../helpers/metrics';
 import useTheme from '../../hooks/useTheme';
 import {useState} from 'react';
+import Apptheme from '../../styles/theme/theme';
 
 interface IProps extends TextInputProps {
   label: string;
   vector?: IconVector;
   leftIconName?: string;
   rightIconName?: string;
+  showLabel?: boolean;
+  labelColor?: keyof typeof Apptheme.colors;
 }
 
 export default function LabeledIconInput({
@@ -17,6 +20,10 @@ export default function LabeledIconInput({
   vector,
   leftIconName,
   rightIconName,
+  showLabel = true,
+  multiline,
+  labelColor = 'white',
+  style,
   ...rest
 }: IProps) {
   const theme = useTheme();
@@ -26,9 +33,11 @@ export default function LabeledIconInput({
   const onBlur = () => setIsFocused(false);
   return (
     <View style={{width: '100%'}} gap={6}>
-      <Text color="white" size="sm">
-        {label}
-      </Text>
+      {showLabel && (
+        <Text color={labelColor} size="sm" variant="semibold">
+          {label}
+        </Text>
+      )}
       <View
         flexDirection="row"
         alignItems="center"
@@ -36,7 +45,7 @@ export default function LabeledIconInput({
         p="lg"
         style={{
           width: '100%',
-          borderWidth: 2,
+          borderWidth: 1.5,
           borderColor: isFocused ? theme.colors.primary : theme.colors.gray4,
           borderRadius: 10,
         }}>
@@ -49,7 +58,22 @@ export default function LabeledIconInput({
               color={theme.colors.gray2}
             />
           )}
-          <TextInput onFocus={onFocus} onBlur={onBlur} {...rest} />
+          <TextInput
+            onFocus={onFocus}
+            onBlur={onBlur}
+            multiline={multiline}
+            style={[
+              style,
+              multiline
+                ? {
+                    height: 100,
+                    textAlignVertical: 'top',
+                    overflow: 'scroll',
+                  }
+                : {},
+            ]}
+            {...rest}
+          />
 
           {rightIconName && (
             <Icon

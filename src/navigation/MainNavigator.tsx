@@ -23,6 +23,9 @@ import {
   TermsConditions,
   LeadDetails,
   ReferralAgentDetails,
+  EditProfile,
+  ChangePasswordProfile,
+  MyTimbuktu,
 } from '../components/screens';
 import {
   DrawerParmasList,
@@ -43,6 +46,7 @@ import theme from '../styles/theme/theme';
 import {Icon, Text, View} from '../components/atoms';
 import {moderateScale} from '../helpers/metrics';
 import {RouteProp} from '@react-navigation/native';
+import {BottomTabBarHeight} from '../constants/values';
 
 const Stack = createStackNavigator<MainStackParamsList>();
 const Tab = createBottomTabNavigator<MainTabsParamsList>();
@@ -60,7 +64,7 @@ const getTabBarOptions = (
     elevation: 1,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
-    height: 80,
+    height: BottomTabBarHeight,
     position: 'absolute',
     bottom: 0,
     backgroundColor: 'white',
@@ -123,13 +127,23 @@ function TabNavigator() {
     <Tab.Navigator screenOptions={({route}) => getTabBarOptions(route)}>
       <Tab.Screen name={SCREENS.HOME} component={Home} />
       <Tab.Screen name={SCREENS.LISTINGS} component={Listings} />
-      <Tab.Screen name={SCREENS.POST_PROPERTY} component={PostProperty} />
+      <Tab.Screen
+        name={SCREENS.POST_PROPERTY}
+        component={PostProperty}
+        options={{
+          headerShown: false,
+        }}
+      />
       <Tab.Screen
         name={SCREENS.MY_TRANSACTIONS_TAB}
         component={MyTransactionsTab}
         options={{headerShown: false}}
       />
-      <Tab.Screen name={SCREENS.PROFILE} component={Profile} />
+      <Tab.Screen
+        name={SCREENS.PROFILE}
+        component={Profile}
+        options={{headerShown: false}}
+      />
     </Tab.Navigator>
   );
 }
@@ -158,6 +172,12 @@ const MainStackNavigator = () => {
         component={ReferralAgentDetails}
       />
       <Stack.Screen name={SCREENS.LEAD_DETAILS} component={LeadDetails} />
+      <Stack.Screen name={SCREENS.EDIT_PROFILE} component={EditProfile} />
+      <Stack.Screen
+        name={SCREENS.CHANGE_PASSWORD_PROFILE}
+        component={ChangePasswordProfile}
+      />
+      <Stack.Screen name={SCREENS.MY_TIMBUKTU_PAGE} component={MyTimbuktu} />
     </Stack.Navigator>
   );
 };

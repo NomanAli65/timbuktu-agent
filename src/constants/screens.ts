@@ -32,6 +32,9 @@ const SCREENS = {
   PROPERTY_DETAILS: 'PropertyDetails',
   REFERRAL_AGENT_DETAILS: 'ReferralAgentDetails',
   LEAD_DETAILS: 'LeadDetails',
+  EDIT_PROFILE: 'EditProfile',
+  MY_TIMBUKTU_PAGE: 'MyTimbuktuPage',
+  CHANGE_PASSWORD_PROFILE: 'ChangePasswordProfile',
 } as const;
 
 export default SCREENS;

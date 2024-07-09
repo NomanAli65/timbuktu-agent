@@ -18,11 +18,12 @@ export default function DropdownMenu({items, handleSelect}: IProps) {
         borderBottomWidth: 1,
         borderTopWidth: 1,
         borderColor: theme.colors.gray4,
-        backgroundColor: theme.colors.white,
+        backgroundColor: theme.colors.primary,
         position: 'absolute',
         top: 40,
         width: '100%',
         borderBottomLeftRadius: 10,
+        zIndex: 999,
         borderBottomRightRadius: 10,
       }}>
       {items.map(item => (

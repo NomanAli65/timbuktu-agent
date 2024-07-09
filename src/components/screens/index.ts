@@ -15,7 +15,9 @@ import Notifications from './Notifications';
 import PropertyDetails from './PropertyDetails';
 import ReferralAgentDetails from './ReferralAgentDetails';
 import LeadDetails from './LeadDetails';
-
+import MyTimbuktu from './MyTimbuktu';
+import ChangePasswordProfile from './ChangePasswordProfile';
+import EditProfile from './EditProfile';
 import MyTransactions from './drawer/MyTransactions';
 import MyProperties from './drawer/MyProperties';
 import MyClients from './drawer/MyClients';
@@ -56,4 +58,7 @@ export {
   PropertyDetails,
   Notifications,
   ReferralAgentDetails,
+  MyTimbuktu,
+  EditProfile,
+  ChangePasswordProfile,
 };

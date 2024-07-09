@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from '../atoms';
+import {ShadowContainer, View} from '../atoms';
 import {ITabMenuItem} from '../types';
 import {TabMenuItem} from '../molecules';
 

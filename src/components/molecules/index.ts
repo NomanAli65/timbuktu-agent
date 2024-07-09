@@ -18,6 +18,10 @@ import MyLeadsCard from './MyLeadsCard';
 import MyReferralsCard from './MyReferralsCard';
 import MyReferralsList from './MyReferralsList';
 import Dropdown from './Dropdown/Dropdown';
+import ProfileSettingItem from './ProfileSettingItem';
+import ProfileSettingSwitchItem from './ProfileSettingSwitchItem';
+import CustomRadioInput from './RadioInput';
+import CheckboxGroup from './CheckboxGroup';
 
 import {
   PostCardActions,
@@ -42,7 +46,11 @@ export {
   MessageAvatar,
   LabelWithIcon,
   MessagesListItem,
+  CustomRadioInput,
   MessagesUnreadCount,
+  ProfileSettingItem,
+  CheckboxGroup,
+  ProfileSettingSwitchItem,
   LabeledIconInput,
   MyReferralsCard,
   MyReferralsList,

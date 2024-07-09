@@ -24,7 +24,7 @@ export default function DropdownInput({
         justifyContent="space-between"
         rounded
         p="xs"
-        style={{borderWidth: 1, borderColor: theme.colors.black, height: 50}}>
+        style={{borderWidth: 1.5, borderColor: theme.colors.black, height: 50}}>
         <Text size="sm">{selectedValue || label}</Text>
         <Icon
           name="keyboard-arrow-down"

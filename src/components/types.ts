@@ -1,4 +1,8 @@
-import {ImageSourcePropType} from 'react-native';
+import {
+  ImageSourcePropType,
+  SwitchProps,
+  TouchableOpacityProps,
+} from 'react-native';
 
 export type IconVector =
   | 'Feather'
@@ -68,6 +72,7 @@ export interface IMessages {
 }
 
 export type Notification = {
+  id: number;
   time: string;
   title: string;
   avatar: any;
@@ -117,4 +122,22 @@ export interface IMyReferral {
   referredTo: string;
   image: ImageSourcePropType;
   image2: ImageSourcePropType;
+}
+
+export interface ISetting extends TouchableOpacityProps {
+  title: string;
+  iconName: string;
+  iconVector: IconVector;
+}
+
+export interface ISettingSwitch extends SwitchProps {
+  title: string;
+  iconName: string;
+  iconVector: IconVector;
+}
+
+export interface ITimbuktuSavedCard {
+  id: number;
+  time: string;
+  status: 'Connected' | 'Active';
 }

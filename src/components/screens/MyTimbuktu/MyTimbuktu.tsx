@@ -1,12 +1,11 @@
-import React from 'react';
 import {SafeAreaContainer, ScreenContainer} from '../../atoms';
-import {PostPropertyFormTemplate} from '../../templates';
+import {MyTimbuktuTemplate} from '../../templates';
 
-export default function PostProperty() {
+export default function MyTimbuktu() {
   return (
     <ScreenContainer backgroundColor="white">
       <SafeAreaContainer>
-        <PostPropertyFormTemplate />
+        <MyTimbuktuTemplate />
       </SafeAreaContainer>
     </ScreenContainer>
   );
