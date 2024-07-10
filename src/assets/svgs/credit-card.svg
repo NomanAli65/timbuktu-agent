@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="360.715" height="196.259" viewBox="0 0 360.715 196.259">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.688" x2="1.108" y2="1.309" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4872ff"/>
+      <stop offset="1" stop-color="#4dffff"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_33" data-name="Rectangle 33" width="335" height="171.741" rx="15" fill="url(#linear-gradient)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-2" x1="-1.533" y1="-0.319" x2="0.352" y2="0.516" gradientUnits="objectBoundingBox">
+      <stop offset="0.165" stop-color="#e8d689"/>
+      <stop offset="0.419" stop-color="#f4eaa9"/>
+      <stop offset="0.621" stop-color="#fdf8be"/>
+      <stop offset="1" stop-color="#cca42c"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-1.237" y1="-0.252" x2="1.597" y2="0.847" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-4" x1="0.242" y1="-0.276" x2="0.544" y2="0.63" gradientUnits="objectBoundingBox">
+      <stop offset="0.165" stop-color="#e8d689"/>
+      <stop offset="0.41" stop-color="#f4eaa9"/>
+      <stop offset="0.604" stop-color="#fdf8be"/>
+      <stop offset="1" stop-color="#cca42c"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="-0.055" y1="-0.286" x2="0.59" y2="0.629" gradientUnits="objectBoundingBox">
+      <stop offset="0.011" stop-color="#e8d689"/>
+      <stop offset="0.302" stop-color="#f4eaa9"/>
+      <stop offset="0.533" stop-color="#fdf8be"/>
+      <stop offset="1" stop-color="#cca42c"/>
+    </linearGradient>
+  </defs>
+  <g id="Cards" transform="translate(-17.142 -69)">
+    <g id="Card" transform="translate(30 69)">
+      <rect id="Rectangle_25" data-name="Rectangle 25" width="294.715" height="47.706" rx="15" transform="translate(20.142 115.554)" opacity="0.84"/>
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="335" height="171.741" rx="15" fill="#c2c2c2"/>
+      <g id="Card_Text" data-name="Card Text">
+        <g id="Mask_Group_1" data-name="Mask Group 1" clip-path="url(#clip-path)">
+          <circle id="Ellipse_4" data-name="Ellipse 4" cx="122.445" cy="122.445" r="122.445" transform="translate(-96.472 23.323)" fill="#fff" opacity="0.2"/>
+          <circle id="Ellipse_3" data-name="Ellipse 3" cx="76.859" cy="76.859" r="76.859" transform="translate(-50.886 68.908)" fill="#fff" opacity="0.2"/>
+        </g>
+        <g id="visa_logo" data-name="visa logo" transform="translate(217.365 120.485)">
+          <path id="Path_8" data-name="Path 8" d="M56.666,100.23l-4.68,29.124h7.481l4.677-29.124ZM79.23,112.094c-2.614-1.291-4.217-2.162-4.217-3.483.032-1.2,1.355-2.43,4.31-2.43a13.018,13.018,0,0,1,5.572,1.078l.679.3,1.017-6.093a18.881,18.881,0,0,0-6.714-1.2c-7.387,0-12.589,3.841-12.621,9.334-.061,4.054,3.724,6.3,6.557,7.653,2.894,1.384,3.879,2.282,3.879,3.512-.032,1.888-2.34,2.76-4.493,2.76a15.214,15.214,0,0,1-7.02-1.5l-.985-.449-1.046,6.333a23.361,23.361,0,0,0,8.343,1.5c7.851,0,12.959-3.783,13.023-9.637C85.539,116.564,83.543,114.1,79.23,112.094Zm26.539-11.773H99.981c-1.783,0-3.139.513-3.911,2.343L84.959,129.354H92.81l2.162-5.779h8.783l1.122,5.8H111.8Zm-8.62,17.424c.151.015,3.013-9.433,3.013-9.433l2.279,9.433ZM45.735,100.23l-7.329,19.787-.8-3.9c-1.355-4.5-5.6-9.4-10.345-11.825l6.711,25.036h7.915L53.65,100.233H45.735Z" transform="translate(-18.549 -100.23)" fill="#00579f"/>
+          <path id="Path_9" data-name="Path 9" d="M16.593,104a4.888,4.888,0,0,0-4.866-3.75H.12l-.12.539c9.054,2.232,16.654,9.1,19.12,15.561Z" transform="translate(0 -100.242)" fill="#faa61a"/>
+        </g>
+        <text id="_8344_987" data-name="**** **** 8344 987" transform="translate(166.203 96.089)" fill="#1d2733" font-size="23" font-family="Poppins-Medium, Poppins" font-weight="500" letter-spacing="0.2em"><tspan x="-144" y="0">**** **** 8344 987</tspan></text>
+        <text id="Mark_Carson" data-name="Mark Carson" transform="translate(24.383 146.576)" fill="#1d2733" font-size="12" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">Mark Carson</tspan></text>
+        <text id="_02_20" data-name="02 / 20" transform="translate(147.358 146.576)" fill="#1d2733" font-size="12" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">02 / 20</tspan></text>
+        <text id="Expiry_Date" data-name="Expiry Date" transform="translate(147.358 125.734)" fill="#1d2733" font-size="7" font-family="Poppins-Regular, Poppins" opacity="0.733"><tspan x="0" y="0">Expiry Date</tspan></text>
+        <text id="Card_Holder_Name" data-name="Card Holder Name" transform="translate(24.383 125.734)" fill="#1d2733" font-size="7" font-family="Poppins-Regular, Poppins" opacity="0.733"><tspan x="0" y="0">Card Holder Name</tspan></text>
+        <g id="Chip" transform="translate(278.9 20.579)">
+          <path id="Exclusion_1" data-name="Exclusion 1" d="M31.615,28.373H5a5.006,5.006,0,0,1-5-5V5A5.006,5.006,0,0,1,5,0H31.615a5.006,5.006,0,0,1,5,5V23.372A5.006,5.006,0,0,1,31.615,28.373ZM18.351,2.809A4.851,4.851,0,0,0,14.6,5.2a8.646,8.646,0,0,0-1.57,4.723A5.715,5.715,0,0,0,15.1,14.386a5.782,5.782,0,0,0-2.069,4.482,8.464,8.464,0,0,0,1.541,4.66A4.738,4.738,0,0,0,18.3,25.854a4.756,4.756,0,0,0,3.743-2.326,8.442,8.442,0,0,0,1.548-4.66,5.748,5.748,0,0,0-2.085-4.482A5.681,5.681,0,0,0,23.6,9.92,8.768,8.768,0,0,0,22.07,5.2,4.7,4.7,0,0,0,18.351,2.809Z" transform="translate(0 0.014)" fill="#512503"/>
+          <g id="Group_200" data-name="Group 200" transform="translate(32.091 0.208)">
+            <path id="Path_2526" data-name="Path 2526" d="M9.219,28.729V26.566a5.691,5.691,0,0,0-4.248-5.493v7.656ZM4.971,49.083a5.66,5.66,0,0,0,4.248-5.477V41.567H4.971Zm0-7.967H9.219V35.622H4.971Zm0-11.951v6.022H9.219V29.165Z" transform="translate(-4.971 -21.073)" fill="url(#linear-gradient-2)"/>
+          </g>
+          <g id="Group_201" data-name="Group 201" transform="translate(0.005 0.349)">
+            <path id="Path_2527" data-name="Path 2527" d="M2.909,41.451V43.49a5.651,5.651,0,0,0,3.828,5.337V41.451Zm3.828-5.944H2.909V41H6.737Zm0-6.458H2.909v6.022H6.737Zm0-7.967a5.676,5.676,0,0,0-3.828,5.369V28.6H6.737Z" transform="translate(-2.909 -21.082)" fill="url(#linear-gradient-3)"/>
+          </g>
+          <g id="Group_203" data-name="Group 203" transform="translate(4.05 0.053)">
+            <g id="Group_202" data-name="Group 202">
+              <path id="Path_2528" data-name="Path 2528" d="M3.169,41.728v7.5a5.746,5.746,0,0,0,1.478.2H29.9a5.978,5.978,0,0,0,1.074-.109V41.728Zm0-6.38H30.976V29.326H3.169Zm0,5.929H30.976V35.784H3.169Zm27.807-12.4V21.141a7.919,7.919,0,0,0-1.074-.078H4.647a5.137,5.137,0,0,0-1.478.187v7.625Z" transform="translate(-3.169 -21.063)" fill="url(#linear-gradient-4)"/>
+            </g>
+          </g>
+          <g id="Group_204" data-name="Group 204" transform="translate(17.909 0)">
+            <path id="Path_2529" data-name="Path 2529" d="M4.06,24.433V21.06h.205v3.374Z" transform="translate(-4.06 -21.06)" fill="#512503"/>
+            <path id="Path_2530" data-name="Path 2530" d="M4.1,24.433V21.06h.213v3.374Z" transform="translate(-3.484 -21.06)" fill="#512503"/>
+          </g>
+          <g id="Group_205" data-name="Group 205" transform="translate(17.909 25.59)">
+            <path id="Path_2531" data-name="Path 2531" d="M4.06,25.577V22.7h.205v2.873Z" transform="translate(-4.06 -22.704)" fill="#512503"/>
+            <path id="Path_2532" data-name="Path 2532" d="M4.1,25.577V22.7h.213v2.873Z" transform="translate(-3.484 -22.704)" fill="#512503"/>
+          </g>
+          <path id="Path_2534" data-name="Path 2534" d="M3.73,36.935a5.7,5.7,0,0,1,1.961-4.326h0A5.67,5.67,0,0,1,3.73,28.3h0c0-3.081,2.427-7,5.509-7.034h0c3.081.031,5.4,3.952,5.415,7.034h0a5.684,5.684,0,0,1-1.976,4.31h0a5.717,5.717,0,0,1,1.976,4.326h0c-.016,3.081-2.381,6.894-5.462,6.909h0c-3.081-.016-5.462-3.828-5.462-6.909Zm1.9-13.087A7.876,7.876,0,0,0,4.072,28.3h0a5.323,5.323,0,0,0,2.007,4.17h0l.078.14h0l-.078.14h0a5.331,5.331,0,0,0-2.007,4.186h0A7.841,7.841,0,0,0,5.6,41.323h0a4.664,4.664,0,0,0,3.595,2.163h0a4.713,4.713,0,0,0,3.595-2.163h0A7.82,7.82,0,0,0,14.3,36.935h0a5.331,5.331,0,0,0-2.007-4.186h0l.109-.14.109.14-.109-.14-.109.14-.062-.14h0l.062-.14h0A5.323,5.323,0,0,0,14.3,28.3h0a8.031,8.031,0,0,0-1.494-4.45h0a4.585,4.585,0,0,0-3.563-2.241H9.223a4.727,4.727,0,0,0-3.595,2.241Z" transform="translate(9.05 -18.069)" fill="#512503"/>
+          <g id="Group_206" data-name="Group 206" transform="translate(13.154 3.476)">
+            <path id="Path_2535" data-name="Path 2535" d="M8.9,21.283c-2.817,0-5.151,3.812-5.151,6.8a5.458,5.458,0,0,0,2.007,4.248,5.489,5.489,0,0,0-2.007,4.264c0,2.972,2.287,6.66,5.088,6.66,2.817,0,5.1-3.688,5.1-6.66a5.526,5.526,0,0,0-1.992-4.264,5.494,5.494,0,0,0,1.992-4.248C13.946,25.1,11.721,21.283,8.9,21.283Z" transform="translate(-3.754 -21.283)" fill="url(#linear-gradient-5)"/>
+          </g>
+        </g>
+        <text id="Freezed_Card" data-name="Freezed Card" transform="translate(308.424 40.323)" fill="#fff" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" opacity="0"><tspan x="-107" y="0">Freezed Card</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

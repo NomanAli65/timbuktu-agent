@@ -15,10 +15,15 @@ import ProfileSettingsList from './ProfileSettingsList';
 import EditProfileForm from './EditProfileForm';
 import TimbuktuPageListing from './TimbuktuPageListing';
 import PostPropertyForm from './PostPropertyForm';
+import AddClientForm from './AddClientForm';
 import TimbuktuPageSavedList from './TimbuktuPageSavedList';
+import AddCardForm from './AddCardForm';
+import CreateAdForm from './CreateAdForm';
 
 export {
   Form,
+  AddCardForm,
+  CreateAdForm,
   PostPropertyForm,
   TimbuktuPageListing,
   TimbuktuPageSavedList,
@@ -26,6 +31,7 @@ export {
   ProfileSettingsList,
   ReferralAgentsList,
   MyLeadsList,
+  AddClientForm,
   PropertyListing,
   TabbedMenu,
   NotificationsList,

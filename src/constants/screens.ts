@@ -35,6 +35,12 @@ const SCREENS = {
   EDIT_PROFILE: 'EditProfile',
   MY_TIMBUKTU_PAGE: 'MyTimbuktuPage',
   CHANGE_PASSWORD_PROFILE: 'ChangePasswordProfile',
+  CLIENT_DETAILS: 'ClientDetails',
+  ADD_CLIENT: 'AddClient',
+  ADD_CARD: 'AddCard',
+  CREATE_AD: 'CreateAd',
+  AD_PREVIEW: 'AdPreview',
+  AD_POST_SUCCESS: 'AdPostSuccess',
 } as const;
 
 export default SCREENS;

@@ -6,12 +6,22 @@ import {Image, ScrollView, useWindowDimensions} from 'react-native';
 import IMAGES from '../../../constants/images';
 import {Dropdown, LabelWithIcon} from '../../molecules';
 import useTheme from '../../../hooks/useTheme';
+import {IHeaderOption} from '../../types';
 
-export default function LeadDetails() {
+export default function ClientDetails() {
   const insets = useSafeAreaInsets();
   const {height} = useWindowDimensions();
   const theme = useTheme();
   const [purpose, setPurpose] = useState<string>('');
+
+  const headerOptions: IHeaderOption[] = [
+    {
+      id: 1,
+      icon: 'edit',
+      iconVector: 'AntDesign',
+      onPress: () => {},
+    },
+  ];
   return (
     <ScreenContainer backgroundColor="white">
       <ScrollView
@@ -25,7 +35,7 @@ export default function LeadDetails() {
             zIndex: 10,
             width: '100%',
           }}>
-          <Header title="" goBack transparent />
+          <Header title="" goBack transparent options={headerOptions} />
         </View>
 
         <View
@@ -62,8 +72,13 @@ export default function LeadDetails() {
               </Text>
               <LabelWithIcon label="Texas, United States" iconName="location" />
             </View>
-            <View backgroundColor="primary" p="md" rounded>
-              <Text color="white">Sold</Text>
+            <View
+              p="md"
+              rounded
+              style={{borderWidth: 1, borderColor: theme.colors.gray2}}>
+              <Text color="gray2" size="sm">
+                Share
+              </Text>
             </View>
           </ShadowContainer>
         </View>
@@ -124,7 +139,7 @@ export default function LeadDetails() {
                 Non-Negotiable
               </Text>
               <Text variant="bold" color="primary">
-                Connect
+                Referral
               </Text>
             </View>
 

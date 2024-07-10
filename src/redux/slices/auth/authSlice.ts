@@ -32,6 +32,7 @@ const authSlice = createSlice({
         state.loading = true;
       })
       .addMatcher(isRejectedAction, (state, action) => {
+        state.loading = false;
         state.error = action.error as string;
       });
   },

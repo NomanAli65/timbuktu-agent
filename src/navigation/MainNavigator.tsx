@@ -26,6 +26,12 @@ import {
   EditProfile,
   ChangePasswordProfile,
   MyTimbuktu,
+  ClientDetails,
+  AddClient,
+  AddCard,
+  CreateAd,
+  AdPreview,
+  AdPostedSuccess,
 } from '../components/screens';
 import {
   DrawerParmasList,
@@ -178,6 +184,15 @@ const MainStackNavigator = () => {
         component={ChangePasswordProfile}
       />
       <Stack.Screen name={SCREENS.MY_TIMBUKTU_PAGE} component={MyTimbuktu} />
+      <Stack.Screen name={SCREENS.CLIENT_DETAILS} component={ClientDetails} />
+      <Stack.Screen name={SCREENS.ADD_CLIENT} component={AddClient} />
+      <Stack.Screen name={SCREENS.ADD_CARD} component={AddCard} />
+      <Stack.Screen name={SCREENS.CREATE_AD} component={CreateAd} />
+      <Stack.Screen name={SCREENS.AD_PREVIEW} component={AdPreview} />
+      <Stack.Screen
+        name={SCREENS.AD_POST_SUCCESS}
+        component={AdPostedSuccess}
+      />
     </Stack.Navigator>
   );
 };

@@ -36,13 +36,20 @@ export type TFormTabHeader = {
   onPress: () => any;
 };
 
+export interface IHeaderOption {
+  id: number;
+  icon: string;
+  iconVector: IconVector;
+  onPress: () => any;
+}
+
 export type TPost = {
   id: number;
   name: string;
   time: string;
   description: string;
   tags: string[];
-  imageUrl: any;
+  imageUrl: ImageSourcePropType | string;
 };
 
 export interface IFilterOption {
@@ -75,7 +82,7 @@ export type Notification = {
   id: number;
   time: string;
   title: string;
-  avatar: any;
+  avatar: ImageSourcePropType | string;
   new: boolean;
 };
 
@@ -90,7 +97,7 @@ export interface IPropertyDetails {
   title: string;
   price: number;
   beds: number;
-  image: any;
+  image: ImageSourcePropType | string;
   baths: number;
   sqft: number;
 }
@@ -99,13 +106,19 @@ export interface IReferralAgent {
   id: number;
   address: string;
   rating: number;
-  image: any;
+  image: ImageSourcePropType | string;
 }
 export interface IMyLead {
   id: number;
   type: 'buyer' | 'seller';
   address: string;
-  image: any;
+  image: ImageSourcePropType | string;
+}
+
+export interface IMyClient {
+  id: number;
+  address: string;
+  image: ImageSourcePropType | string;
 }
 
 export interface IHomeFeature {
@@ -120,8 +133,8 @@ export interface IMyReferral {
   id: number;
   name: string;
   referredTo: string;
-  image: ImageSourcePropType;
-  image2: ImageSourcePropType;
+  image: ImageSourcePropType | string;
+  image2: ImageSourcePropType | string;
 }
 
 export interface ISetting extends TouchableOpacityProps {
@@ -140,4 +153,16 @@ export interface ITimbuktuSavedCard {
   id: number;
   time: string;
   status: 'Connected' | 'Active';
+}
+
+export interface IAdDetails {
+  id: number;
+  reached: number;
+  engaged: number;
+  image: ImageSourcePropType | string;
+  description: string;
+  userImg: ImageSourcePropType | string;
+  title: string;
+  time: string;
+  isRunning: boolean;
 }

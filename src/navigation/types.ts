@@ -44,6 +44,12 @@ export type MainStackParamsList = {
   EditProfile: undefined;
   MyTimbuktuPage: undefined;
   ChangePasswordProfile: undefined;
+  ClientDetails: undefined;
+  AddClient: undefined;
+  AddCard: undefined;
+  CreateAd: undefined;
+  AdPreview: undefined;
+  AdPostSuccess: undefined;
 };
 
 export type MainStackScreensProp = StackScreenProps<MainStackParamsList>;

@@ -18,7 +18,7 @@ export default function DropdownMenu({items, handleSelect}: IProps) {
         borderBottomWidth: 1,
         borderTopWidth: 1,
         borderColor: theme.colors.gray4,
-        backgroundColor: theme.colors.primary,
+        backgroundColor: theme.colors.white,
         position: 'absolute',
         top: 40,
         width: '100%',
@@ -27,7 +27,7 @@ export default function DropdownMenu({items, handleSelect}: IProps) {
         borderBottomRightRadius: 10,
       }}>
       {items.map(item => (
-        <TouchableOpacity onPress={() => handleSelect(item)}>
+        <TouchableOpacity onPress={() => handleSelect(item)} key={item}>
           <Text style={{padding: theme.spacing.md}} color="gray4" size="sm">
             {item}
           </Text>

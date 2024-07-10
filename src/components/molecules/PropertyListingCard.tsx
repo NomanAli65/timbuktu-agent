@@ -15,7 +15,7 @@ export default function PropertyListingCard({item}: IProps) {
   const onPress = () => navigation.navigate(SCREENS.PROPERTY_DETAILS);
   return (
     <Pressable onPress={onPress}>
-      <ShadowContainer p="md" m="md" rounded>
+      <ShadowContainer p="lg" m="md" rounded>
         <Image
           source={item.image}
           style={{

@@ -25,6 +25,12 @@ import MyDocuments from './drawer/MyDocuments';
 import AdsCenter from './drawer/AdsCenter';
 import PrivacyPolicy from './drawer/PrivacyPolicy';
 import TermsConditions from './drawer/TermsCondition';
+import ClientDetails from './ClientDetails';
+import AddClient from './AddClient/AddClient';
+import AddCard from './AddCard';
+import CreateAd from './CreateAd';
+import AdPreview from './AdPreview';
+import AdPostedSuccess from './AdPostSuccess';
 
 export {
   // AUTH
@@ -52,13 +58,19 @@ export {
 
   // MAIN STACK
   Messaging,
+  AddCard,
   Messages,
   SearchFilters,
+  CreateAd,
   LeadDetails,
   PropertyDetails,
+  AdPreview,
   Notifications,
   ReferralAgentDetails,
+  ClientDetails,
   MyTimbuktu,
   EditProfile,
   ChangePasswordProfile,
+  AddClient,
+  AdPostedSuccess,
 };

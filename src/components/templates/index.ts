@@ -13,13 +13,21 @@ import ChangePasswordProfileTemplate from './ChangePasswordProfileTemplate';
 import MyTimbuktuTemplate from './MyTimbuktuTemplate';
 import EditProfileTemplate from './EditProfileTemplate';
 import PostPropertyFormTemplate from './PostPropertyFormTemplate';
+import AddClientTemplate from './AddClientTemplate';
+import AddCardTemplate from './AddCardTemplate';
+import CreateAdTemplate from './CreateAdTemplate';
+import AdPreviewTemplate from './AdPreviewTemplate';
 
 export {
   LoginForm,
+  AdPreviewTemplate,
+  CreateAdTemplate,
+  AddCardTemplate,
   PostPropertyFormTemplate,
   MyTimbuktuTemplate,
   MyReferralsListTemplate,
   MyLeadsListTemplate,
+  AddClientTemplate,
   ReferralAgentsListTemplate,
   TabbedListingMenuTemplate,
   EditProfileTemplate,
