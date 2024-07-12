@@ -1,7 +1,7 @@
 import React from 'react';
 import {Avatar, Icon, ShadowContainer, Text, View} from '../atoms';
 import {horizontalScale} from '../../helpers/metrics';
-import {IReferralAgent} from '../types';
+import {IAgentDetails} from '../types';
 import useTheme from '../../hooks/useTheme';
 import {useNavigation} from '@react-navigation/native';
 import {MainStackNavigation} from '../../navigation/types';
@@ -9,10 +9,10 @@ import {TouchableOpacity} from 'react-native';
 import SCREENS from '../../constants/screens';
 
 interface IProps {
-  details: IReferralAgent;
+  details: IAgentDetails;
 }
 
-export default function ReferralAgentCard({details}: IProps) {
+export default function AgentCard({details}: IProps) {
   const theme = useTheme();
   const navigation = useNavigation<MainStackNavigation>();
   const onPress = () => navigation.navigate(SCREENS.REFERRAL_AGENT_DETAILS);

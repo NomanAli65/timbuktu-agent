@@ -12,7 +12,6 @@ import {
   MyClients,
   MyDocuments,
   MyProperties,
-  MyTransactions,
   MyTransactionsTab,
   Notifications,
   PostProperty,
@@ -32,6 +31,8 @@ import {
   CreateAd,
   AdPreview,
   AdPostedSuccess,
+  Documents,
+  MyAgent,
 } from '../components/screens';
 import {
   DrawerParmasList,
@@ -52,7 +53,8 @@ import theme from '../styles/theme/theme';
 import {Icon, Text, View} from '../components/atoms';
 import {moderateScale} from '../helpers/metrics';
 import {RouteProp} from '@react-navigation/native';
-import {BottomTabBarHeight} from '../constants/values';
+import {BottomTabBarHeight, UserTypes} from '../constants/values';
+import {useAppSelector} from '../hooks/useAppSelector';
 
 const Stack = createStackNavigator<MainStackParamsList>();
 const Tab = createBottomTabNavigator<MainTabsParamsList>();
@@ -100,6 +102,11 @@ const getTabBarOptions = (
         break;
       }
 
+      case SCREENS.MY_AGENT: {
+        iconName = 'account-group';
+        break;
+      }
+
       case SCREENS.PROFILE: {
         iconName = 'account';
         break;
@@ -129,22 +136,43 @@ const getTabBarOptions = (
 });
 
 function TabNavigator() {
+  const {type} = useAppSelector(state => state.auth);
   return (
     <Tab.Navigator screenOptions={({route}) => getTabBarOptions(route)}>
       <Tab.Screen name={SCREENS.HOME} component={Home} />
-      <Tab.Screen name={SCREENS.LISTINGS} component={Listings} />
       <Tab.Screen
-        name={SCREENS.POST_PROPERTY}
-        component={PostProperty}
+        name={SCREENS.LISTINGS}
+        component={Listings}
         options={{
-          headerShown: false,
+          headerShown: type === UserTypes.Agent,
         }}
       />
-      <Tab.Screen
-        name={SCREENS.MY_TRANSACTIONS_TAB}
-        component={MyTransactionsTab}
-        options={{headerShown: false}}
-      />
+
+      {type === UserTypes.Agent && (
+        <>
+          <Tab.Screen
+            name={SCREENS.POST_PROPERTY}
+            component={PostProperty}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Tab.Screen
+            name={SCREENS.MY_TRANSACTIONS_TAB}
+            component={MyTransactionsTab}
+            options={{headerShown: false}}
+          />
+        </>
+      )}
+
+      {type === UserTypes.Member && (
+        <Tab.Screen
+          name={SCREENS.MY_AGENT}
+          component={MyAgent}
+          options={{headerShown: false}}
+        />
+      )}
+
       <Tab.Screen
         name={SCREENS.PROFILE}
         component={Profile}
@@ -193,6 +221,7 @@ const MainStackNavigator = () => {
         name={SCREENS.AD_POST_SUCCESS}
         component={AdPostedSuccess}
       />
+      <Stack.Screen name={SCREENS.DOCUMENTS} component={Documents} />
     </Stack.Navigator>
   );
 };
@@ -223,6 +252,7 @@ const getDrawerOptions = (
   },
 });
 function MainNavigator() {
+  const {type} = useAppSelector(state => state.auth);
   return (
     <Drawer.Navigator
       screenOptions={({route}) => getDrawerOptions(route)}
@@ -233,15 +263,28 @@ function MainNavigator() {
         options={{drawerItemStyle: {display: 'none'}}}
       />
 
-      <Drawer.Screen
-        name={SCREENS.MY_TRANSACTIONS}
-        component={MyTransactions}
-      />
+      {type === UserTypes.Agent && (
+        <>
+          <Drawer.Screen
+            name={SCREENS.MY_TRANSACTIONS}
+            component={MyTransactionsTab}
+            initialParams={{
+              goBack: true,
+            }}
+          />
+          <Drawer.Screen name={SCREENS.MY_CLIENTS} component={MyClients} />
+          <Drawer.Screen
+            name={SCREENS.MY_PROPERTIES}
+            component={MyProperties}
+          />
+        </>
+      )}
 
-      <Drawer.Screen name={SCREENS.MY_CLIENTS} component={MyClients} />
       <Drawer.Screen name={SCREENS.MY_DOCUMENTS} component={MyDocuments} />
-      <Drawer.Screen name={SCREENS.MY_PROPERTIES} component={MyProperties} />
-      <Drawer.Screen name={SCREENS.ADS_CENTER} component={AdsCenter} />
+
+      {type === UserTypes.Agent && (
+        <Drawer.Screen name={SCREENS.ADS_CENTER} component={AdsCenter} />
+      )}
 
       <Drawer.Screen
         name={SCREENS.PRIVACY}

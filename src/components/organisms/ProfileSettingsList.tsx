@@ -6,9 +6,12 @@ import useTheme from '../../hooks/useTheme';
 import {useNavigation} from '@react-navigation/native';
 import {MainStackNavigation} from '../../navigation/types';
 import SCREENS from '../../constants/screens';
+import {useAppSelector} from '../../hooks/useAppSelector';
+import {UserTypes} from '../../constants/values';
 
 export default function ProfileSettingsList() {
   const navigation = useNavigation<MainStackNavigation>();
+  const {type} = useAppSelector(state => state.auth);
   const items: ISetting[] = [
     {
       title: 'Edit Profile',
@@ -59,6 +62,12 @@ export default function ProfileSettingsList() {
           style={{
             borderBottomWidth: idx === items.length - 1 ? 0 : 1,
             borderColor: theme.colors.gray,
+            display:
+              idx === 1
+                ? type === UserTypes.Member
+                  ? 'none'
+                  : 'flex'
+                : 'flex',
           }}
           onPress={item.onPress}
         />

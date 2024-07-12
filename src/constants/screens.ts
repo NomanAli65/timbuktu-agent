@@ -22,6 +22,7 @@ const SCREENS = {
   LISTINGS: 'Listings',
   POST_PROPERTY: 'PostProperty',
   MY_TRANSACTIONS_TAB: 'MyTransactionsTab',
+  MY_AGENT: 'MyAgent',
   PROFILE: 'Profile',
 
   // MAIN STACK
@@ -41,6 +42,7 @@ const SCREENS = {
   CREATE_AD: 'CreateAd',
   AD_PREVIEW: 'AdPreview',
   AD_POST_SUCCESS: 'AdPostSuccess',
+  DOCUMENTS: 'Documents',
 } as const;
 
 export default SCREENS;

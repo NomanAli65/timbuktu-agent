@@ -11,7 +11,11 @@ export default function AdPostedSuccess() {
   const theme = useTheme();
 
   const navigation = useNavigation<DrawerNavigation>();
-  const onPress = () => navigation.navigate(SCREENS.ADS_CENTER);
+  const onPress = () =>
+    navigation.reset({
+      index: 0,
+      routes: [{name: SCREENS.ADS_CENTER}],
+    });
   return (
     <ScreenContainer>
       <View

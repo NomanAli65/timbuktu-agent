@@ -15,6 +15,7 @@ interface IProps {
 
 export default function Header({
   goBack = true,
+
   title,
   transparent = false,
   options = [],

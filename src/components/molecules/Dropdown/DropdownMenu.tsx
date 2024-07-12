@@ -1,38 +1,56 @@
 import React from 'react';
-import {Text, View} from '../../atoms';
+import {Icon, Text, View} from '../../atoms';
 import useTheme from '../../../hooks/useTheme';
 import {TouchableOpacity} from 'react-native';
+import Modal from 'react-native-modal';
+import {moderateScale} from '../../../helpers/metrics';
 
 interface IProps {
   items: string[];
   handleSelect: (option: string) => any;
+  open: boolean;
+  close: () => void;
 }
 
-export default function DropdownMenu({items, handleSelect}: IProps) {
+export default function DropdownMenu({
+  items,
+  handleSelect,
+  open,
+  close,
+}: IProps) {
   const theme = useTheme();
   return (
-    <View
-      style={{
-        borderLeftWidth: 1,
-        borderRightWidth: 1,
-        borderBottomWidth: 1,
-        borderTopWidth: 1,
-        borderColor: theme.colors.gray4,
-        backgroundColor: theme.colors.white,
-        position: 'absolute',
-        top: 40,
-        width: '100%',
-        borderBottomLeftRadius: 10,
-        zIndex: 999,
-        borderBottomRightRadius: 10,
+    <Modal
+      isVisible={open}
+      onBackdropPress={() => {
+        close();
       }}>
-      {items.map(item => (
-        <TouchableOpacity onPress={() => handleSelect(item)} key={item}>
-          <Text style={{padding: theme.spacing.md}} color="gray4" size="sm">
-            {item}
-          </Text>
-        </TouchableOpacity>
-      ))}
-    </View>
+      <View justifyContent="center" alignItems="center">
+        <View
+          backgroundColor="white"
+          style={{
+            width: '90%',
+          }}
+          rounded
+          p="md">
+          {items.map((option, idx) => (
+            <TouchableOpacity
+              onPress={() => handleSelect(option)}
+              key={option}
+              style={{
+                padding: theme.spacing.md,
+                borderBottomWidth: items.length - 1 === idx ? 0 : 1,
+                borderColor: theme.colors.gray7,
+              }}>
+              <View flexDirection="row" alignItems="center">
+                <Text color="gray4" size="sm" variant="semibold">
+                  {option}
+                </Text>
+              </View>
+            </TouchableOpacity>
+          ))}
+        </View>
+      </View>
+    </Modal>
   );
 }

@@ -16,6 +16,8 @@ export default function SignupForm() {
       placeholder: 'Member / Agent',
       rightIconName: 'keyboard-arrow-down',
       vector: 'MaterialIcons',
+      isDropdown: true,
+      dropdownOptions: ['Member', 'Agent'],
     },
     {
       name: 'name',

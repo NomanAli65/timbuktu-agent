@@ -8,7 +8,7 @@ import MessageInputContainer from './MessageInputContainer';
 import NotificationsList from './NotificationsList';
 import TabbedMenu from './TabbedMenu';
 import PropertyListing from './PropertyListing';
-import ReferralAgentsList from './ReferralAgentsList';
+import AgentsList from './AgentsList';
 import MyLeadsList from './MyLeadsList';
 import ChangePasswordProfileForm from './ChangePasswordProfileForm';
 import ProfileSettingsList from './ProfileSettingsList';
@@ -29,7 +29,7 @@ export {
   TimbuktuPageSavedList,
   ChangePasswordProfileForm,
   ProfileSettingsList,
-  ReferralAgentsList,
+  AgentsList,
   MyLeadsList,
   AddClientForm,
   PropertyListing,

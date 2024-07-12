@@ -9,6 +9,7 @@ const IMAGES = {
   House2: require('../assets/images/house-2.jpg'),
   House3: require('../assets/images/house-3.jpg'),
   House4: require('../assets/images/house-4.jpg'),
+  Statement: require('../assets/images/statement.webp'),
 };
 
 export default IMAGES;

@@ -5,17 +5,23 @@ import {moderateScale} from '../../helpers/metrics';
 import useTheme from '../../hooks/useTheme';
 import {useState} from 'react';
 import Apptheme from '../../styles/theme/theme';
+import {DropdownMenu} from './Dropdown';
 
 interface IProps extends TextInputProps {
   label: string;
+  name: string;
   vector?: IconVector;
   leftIconName?: string;
   rightIconName?: string;
   showLabel?: boolean;
   labelColor?: keyof typeof Apptheme.colors;
+  handleChange: (name: string, value: string | boolean) => any;
+  isVisible?: boolean;
+  close?: () => any;
+  options?: string[];
 }
 
-export default function LabeledIconInput({
+export default function LabledDropdownInput({
   label,
   vector,
   leftIconName,
@@ -23,8 +29,12 @@ export default function LabeledIconInput({
   showLabel = true,
   multiline,
   labelColor = 'white',
+  handleChange,
+  isVisible,
+  close,
+  options = [],
   style,
-
+  name,
   ...rest
 }: IProps) {
   const theme = useTheme();
@@ -32,6 +42,7 @@ export default function LabeledIconInput({
 
   const onFocus = () => setIsFocused(true);
   const onBlur = () => setIsFocused(false);
+
   return (
     <View style={{width: '100%'}} gap={6}>
       {showLabel && (
@@ -86,6 +97,15 @@ export default function LabeledIconInput({
           )}
         </View>
       </View>
+
+      <DropdownMenu
+        items={options}
+        handleSelect={option => {
+          handleChange(name, option);
+        }}
+        open={isVisible as boolean}
+        close={close as () => any}
+      />
     </View>
   );
 }

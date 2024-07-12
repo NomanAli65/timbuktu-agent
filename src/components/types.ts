@@ -28,6 +28,9 @@ export type Field = {
   leftIconName?: string;
   rightIconName?: string;
   vector?: IconVector;
+  isDropdown?: boolean;
+  dropdownOptions?: string[];
+  multiline?: boolean;
 };
 
 export type TFormTabHeader = {
@@ -102,7 +105,7 @@ export interface IPropertyDetails {
   sqft: number;
 }
 
-export interface IReferralAgent {
+export interface IAgentDetails {
   id: number;
   address: string;
   rating: number;

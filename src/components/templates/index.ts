@@ -6,7 +6,7 @@ import MessagingList from './MessagingLists';
 import MessagesListTemp from './MessagesList';
 import PropertyListingTemplate from './PropertyListingTemplate';
 import TabbedListingMenuTemplate from './TabbedListingMenu';
-import ReferralAgentsListTemplate from './ReferralAgentsListTemplate';
+import AgentsListTemplate from './AgentsListTemplate';
 import MyLeadsListTemplate from './MyLeadsListTemplate';
 import MyReferralsListTemplate from './MyReferralsListTemplate';
 import ChangePasswordProfileTemplate from './ChangePasswordProfileTemplate';
@@ -28,7 +28,7 @@ export {
   MyReferralsListTemplate,
   MyLeadsListTemplate,
   AddClientTemplate,
-  ReferralAgentsListTemplate,
+  AgentsListTemplate,
   TabbedListingMenuTemplate,
   EditProfileTemplate,
   PropertyListingTemplate,

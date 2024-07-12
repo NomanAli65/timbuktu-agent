@@ -1,14 +1,10 @@
 import React from 'react';
 import {Text, View} from '../atoms';
 import {Switch} from 'react-native';
-import {
-  NotificationCard,
-  PropertyListingCard,
-  ReferralAgentCard,
-} from '../molecules';
+import {NotificationCard, PropertyListingCard, AgentCard} from '../molecules';
 import {useAppSelector} from '../../hooks/useAppSelector';
 import IMAGES from '../../constants/images';
-import {IReferralAgent, Notification} from '../types';
+import {IAgentDetails, Notification} from '../types';
 
 export default function TimbuktuPageListing() {
   const {properties} = useAppSelector(state => state.listings);
@@ -36,7 +32,7 @@ export default function TimbuktuPageListing() {
     },
   ];
 
-  const agents: IReferralAgent[] = [
+  const agents: IAgentDetails[] = [
     {
       id: 210321,
       address: 'Texas, USA',
@@ -82,7 +78,7 @@ export default function TimbuktuPageListing() {
         <Text variant="bold">Agents</Text>
 
         {agents.map(details => (
-          <ReferralAgentCard details={details} key={details.id} />
+          <AgentCard details={details} key={details.id} />
         ))}
       </View>
     </>

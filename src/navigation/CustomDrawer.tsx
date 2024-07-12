@@ -8,12 +8,15 @@ import {Avatar, Text, View} from '../components/atoms';
 import useTheme from '../hooks/useTheme';
 import SCREENS from '../constants/screens';
 import {RatingBox} from '../components/molecules';
+import {useAppDispatch} from '../hooks/useAppDispatch';
+import {logout} from '../redux/slices/auth/authSlice';
 
 export default function CustomDrawer({
   navigation,
   ...rest
 }: DrawerContentComponentProps) {
   const theme = useTheme();
+  const dispatch = useAppDispatch();
   return (
     <DrawerContentScrollView {...rest}>
       <View justifyContent="center" alignItems="center" mb="md">
@@ -37,7 +40,7 @@ export default function CustomDrawer({
         />
         <DrawerItem
           label="Log out"
-          onPress={() => {}}
+          onPress={() => dispatch(logout())}
           style={{paddingHorizontal: theme.spacing.md}}
         />
       </View>

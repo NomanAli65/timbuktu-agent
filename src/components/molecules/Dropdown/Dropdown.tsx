@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import DropdownInput from './DropdownInput';
 import {View} from '../../atoms';
-import DropdownMenu from './DropdownMenu';
 import {DimensionValue} from 'react-native';
+import DropdownMenu from './DropdownMenu';
 
 interface IProps {
   label: string;
@@ -41,7 +41,12 @@ export default function Dropdown({
         toggleDropdown={toggleDropdown}
       />
       {open && (
-        <DropdownMenu items={options} handleSelect={handleSelectOption} />
+        <DropdownMenu
+          items={options}
+          handleSelect={handleSelectOption}
+          open={open}
+          close={toggleDropdown}
+        />
       )}
     </View>
   );

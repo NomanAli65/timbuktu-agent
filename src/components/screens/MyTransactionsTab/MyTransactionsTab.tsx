@@ -9,10 +9,12 @@ import {
 import {IMyReferral, ITabMenuItem} from '../../types';
 import {useAppSelector} from '../../../hooks/useAppSelector';
 import IMAGES from '../../../constants/images';
+import {useRoute} from '@react-navigation/native';
 
 export default function MyTransactionsTab() {
   const [activeId, setActiveId] = useState(2);
   const [menu2ActiveId, setMenu2ActiveId] = useState(1);
+  const {params} = useRoute();
   const {myLeads} = useAppSelector(state => state.myLeads);
   const items: ITabMenuItem[] = [
     {
@@ -78,7 +80,10 @@ export default function MyTransactionsTab() {
   return (
     <ScreenContainer backgroundColor="white">
       <SafeAreaContainer>
-        <Header title="My Transactions" goBack={false} />
+        <Header
+          title="My Transactions"
+          goBack={params ? (params.goBack ? true : false) : false}
+        />
         <TabbedListingMenuTemplate
           items={items}
           activeId={activeId}

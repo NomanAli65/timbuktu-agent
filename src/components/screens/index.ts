@@ -26,11 +26,13 @@ import AdsCenter from './drawer/AdsCenter';
 import PrivacyPolicy from './drawer/PrivacyPolicy';
 import TermsConditions from './drawer/TermsCondition';
 import ClientDetails from './ClientDetails';
-import AddClient from './AddClient/AddClient';
+import AddClient from './AddClient';
 import AddCard from './AddCard';
 import CreateAd from './CreateAd';
 import AdPreview from './AdPreview';
 import AdPostedSuccess from './AdPostSuccess';
+import Documents from './Documents';
+import MyAgent from './MyAgent';
 
 export {
   // AUTH
@@ -45,6 +47,7 @@ export {
   Listings,
   PostProperty,
   MyTransactionsTab,
+  MyAgent,
   Profile,
 
   // DRAWER
@@ -71,6 +74,7 @@ export {
   MyTimbuktu,
   EditProfile,
   ChangePasswordProfile,
+  Documents,
   AddClient,
   AdPostedSuccess,
 };

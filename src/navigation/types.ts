@@ -24,6 +24,7 @@ export type MainTabsParamsList = {
   Listings: undefined;
   PostProperty: undefined;
   MyTransactionsTab: undefined;
+  MyAgent: undefined;
   Profile: undefined;
 };
 export type TabScreensProp = BottomTabScreenProps<MainTabsParamsList>;
@@ -50,6 +51,7 @@ export type MainStackParamsList = {
   CreateAd: undefined;
   AdPreview: undefined;
   AdPostSuccess: undefined;
+  Documents: undefined;
 };
 
 export type MainStackScreensProp = StackScreenProps<MainStackParamsList>;
@@ -58,7 +60,9 @@ export type MainStackNavigation = StackNavigationProp<MainStackParamsList>;
 // DRAWER
 export type DrawerParmasList = {
   MainStack: undefined;
-  MyTransactions: undefined;
+  MyTransactions: {
+    goBack: boolean;
+  };
   MyProperties: undefined;
   MyClients: undefined;
   MyDocuments: undefined;
