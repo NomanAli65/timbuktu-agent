@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Button, Text, View} from '../atoms';
 import UploadImagePlaceholder from '../molecules/UploadImagePlaceholder';
-import {CustomRadioInput, Dropdown, LabeledIconInput} from '../molecules';
+import {CustomRadioInput, CustomSlider, LabeledIconInput} from '../molecules';
 import {CheckboxGroup} from '../molecules';
 import {useNavigation} from '@react-navigation/native';
 import {MainStackNavigation} from '../../navigation/types';
@@ -49,6 +49,13 @@ export default function PostPropertyForm() {
           placeholder="Enter location"
           labelColor="black"
         />
+
+        <View alignItems="center">
+          <Text style={{width: '100%'}} size="sm" variant="semibold">
+            Rating
+          </Text>
+          <CustomSlider values={[0, 5]} min={0} max={5} />
+        </View>
         <LabeledIconInput
           label="Zip Code"
           placeholder="Enter Zip code"

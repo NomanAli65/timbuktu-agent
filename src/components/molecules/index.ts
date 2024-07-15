@@ -25,6 +25,7 @@ import CheckboxGroup from './CheckboxGroup';
 import MyClientCard from './MyClientsCard';
 import LabeledDropdownInput from './LabeledDropdownInput';
 import MyClientsList from './MyClientsList';
+import {CustomSlider} from './CustomSlider';
 
 import {
   PostCardActions,
@@ -52,6 +53,7 @@ export {
   DropdownMenu,
   MessageInput,
   MessageContainer,
+  CustomSlider,
   PostCardComment,
   MyClientCard,
   ShadowIconButtonContainer,

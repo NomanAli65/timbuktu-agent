@@ -3,6 +3,7 @@ import authSlice from './slices/auth/authSlice';
 import listingSlice from './slices/listings/listingSlice';
 import referralAgentsSlice from './slices/referralAgents/referralAgentsSlice';
 import myLeadsSlice from './slices/myLeads/myLeadsSlice';
+import searchFilterSlice from './slices/searchFilter/searchFilterSlice';
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     listings: listingSlice,
     referralAgents: referralAgentsSlice,
     myLeads: myLeadsSlice,
+    searchFilters: searchFilterSlice,
   },
 });
 

@@ -22,6 +22,7 @@ import {useNavigation} from '@react-navigation/native';
 import {TabStackNavigation} from '../../../navigation/types';
 import SCREENS from '../../../constants/screens';
 import {UserTypes} from '../../../constants/values';
+import {changeFilter} from '../../../redux/slices/searchFilter/searchFilterSlice';
 
 export default function Listings() {
   const [activeId, setActiveId] = useState(2);
@@ -36,12 +37,18 @@ export default function Listings() {
     {
       id: 1,
       label: 'Referral Agents',
-      onPress: () => dispatch(getAgentsAsync()),
+      onPress: () => {
+        dispatch(changeFilter('agent'));
+        dispatch(getAgentsAsync());
+      },
     },
     {
       id: 2,
       label: 'Exclusive Listings',
-      onPress: () => dispatch(getProperties()),
+      onPress: () => {
+        dispatch(changeFilter('property'));
+        dispatch(getProperties());
+      },
     },
   ];
 

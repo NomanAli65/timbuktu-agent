@@ -64,8 +64,11 @@ export interface IFilterOption {
 
 export interface IFilter {
   title: string;
-  options: IFilterOption[];
-  type?: 'slider' | 'default';
+  options?: IFilterOption[];
+  type?: 'slider' | 'default' | 'input';
+  values?: number[];
+  min?: number;
+  max?: number;
 }
 
 export type Message = {

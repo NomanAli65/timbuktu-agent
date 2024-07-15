@@ -1,7 +1,10 @@
 import IMAGES from '../../../constants/images';
+import {useAppDispatch} from '../../../hooks/useAppDispatch';
 import {BottomTabBarPadding, ScreenContainer} from '../../atoms';
 import PostsListsTemplate from '../../templates/PostsList';
 import {TPost} from '../../types';
+import {changeFilter} from '../../../redux/slices/searchFilter/searchFilterSlice';
+import {useFocusEffect} from '@react-navigation/native';
 
 const posts: TPost[] = [
   {
@@ -45,6 +48,11 @@ const posts: TPost[] = [
 ];
 
 export default function Home() {
+  const dispatch = useAppDispatch();
+
+  useFocusEffect(() => {
+    dispatch(changeFilter('property'));
+  });
   return (
     <ScreenContainer backgroundColor="white">
       <PostsListsTemplate posts={posts} />

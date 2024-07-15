@@ -10,9 +10,10 @@ import {IFilter} from '../../types';
 import Filters from '../../templates/Filters';
 import {moderateScale} from '../../../helpers/metrics';
 import {TouchableOpacity} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
+import {useAppSelector} from '../../../hooks/useAppSelector';
 
-const filters: IFilter[] = [
+const listingFilters: IFilter[] = [
   {
     title: 'Property Type',
     options: [
@@ -88,8 +89,45 @@ const filters: IFilter[] = [
   },
 ];
 
+const agentsFilter: IFilter[] = [
+  {
+    title: 'Rating',
+    values: [0, 5],
+    min: 0,
+    max: 5,
+    type: 'slider',
+  },
+  {
+    title: 'Years in service',
+    values: [0, 100000],
+    min: 0,
+    max: 100000,
+    type: 'slider',
+  },
+  {
+    title: 'Annual Sales Volume',
+    values: [0, 100000],
+    min: 0,
+    max: 100000,
+    type: 'slider',
+  },
+
+  {
+    title: 'Location',
+    type: 'input',
+  },
+  {
+    title: 'Primary Service areas',
+    type: 'input',
+  },
+];
+
 export default function SearchFilters() {
   const navigation = useNavigation();
+  const {filter} = useAppSelector(state => state.searchFilters);
+
+  console.log({filter});
+
   return (
     <ScreenContainer>
       <SafeAreaContainer>
@@ -97,20 +135,21 @@ export default function SearchFilters() {
           flex={1}
           backgroundColor="white"
           rounded
-          p="md"
           style={{position: 'relative'}}>
-          <View p="xs" style={{position: 'relative'}}>
+          <View p="md" style={{position: 'relative'}}>
             <Text variant="semibold" textAlign="center">
               Search & Filters
             </Text>
             <TouchableOpacity
               onPress={() => navigation.goBack()}
-              style={{position: 'absolute', right: 10, zIndex: 1}}>
+              style={{position: 'absolute', right: 10, top: 10, zIndex: 10}}>
               <Icon name="close" size={moderateScale(26)} />
             </TouchableOpacity>
           </View>
 
-          <Filters filters={filters} />
+          <Filters
+            filters={filter === 'agent' ? agentsFilter : listingFilters}
+          />
         </View>
       </SafeAreaContainer>
     </ScreenContainer>
