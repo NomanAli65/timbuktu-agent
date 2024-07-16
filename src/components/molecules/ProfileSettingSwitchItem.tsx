@@ -33,7 +33,10 @@ export default function ProfileSettingSwitchItem({
           {title}
         </Text>
       </View>
-      <Switch {...rest} />
+      <Switch {...rest} thumbColor={theme.colors.gray3} trackColor={{
+        false: theme.colors.gray5,
+        true: theme.colors.success
+      }} />
     </View>
   );
 }

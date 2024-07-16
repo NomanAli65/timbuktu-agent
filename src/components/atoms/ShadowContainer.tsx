@@ -13,7 +13,7 @@ export default function ShadowContainer({children, style, ...rest}: IView) {
           shadowOffset: {width: 0, height: 1},
           shadowOpacity: 0.5,
           shadowRadius: 5,
-          elevation: 1,
+          elevation: 10,
         },
         style,
       ]}

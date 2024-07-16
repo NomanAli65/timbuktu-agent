@@ -12,6 +12,7 @@ import {moderateScale} from '../../../helpers/metrics';
 import {TouchableOpacity} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {useAppSelector} from '../../../hooks/useAppSelector';
+import useTheme from '../../../hooks/useTheme';
 
 const listingFilters: IFilter[] = [
   {
@@ -125,8 +126,9 @@ const agentsFilter: IFilter[] = [
 export default function SearchFilters() {
   const navigation = useNavigation();
   const {filter} = useAppSelector(state => state.searchFilters);
+  const theme = useTheme()
 
-  console.log({filter});
+  
 
   return (
     <ScreenContainer>
@@ -143,7 +145,7 @@ export default function SearchFilters() {
             <TouchableOpacity
               onPress={() => navigation.goBack()}
               style={{position: 'absolute', right: 10, top: 10, zIndex: 10}}>
-              <Icon name="close" size={moderateScale(26)} />
+              <Icon name="close" size={moderateScale(26)} color={theme.colors.gray4} />
             </TouchableOpacity>
           </View>
 

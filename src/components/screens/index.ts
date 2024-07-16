@@ -5,7 +5,7 @@ import ForgotPassword from './auth/ForgotPassword';
 import ChangePassword from './auth/ChangePassword';
 
 import {Home, SearchFilters} from './home';
-import Listings from './Listings';
+import Listings from './listings';
 import MyTransactionsTab from './MyTransactionsTab';
 import Profile from './Profile';
 import PostProperty from './PostProperty';

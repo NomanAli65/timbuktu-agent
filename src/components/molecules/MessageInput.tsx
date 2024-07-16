@@ -7,6 +7,7 @@ import useKeyboard from '../../hooks/useKeyboard';
 export default function MessageInput() {
   const theme = useTheme();
   const {isOpen} = useKeyboard();
+  
   return (
     <TextInput
       placeholder="Message here"
@@ -16,6 +17,7 @@ export default function MessageInput() {
         backgroundColor: theme.colors.gray7,
         padding: theme.spacing.lg,
         fontFamily: FontFamily.medium,
+        color: theme.colors.black
       }}
     />
   );

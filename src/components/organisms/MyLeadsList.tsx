@@ -3,6 +3,7 @@ import {FlatList} from 'react-native';
 import {IMyLead} from '../types';
 import {MyLeadsCard} from '../molecules';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import { BottomTabBarHeight } from '../../constants/values';
 
 interface IProps {
   items: IMyLead[];
@@ -14,7 +15,7 @@ export default function MyLeadsList({items}: IProps) {
       data={items}
       renderItem={({item}) => <MyLeadsCard details={item} />}
       contentContainerStyle={{
-        paddingBottom: insets.bottom,
+        paddingBottom: insets.bottom + BottomTabBarHeight,
         flexGrow: 1,
       }}
     />

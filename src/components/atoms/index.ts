@@ -10,9 +10,11 @@ import FadeInContainer from './FadeInContainer';
 import ShadowContainer from './ShadowContainer';
 import Avatar from './Avatar';
 import BottomTabBarPadding from './BottomTabBarPadding';
+import KeyboardAvoidingContainer from './KeyboardAvoidingContainer';
 
 export {
   Text,
+  KeyboardAvoidingContainer,
   Avatar,
   BottomTabBarPadding,
   ShadowContainer,

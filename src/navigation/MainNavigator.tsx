@@ -55,6 +55,8 @@ import {moderateScale} from '../helpers/metrics';
 import {RouteProp} from '@react-navigation/native';
 import {BottomTabBarHeight, UserTypes} from '../constants/values';
 import {useAppSelector} from '../hooks/useAppSelector';
+import { Platform } from 'react-native';
+import useKeyboard from '../hooks/useKeyboard';
 
 const Stack = createStackNavigator<MainStackParamsList>();
 const Tab = createBottomTabNavigator<MainTabsParamsList>();
@@ -62,20 +64,22 @@ const Drawer = createDrawerNavigator<DrawerParmasList>();
 
 const getTabBarOptions = (
   route: RouteProp<MainTabsParamsList, keyof MainTabsParamsList>,
+  isOpen: boolean
 ): BottomTabNavigationOptions => ({
   tabBarStyle: {
     borderTopWidth: 0,
-    shadowColor: theme.colors.shadow,
+    shadowColor: Platform.OS === 'ios' ? theme.colors.shadow : theme.colors.black,
     shadowOffset: {width: 0, height: -3},
     shadowOpacity: 1,
     shadowRadius: 6,
-    elevation: 1,
+    elevation: 40,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     height: BottomTabBarHeight,
     position: 'absolute',
     bottom: 0,
     backgroundColor: 'white',
+    display: isOpen ? 'none' : 'flex'
   },
   tabBarShowLabel: false,
   tabBarIcon(props) {
@@ -137,8 +141,9 @@ const getTabBarOptions = (
 
 function TabNavigator() {
   const {type} = useAppSelector(state => state.auth);
+  const {isOpen} = useKeyboard();
   return (
-    <Tab.Navigator screenOptions={({route}) => getTabBarOptions(route)}>
+    <Tab.Navigator screenOptions={({route}) => getTabBarOptions(route, isOpen)}>
       <Tab.Screen name={SCREENS.HOME} component={Home} />
       <Tab.Screen
         name={SCREENS.LISTINGS}
@@ -231,6 +236,9 @@ const getDrawerOptions = (
 ): DrawerNavigationOptions => ({
   headerShown: false,
   drawerActiveBackgroundColor: theme.colors.primary,
+  drawerStyle: {
+    paddingVertical: 12 
+  },
   drawerLabel(props) {
     let result = route.name.replace(/([a-z])([A-Z])/g, '$1 $2');
     return (
