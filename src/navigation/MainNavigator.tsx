@@ -33,6 +33,9 @@ import {
   AdPostedSuccess,
   Documents,
   MyAgent,
+  PotentialAgents,
+  PotentialAgentProfile,
+  PotentialAgentsFilter,
 } from '../components/screens';
 import {
   DrawerParmasList,
@@ -55,7 +58,7 @@ import {moderateScale} from '../helpers/metrics';
 import {RouteProp} from '@react-navigation/native';
 import {BottomTabBarHeight, UserTypes} from '../constants/values';
 import {useAppSelector} from '../hooks/useAppSelector';
-import { Platform } from 'react-native';
+import {Platform} from 'react-native';
 import useKeyboard from '../hooks/useKeyboard';
 
 const Stack = createStackNavigator<MainStackParamsList>();
@@ -64,11 +67,12 @@ const Drawer = createDrawerNavigator<DrawerParmasList>();
 
 const getTabBarOptions = (
   route: RouteProp<MainTabsParamsList, keyof MainTabsParamsList>,
-  isOpen: boolean
+  isOpen: boolean,
 ): BottomTabNavigationOptions => ({
   tabBarStyle: {
     borderTopWidth: 0,
-    shadowColor: Platform.OS === 'ios' ? theme.colors.shadow : theme.colors.black,
+    shadowColor:
+      Platform.OS === 'ios' ? theme.colors.shadow : theme.colors.black,
     shadowOffset: {width: 0, height: -3},
     shadowOpacity: 1,
     shadowRadius: 6,
@@ -79,7 +83,7 @@ const getTabBarOptions = (
     position: 'absolute',
     bottom: 0,
     backgroundColor: 'white',
-    display: isOpen ? 'none' : 'flex'
+    display: isOpen ? 'none' : 'flex',
   },
   tabBarShowLabel: false,
   tabBarIcon(props) {
@@ -227,6 +231,14 @@ const MainStackNavigator = () => {
         component={AdPostedSuccess}
       />
       <Stack.Screen name={SCREENS.DOCUMENTS} component={Documents} />
+      <Stack.Screen
+        name={SCREENS.POTENTIAL_AGENT_PROFILE}
+        component={PotentialAgentProfile}
+      />
+      <Stack.Screen
+        name={SCREENS.POTENTIAL_AGENTS_FILTER}
+        component={PotentialAgentsFilter}
+      />
     </Stack.Navigator>
   );
 };
@@ -237,7 +249,7 @@ const getDrawerOptions = (
   headerShown: false,
   drawerActiveBackgroundColor: theme.colors.primary,
   drawerStyle: {
-    paddingVertical: 12 
+    paddingVertical: 12,
   },
   drawerLabel(props) {
     let result = route.name.replace(/([a-z])([A-Z])/g, '$1 $2');
@@ -289,6 +301,10 @@ function MainNavigator() {
       )}
 
       <Drawer.Screen name={SCREENS.MY_DOCUMENTS} component={MyDocuments} />
+
+      {type === UserTypes.Member && (
+        <Drawer.Screen name={SCREENS.MY_AGENTS} component={PotentialAgents} />
+      )}
 
       {type === UserTypes.Agent && (
         <Drawer.Screen name={SCREENS.ADS_CENTER} component={AdsCenter} />

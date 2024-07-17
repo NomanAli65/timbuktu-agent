@@ -1,19 +1,26 @@
 // CustomRadioInput.js
 
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  ViewStyle,
+} from 'react-native';
 import useTheme from '../../hooks/useTheme';
 
 interface IProps {
   label: string;
   selected: boolean;
   onSelect: () => any;
+  containerStyles?: ViewStyle;
 }
 
 const CustomRadioInput = ({label, selected, onSelect}: IProps) => {
   const theme = useTheme();
   return (
-    <TouchableOpacity style={styles.container} onPress={onSelect}>
+    <TouchableOpacity style={[styles.container]} onPress={onSelect}>
       <View
         style={[
           styles.radioButton,

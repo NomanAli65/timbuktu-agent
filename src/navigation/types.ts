@@ -52,6 +52,8 @@ export type MainStackParamsList = {
   AdPreview: undefined;
   AdPostSuccess: undefined;
   Documents: undefined;
+  PotentialAgentProfile: undefined;
+  PotentialAgentsFilter: undefined;
 };
 
 export type MainStackScreensProp = StackScreenProps<MainStackParamsList>;
@@ -69,6 +71,7 @@ export type DrawerParmasList = {
   AdsCenter: undefined;
   PrivacyPolicy: undefined;
   TermsConditions: undefined;
+  MyAgents: undefined;
 };
 
 export type DrawerNavigation = DrawerNavigationProp<DrawerParmasList>;

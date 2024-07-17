@@ -26,6 +26,7 @@ import MyClientCard from './MyClientsCard';
 import LabeledDropdownInput from './LabeledDropdownInput';
 import MyClientsList from './MyClientsList';
 import {CustomSlider} from './CustomSlider';
+import PotentialAgentCard from './PotentialAgentCard';
 
 import {
   PostCardActions,
@@ -62,6 +63,7 @@ export {
   LabelWithIcon,
   MessagesListItem,
   MyClientsList,
+  PotentialAgentCard,
   CustomRadioInput,
   UnderlinedLabeledInput,
   MessagesUnreadCount,

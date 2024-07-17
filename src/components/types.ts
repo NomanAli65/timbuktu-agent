@@ -121,6 +121,13 @@ export interface IMyLead {
   image: ImageSourcePropType | string;
 }
 
+export interface IPotentialAgent {
+  id: number;
+  type: 'buyer' | 'seller';
+  address: string;
+  image: ImageSourcePropType | string;
+}
+
 export interface IMyClient {
   id: number;
   address: string;

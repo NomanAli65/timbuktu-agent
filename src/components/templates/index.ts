@@ -17,6 +17,7 @@ import AddClientTemplate from './AddClientTemplate';
 import AddCardTemplate from './AddCardTemplate';
 import CreateAdTemplate from './CreateAdTemplate';
 import AdPreviewTemplate from './AdPreviewTemplate';
+import PotentialAgentsListTemplate from './PotentialAgentsListTemplate';
 
 export {
   LoginForm,
@@ -24,6 +25,7 @@ export {
   CreateAdTemplate,
   AddCardTemplate,
   PostPropertyFormTemplate,
+  PotentialAgentsListTemplate,
   MyTimbuktuTemplate,
   MyReferralsListTemplate,
   MyLeadsListTemplate,

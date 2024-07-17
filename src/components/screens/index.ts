@@ -32,7 +32,10 @@ import CreateAd from './CreateAd';
 import AdPreview from './AdPreview';
 import AdPostedSuccess from './AdPostSuccess';
 import Documents from './Documents';
+import PotentialAgents from './PotentialAgents';
 import MyAgent from './MyAgent';
+import PotentialAgentProfile from './PotentialAgentProfile';
+import PotentialAgentsFilter from './PotentialAgentsFilter';
 
 export {
   // AUTH
@@ -53,6 +56,7 @@ export {
   // DRAWER
   MyTransactions,
   MyProperties,
+  PotentialAgents,
   MyClients,
   MyDocuments,
   AdsCenter,
@@ -69,6 +73,7 @@ export {
   PropertyDetails,
   AdPreview,
   Notifications,
+  PotentialAgentsFilter,
   ReferralAgentDetails,
   ClientDetails,
   MyTimbuktu,
@@ -76,5 +81,6 @@ export {
   ChangePasswordProfile,
   Documents,
   AddClient,
+  PotentialAgentProfile,
   AdPostedSuccess,
 };

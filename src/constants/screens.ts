@@ -16,6 +16,7 @@ const SCREENS = {
   MY_DOCUMENTS: 'MyDocuments',
   PRIVACY: 'PrivacyPolicy',
   TERMS: 'TermsConditions',
+  MY_AGENTS: 'MyAgents',
 
   // MAIN TABS
   HOME: 'Home',
@@ -43,6 +44,8 @@ const SCREENS = {
   AD_PREVIEW: 'AdPreview',
   AD_POST_SUCCESS: 'AdPostSuccess',
   DOCUMENTS: 'Documents',
+  POTENTIAL_AGENT_PROFILE: 'PotentialAgentProfile',
+  POTENTIAL_AGENTS_FILTER: 'PotentialAgentsFilter',
 } as const;
 
 export default SCREENS;

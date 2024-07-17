@@ -956,6 +956,15 @@ PODS:
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
+  - react-native-video (6.4.2):
+    - glog
+    - RCT-Folly (= 2022.05.16.00)
+    - React-Core
+    - react-native-video/Video (= 6.4.2)
+  - react-native-video/Video (6.4.2):
+    - glog
+    - RCT-Folly (= 2022.05.16.00)
+    - React-Core
   - React-nativeconfig (0.73.8)
   - React-NativeModulesApple (0.73.8):
     - glog
@@ -1199,6 +1208,7 @@ DEPENDENCIES:
   - "react-native-blur (from `../node_modules/@react-native-community/blur`)"
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - "react-native-slider (from `../node_modules/@react-native-community/slider`)"
+  - react-native-video (from `../node_modules/react-native-video`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -1305,6 +1315,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-slider:
     :path: "../node_modules/@react-native-community/slider"
+  react-native-video:
+    :path: "../node_modules/react-native-video"
   React-nativeconfig:
     :path: "../node_modules/react-native/ReactCommon"
   React-NativeModulesApple:
@@ -1400,6 +1412,7 @@ SPEC CHECKSUMS:
   react-native-blur: 799045500f56146afc46245148080e7b7623cb75
   react-native-safe-area-context: b7daa1a8df36095a032dff095a1ea8963cb48371
   react-native-slider: 7a39874fc1fcdfee48e448fa72cce0a8f2c7c5d6
+  react-native-video: da6a37174e0cf74ba3decdbe671a0bf8e309538c
   React-nativeconfig: 2e44d0d2dd222b12a5183f4bcaa4a91881497acb
   React-NativeModulesApple: 8aa032fe6c92c1a3c63e4809d42816284a56a9b0
   React-perflogger: f9367428cf475f4606b5965c1d5a71781bb95299

@@ -18,6 +18,7 @@ import PostPropertyForm from './PostPropertyForm';
 import AddClientForm from './AddClientForm';
 import TimbuktuPageSavedList from './TimbuktuPageSavedList';
 import AddCardForm from './AddCardForm';
+import PotentialAgentsList from './PotentialAgentsList';
 import CreateAdForm from './CreateAdForm';
 
 export {
@@ -27,6 +28,7 @@ export {
   PostPropertyForm,
   TimbuktuPageListing,
   TimbuktuPageSavedList,
+  PotentialAgentsList,
   ChangePasswordProfileForm,
   ProfileSettingsList,
   AgentsList,
