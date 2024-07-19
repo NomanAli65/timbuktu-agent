@@ -3,13 +3,15 @@ import {BlurContainer, Button, Text, View} from '../atoms';
 import {ActiveLineText, LabeledIconInput} from '../molecules';
 import {AuthStackNavigationProp} from '../../navigation/types';
 import SCREENS from '../../constants/screens';
+import useKeyboard from '../../hooks/useKeyboard';
 
 export default function ChangePasswordAuthForm() {
   const navigation = useNavigation<AuthStackNavigationProp>();
+  const {isOpen} = useKeyboard();
   return (
     <BlurContainer>
       <View p="lg" flex={1}>
-        <View justifyContent="space-between" flex={0.8}>
+        <View justifyContent="space-between" flex={isOpen ? 1 : 0.8}>
           <ActiveLineText active size="lg">
             Forgot Password
           </ActiveLineText>
