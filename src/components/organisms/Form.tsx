@@ -2,7 +2,7 @@ import {Field} from '../types';
 import React, {useState} from 'react';
 import {LabeledDropdownInput, LabeledIconInput} from '../molecules';
 import {Button, Text, View} from '../atoms';
-import {ScrollView} from 'react-native';
+import {ScrollView, TouchableOpacity} from 'react-native';
 import {IView} from '../atoms/View';
 import {useNavigation} from '@react-navigation/native';
 import {AuthStackNavigationProp} from '../../navigation/types';
@@ -14,7 +14,7 @@ interface IProps extends IView {
   onSubmit: (state: any) => any;
   submitButtonLabel: string;
   labelColor?: keyof typeof Apptheme.colors;
-  formType?: 'login';
+  formType?: 'login' | 'signup';
   scrollEnabled?: boolean;
 }
 
@@ -61,20 +61,31 @@ const Form = ({
         <View gap={10}>
           {fields.map(field =>
             field.isDropdown ? (
-              <LabeledDropdownInput
-                key={field.name}
-                label={field.label}
-                name={field.name}
-                placeholder={field.placeholder}
-                value={formState[field.name]}
-                handleChange={(name, value) => handleChange(name, value)}
-                isVisible={formState[field.name + 'Open']}
-                close={() => handleChange(field.name + 'Open', false)}
-                onPressIn={() => handleChange(field.name + 'Open', true)}
-                editable={false}
-                labelColor={labelColor}
-                options={field.dropdownOptions}
-              />
+              <TouchableOpacity
+                onPressIn={() => {
+                  handleChange(field.name + 'Open', true);
+                }}
+                key={field.name}>
+                <LabeledDropdownInput
+                  key={field.name}
+                  label={field.label}
+                  name={field.name}
+                  placeholder={field.placeholder}
+                  value={formState[field.name]}
+                  onPressIn={() => {
+                    handleChange(field.name + 'Open', true);
+                  }}
+                  handleChange={(name, value) => handleChange(name, value)}
+                  isVisible={formState[field.name + 'Open']}
+                  close={() => handleChange(field.name + 'Open', false)}
+                  editable={false}
+                  labelColor={labelColor}
+                  options={field.dropdownOptions}
+                  vector={field.vector}
+                  leftIconName={field.leftIconName}
+                  rightIconName={field.rightIconName}
+                />
+              </TouchableOpacity>
             ) : (
               <LabeledIconInput
                 key={field.name}
@@ -100,6 +111,20 @@ const Form = ({
           </Text>
         )}
         <Button label={submitButtonLabel} onPress={handleSubmit} />
+
+        {formType === 'signup' && (
+          <View p="xs">
+            <Text color="white" size="sm" textAlign="center">
+              Already have an account?{' '}
+              <Text
+                size="sm"
+                color="primary"
+                onPress={() => navigation.navigate(SCREENS.LOGIN)}>
+                Sign in
+              </Text>
+            </Text>
+          </View>
+        )}
       </View>
     </ScrollView>
   );

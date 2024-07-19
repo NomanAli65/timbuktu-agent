@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Icon, ScreenContainer, Text, View} from '../../atoms';
+import {Button, ScreenContainer, Text, View} from '../../atoms';
 import {Header} from '../../organisms';
 import IMAGES from '../../../constants/images';
 import {ScrollView, useWindowDimensions} from 'react-native';
@@ -14,10 +14,12 @@ import useTheme from '../../../hooks/useTheme';
 import {IHomeFeature} from '../../types';
 import {MainStackScreensProp} from '../../../navigation/types';
 import SCREENS from '../../../constants/screens';
+import {useAppSelector} from '../../../hooks/useAppSelector';
 
 export default function PropertyDetails({navigation}: MainStackScreensProp) {
   const images = [IMAGES.House1, IMAGES.House2, IMAGES.House3];
   const {height} = useWindowDimensions();
+  const {savable} = useAppSelector(state => state.listings);
   const theme = useTheme();
   const insets = useSafeAreaInsets();
 
@@ -96,8 +98,6 @@ export default function PropertyDetails({navigation}: MainStackScreensProp) {
     },
   ];
 
-  const onPress = () => navigation.navigate(SCREENS.MESSAGES, {messages: []});
-
   return (
     <ScreenContainer backgroundColor="white">
       <ScrollView
@@ -167,7 +167,17 @@ export default function PropertyDetails({navigation}: MainStackScreensProp) {
             </Text>
           </View>
           <View>
-            <Text variant="bold">Main Features</Text>
+            <View
+              flexDirection="row"
+              alignItems="center"
+              justifyContent="space-between">
+              <Text variant="bold">Main Features</Text>
+              {savable && (
+                <Text variant="bold" color="primary" size="sm">
+                  Save
+                </Text>
+              )}
+            </View>
             <HomeDetailsFeaturesContainer
               items={interiorFeatures}
               title="Interior Features"
@@ -214,8 +224,6 @@ export default function PropertyDetails({navigation}: MainStackScreensProp) {
               dolores et ea rebum
             </Text>
           </View>
-
-          <Button label="Contact agent" onPress={onPress} />
         </View>
       </ScrollView>
     </ScreenContainer>

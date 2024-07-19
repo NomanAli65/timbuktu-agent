@@ -1,13 +1,19 @@
-import {SafeAreaContainer, ScreenContainer} from '../../atoms';
+import {
+  KeyboardAvoidingContainer,
+  SafeAreaContainer,
+  ScreenContainer,
+} from '../../atoms';
 
 import {AddCardTemplate} from '../../templates';
 
 export default function AddCard() {
   return (
-    <ScreenContainer backgroundColor="white">
-      <SafeAreaContainer>
-        <AddCardTemplate />
-      </SafeAreaContainer>
-    </ScreenContainer>
+    <KeyboardAvoidingContainer>
+      <ScreenContainer backgroundColor="white">
+        <SafeAreaContainer>
+          <AddCardTemplate />
+        </SafeAreaContainer>
+      </ScreenContainer>
+    </KeyboardAvoidingContainer>
   );
 }

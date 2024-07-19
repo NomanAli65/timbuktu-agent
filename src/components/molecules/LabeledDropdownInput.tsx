@@ -1,4 +1,4 @@
-import {TextInputProps} from 'react-native';
+import {Platform, TextInputProps} from 'react-native';
 import {Text, View, Icon, TextInput} from '../atoms';
 import {IconVector} from '../types';
 import {moderateScale} from '../../helpers/metrics';
@@ -54,7 +54,8 @@ export default function LabledDropdownInput({
         flexDirection="row"
         alignItems="center"
         justifyContent="space-between"
-        p="lg"
+        pv={Platform.OS === 'ios' ? 'lg' : 'xxs'}
+        ph={Platform.OS === 'ios' ? 'lg' : 'md'}
         style={{
           width: '100%',
           borderWidth: 1.5,

@@ -45,6 +45,7 @@ export default function ProfileSettingItem({
           name="keyboard-arrow-right"
           size={moderateScale(20)}
           vector="MaterialIcons"
+          color={theme.colors.black}
         />
       </View>
     </TouchableOpacity>

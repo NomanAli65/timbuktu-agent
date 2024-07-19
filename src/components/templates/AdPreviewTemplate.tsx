@@ -29,7 +29,7 @@ export default function AdPreviewTemplate() {
             item={{
               id: 1,
               time: '',
-              title: 'Ad 1',
+              title: 'My Ads 1',
               reached: 0,
               engaged: 0,
               image: IMAGES.House2,
@@ -77,8 +77,10 @@ export default function AdPreviewTemplate() {
           </View>
         </View>
 
-        <View gap={12}>
-          <Text variant="bold">Your payment info</Text>
+        <View gap={12} justifyContent="center" alignItems="center">
+          <Text variant="bold" textAlign="left" style={{width: '100%'}}>
+            Your payment info
+          </Text>
           <SVGS.CreditCard style={{width: '100%'}} />
         </View>
 

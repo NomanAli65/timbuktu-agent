@@ -23,6 +23,7 @@ export default function LoginForm() {
       placeholder: 'Enter your password',
       leftIconName: 'lock',
       vector: 'Feather',
+      rightIconName: 'eye',
     },
   ];
 
@@ -46,7 +47,7 @@ export default function LoginForm() {
             },
             {
               id: 2,
-              title: 'Register',
+              title: 'Sign Up',
               onPress: onRegister,
             },
           ]}

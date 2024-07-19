@@ -7,6 +7,9 @@ import IMAGES from '../../../constants/images';
 import {Dropdown, LabelWithIcon} from '../../molecules';
 import useTheme from '../../../hooks/useTheme';
 import {IHeaderOption} from '../../types';
+import {useNavigation} from '@react-navigation/native';
+import {DrawerNavigation} from '../../../navigation/types';
+import SCREENS from '../../../constants/screens';
 
 export default function ClientDetails() {
   const insets = useSafeAreaInsets();
@@ -35,7 +38,7 @@ export default function ClientDetails() {
             zIndex: 10,
             width: '100%',
           }}>
-          <Header title="" goBack transparent options={headerOptions} />
+          <Header title="" transparent options={headerOptions} />
         </View>
 
         <View

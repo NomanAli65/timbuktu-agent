@@ -34,7 +34,7 @@ export default function UnderlinedLabeledInput({
   const onFocus = () => setIsFocused(true);
   const onBlur = () => setIsFocused(false);
   return (
-    <View style={{width}} gap={6}>
+    <View style={{width}} gap={2}>
       <Text color={labelColor} size="xs" variant="medium">
         {label}
       </Text>

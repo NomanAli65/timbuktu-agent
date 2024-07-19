@@ -4,10 +4,20 @@ import {Image, ScrollView, useWindowDimensions} from 'react-native';
 import IMAGES from '../../constants/images';
 import {View} from '../atoms';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {IHeaderOption} from '../types';
 
 export default function EditProfileTemplate() {
   const {height} = useWindowDimensions();
   const insets = useSafeAreaInsets();
+
+  const headerOptions: IHeaderOption[] = [
+    {
+      id: 1,
+      icon: 'user-circle',
+      iconVector: 'FontAwesome6',
+      onPress() {},
+    },
+  ];
   return (
     <ScrollView
       contentContainerStyle={{
@@ -22,7 +32,7 @@ export default function EditProfileTemplate() {
           zIndex: 10,
           width: '100%',
         }}>
-        <Header title="" goBack transparent />
+        <Header title="" goBack transparent options={headerOptions} />
       </View>
       <Image
         source={IMAGES.Avatar2}

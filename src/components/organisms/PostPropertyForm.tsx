@@ -45,7 +45,7 @@ export default function PostPropertyForm() {
         />
 
         <LabeledIconInput
-          label="Location"
+          label="Location*"
           placeholder="Enter location"
           labelColor="black"
         />
@@ -67,20 +67,22 @@ export default function PostPropertyForm() {
         <Text variant="semibold">Main Features</Text>
 
         <LabeledIconInput
-          label="Number of Baths"
-          placeholder="Enter Number of Baths"
+          label="Number of Bath"
+          placeholder="Enter Number of Bath"
           labelColor="black"
+          keyboardType="numeric"
         />
         <LabeledIconInput
-          label="Number of beds"
-          placeholder="Enter Number of beds"
+          label="Number of Bed"
+          placeholder="Enter Number of Bed"
           labelColor="black"
+          keyboardType="numeric"
         />
 
         <View>
           <View flexDirection="row" alignItems="center" gap={12}>
             <Text color="black" size="sm" variant="semibold">
-              *Level
+              *Level:
             </Text>
             <CustomRadioInput label="Yes" selected onSelect={() => {}} />
             <CustomRadioInput label="No" selected={false} onSelect={() => {}} />
@@ -90,18 +92,19 @@ export default function PostPropertyForm() {
             showLabel={false}
             placeholder="Enter level"
             labelColor="black"
+            keyboardType="numeric"
           />
         </View>
         <View>
           <View flexDirection="row" alignItems="center" gap={12}>
             <Text color="black" size="sm" variant="semibold">
-              *Central Air
+              *Central Air:
             </Text>
             <CustomRadioInput label="Yes" selected onSelect={() => {}} />
             <CustomRadioInput label="No" selected={false} onSelect={() => {}} />
           </View>
           <LabeledIconInput
-            label="Central Air"
+            label=""
             showLabel={false}
             placeholder="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero."
             multiline
@@ -111,7 +114,7 @@ export default function PostPropertyForm() {
         <View>
           <View flexDirection="row" alignItems="center" gap={12}>
             <Text color="black" size="sm" variant="semibold">
-              *Central Heat
+              *Central Heat:
             </Text>
             <CustomRadioInput label="Yes" selected onSelect={() => {}} />
             <CustomRadioInput label="No" selected={false} onSelect={() => {}} />
@@ -126,13 +129,13 @@ export default function PostPropertyForm() {
         </View>
 
         <CheckboxGroup
-          title="Kitchen (check all that applies)"
+          title="Kitchen (check all that applies):"
           options={['Island', 'Stone Counters', 'Walk in pantry', 'Gas Stove']}
           selectedOptions={selectedKitchenItems}
           onSelect={val => setSelectedKitchenItems(val)}
         />
         <CheckboxGroup
-          title="Laundry (check all that applies)"
+          title="Laundry (check all that applies):"
           options={[
             'Gas',
             'Electric',
@@ -177,14 +180,14 @@ export default function PostPropertyForm() {
         />
 
         <CheckboxGroup
-          title="Type (check all that applies)"
+          title="Type (check all that applies):"
           options={['Garage', 'Carport', 'Driveway', 'Assinged', 'Street']}
           selectedOptions={selectedType}
           onSelect={val => setSelectedType(val)}
         />
 
         <CheckboxGroup
-          title="LOT type (check all that applies)"
+          title="LOT type (check all that applies):"
           options={[
             'Corner',
             'Key',
@@ -201,13 +204,13 @@ export default function PostPropertyForm() {
         <View>
           <View flexDirection="row" alignItems="center" gap={12}>
             <Text color="black" size="sm" variant="semibold">
-              *EASEMENT
+              *EASEMENT:
             </Text>
             <CustomRadioInput label="Yes" selected onSelect={() => {}} />
             <CustomRadioInput label="No" selected={false} onSelect={() => {}} />
           </View>
           <LabeledIconInput
-            label="Central Air"
+            label=""
             showLabel={false}
             placeholder="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero."
             multiline
@@ -221,7 +224,7 @@ export default function PostPropertyForm() {
             size="sm"
             variant="semibold"
             style={{marginRight: 10}}>
-            Pool:
+            *Pool:
           </Text>
           <View flexDirection="row" gap={10}>
             <CustomRadioInput label="Yes" selected onSelect={() => {}} />
@@ -244,13 +247,13 @@ export default function PostPropertyForm() {
         <View>
           <View flexDirection="row" alignItems="center" gap={12}>
             <Text color="black" size="sm" variant="semibold">
-              *ABU
+              *ABU:
             </Text>
             <CustomRadioInput label="Yes" selected onSelect={() => {}} />
             <CustomRadioInput label="No" selected={false} onSelect={() => {}} />
           </View>
           <LabeledIconInput
-            label="Central Air"
+            label=""
             showLabel={false}
             placeholder="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero."
             multiline
@@ -259,14 +262,14 @@ export default function PostPropertyForm() {
         </View>
 
         <LabeledIconInput
-          label="* Special Exterior Features(s)"
+          label="* Special Exterior Features(s):"
           placeholder="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero."
           multiline
           labelColor="black"
         />
 
         <CheckboxGroup
-          title="Sale type & condition"
+          title="Sale type & condition:"
           options={[
             'Standard',
             'FSBO',
@@ -289,7 +292,7 @@ export default function PostPropertyForm() {
             size="sm"
             variant="semibold"
             style={{marginRight: 10}}>
-            Third-party confirmation required:
+            *Third-party confirmation required:
           </Text>
           <View flexDirection="row" gap={10} mt="xs">
             <CustomRadioInput label="Yes" selected onSelect={() => {}} />
@@ -315,7 +318,7 @@ export default function PostPropertyForm() {
         </View>
 
         <LabeledIconInput
-          label="*Any Special terms on financing? (100 word limit)"
+          label="*Any Special terms on financing? (100 word limit):"
           placeholder="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero."
           multiline
           labelColor="black"

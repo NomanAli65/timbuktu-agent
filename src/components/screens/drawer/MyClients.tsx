@@ -47,10 +47,12 @@ export default function MyClients() {
     },
   ];
 
+  const onBack = () => navigation.navigate(SCREENS.HOME);
+
   return (
     <ScreenContainer backgroundColor="white">
       <SafeAreaContainer>
-        <Header title="My Clients" options={headerOptions} />
+        <Header title="My Clients" options={headerOptions} onBack={onBack} />
         <MyClientsList items={clients} />
       </SafeAreaContainer>
     </ScreenContainer>

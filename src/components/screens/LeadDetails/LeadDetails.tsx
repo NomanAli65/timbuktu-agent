@@ -6,12 +6,17 @@ import {Image, ScrollView, useWindowDimensions} from 'react-native';
 import IMAGES from '../../../constants/images';
 import {Dropdown, LabelWithIcon} from '../../molecules';
 import useTheme from '../../../hooks/useTheme';
+import {useNavigation} from '@react-navigation/native';
+import SCREENS from '../../../constants/screens';
 
 export default function LeadDetails() {
   const insets = useSafeAreaInsets();
   const {height} = useWindowDimensions();
   const theme = useTheme();
   const [purpose, setPurpose] = useState<string>('');
+  const navigation = useNavigation();
+
+  const onBack = () => navigation.navigate(SCREENS.MY_TRANSACTIONS_TAB);
   return (
     <ScreenContainer backgroundColor="white">
       <ScrollView
@@ -25,7 +30,7 @@ export default function LeadDetails() {
             zIndex: 10,
             width: '100%',
           }}>
-          <Header title="" goBack transparent />
+          <Header title="" goBack transparent onBack={onBack} />
         </View>
 
         <View

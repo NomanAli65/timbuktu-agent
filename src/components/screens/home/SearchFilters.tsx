@@ -52,21 +52,17 @@ const listingFilters: IFilter[] = [
 
   {
     title: 'Living Square feet',
-    options: [
-      {id: 1, label: '1'},
-      {id: 2, label: '2'},
-      {id: 3, label: '3'},
-    ],
+    values: [0, 100000],
+    min: 0,
+    max: 100000,
     type: 'slider',
   },
 
   {
     title: 'LOT Size',
-    options: [
-      {id: 1, label: '1'},
-      {id: 2, label: '2'},
-      {id: 3, label: '3'},
-    ],
+    values: [0, 100000],
+    min: 0,
+    max: 100000,
     type: 'slider',
   },
 
@@ -85,6 +81,16 @@ const listingFilters: IFilter[] = [
     options: [
       {id: 1, label: '$150'},
       {id: 2, label: 'N/A'},
+    ],
+    type: 'default',
+  },
+
+  {
+    title: 'ADU',
+    options: [
+      {id: 1, label: 'Yes'},
+      {id: 2, label: 'No'},
+      {id: 3, label: "Doesn't matter"},
     ],
     type: 'default',
   },
@@ -126,9 +132,7 @@ const agentsFilter: IFilter[] = [
 export default function SearchFilters() {
   const navigation = useNavigation();
   const {filter} = useAppSelector(state => state.searchFilters);
-  const theme = useTheme()
-
-  
+  const theme = useTheme();
 
   return (
     <ScreenContainer>
@@ -145,7 +149,11 @@ export default function SearchFilters() {
             <TouchableOpacity
               onPress={() => navigation.goBack()}
               style={{position: 'absolute', right: 10, top: 10, zIndex: 10}}>
-              <Icon name="close" size={moderateScale(26)} color={theme.colors.gray4} />
+              <Icon
+                name="close"
+                size={moderateScale(26)}
+                color={theme.colors.gray4}
+              />
             </TouchableOpacity>
           </View>
 

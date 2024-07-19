@@ -18,10 +18,19 @@ export default function ChangePasswordProfileForm() {
         secureTextEntry
       />
       <LabeledIconInput
-        label="New Passowrd"
+        label="New Password"
         vector="FontAwesome"
         secureTextEntry
-        placeholder="Enter Passowrd"
+        placeholder="Enter Password"
+        leftIconName="lock"
+        rightIconName="eye"
+        labelColor="black"
+      />
+      <LabeledIconInput
+        label="Confirm Password"
+        vector="FontAwesome"
+        secureTextEntry
+        placeholder="Enter Confirm Password"
         leftIconName="lock"
         rightIconName="eye"
         labelColor="black"

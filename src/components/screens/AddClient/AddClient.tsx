@@ -1,13 +1,19 @@
 import React from 'react';
-import {SafeAreaContainer, ScreenContainer} from '../../atoms';
+import {
+  KeyboardAvoidingContainer,
+  SafeAreaContainer,
+  ScreenContainer,
+} from '../../atoms';
 import {AddClientTemplate} from '../../templates';
 
 export default function AddClient() {
   return (
-    <ScreenContainer backgroundColor="white">
-      <SafeAreaContainer>
-        <AddClientTemplate />
-      </SafeAreaContainer>
-    </ScreenContainer>
+    <KeyboardAvoidingContainer>
+      <ScreenContainer backgroundColor="white">
+        <SafeAreaContainer>
+          <AddClientTemplate />
+        </SafeAreaContainer>
+      </ScreenContainer>
+    </KeyboardAvoidingContainer>
   );
 }

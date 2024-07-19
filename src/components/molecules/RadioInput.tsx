@@ -1,14 +1,9 @@
 // CustomRadioInput.js
 
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  ViewStyle,
-} from 'react-native';
+import {TouchableOpacity, StyleSheet, ViewStyle} from 'react-native';
 import useTheme from '../../hooks/useTheme';
+import {Text, View} from '../atoms';
 
 interface IProps {
   label: string;

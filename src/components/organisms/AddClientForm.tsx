@@ -12,13 +12,6 @@ import Form from './Form';
 export default function AddClientForm() {
   const addClientForm: Field[] = [
     {
-      name: 'type',
-      label: 'Select as a ',
-      placeholder: 'Member / Agent',
-      isDropdown: true,
-      dropdownOptions: ['Member', 'Agent'],
-    },
-    {
       name: 'baths',
       label: 'Number of baths',
       placeholder: 'Number of baths',
@@ -30,7 +23,7 @@ export default function AddClientForm() {
     },
     {
       name: 'location',
-      label: 'Location',
+      label: 'Location*',
       placeholder: 'Enter location',
     },
     {
@@ -62,61 +55,15 @@ export default function AddClientForm() {
 
   return (
     <ScrollView>
-      <UploadImagePlaceholder />
+      <UploadImagePlaceholder showBtn={false} />
       <View gap={16} p="md" mt="lg">
-        <Text variant="bold">Property Requirements</Text>
+        <Text variant="bold">Property Requirements:</Text>
         <Form
           fields={addClientForm}
           submitButtonLabel="Add Client"
           labelColor="black"
           onSubmit={state => console.log({state})}
         />
-        {/* <LabeledIconInput
-          label="Number of baths"
-          labelColor="black"
-          placeholder="Number of baths"
-        />
-
-        <LabeledIconInput
-          label="Number of beds"
-          labelColor="black"
-          placeholder="Number of beds"
-        />
-
-        <LabeledIconInput
-          label="Location"
-          labelColor="black"
-          placeholder="Enter location"
-        />
-
-        <LabeledIconInput
-          label="Zip Code"
-          labelColor="black"
-          placeholder="Enter Zip Code"
-        />
-
-        <LabeledDropdownInput
-          label="* Purpose/Occasion:"
-          labelColor="black"
-          placeholder="Enter Zip Code"
-          name=""
-          handleChange={(name, value) => {}}
-        />
-
-        <LabeledIconInput
-          label="Why(s):"
-          labelColor="black"
-          placeholder="Description"
-          multiline
-        />
-        <LabeledIconInput
-          label="Non Negotiables(s)"
-          labelColor="black"
-          placeholder="Description"
-          multiline
-        />
-
-        <Button label="Add Client" /> */}
       </View>
     </ScrollView>
   );

@@ -194,10 +194,11 @@ function TabNavigator() {
 const mainOptions: StackNavigationOptions = {
   headerShown: false,
 };
-const MainStackNavigator = () => {
+export const MainStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={mainOptions}>
-      <Stack.Screen name={SCREENS.MAIN_TABS} component={TabNavigator} />
+      <Stack.Screen name={SCREENS.DRAWER} component={MainNavigator} />
+
       <Stack.Screen
         name={SCREENS.SEARCH_FILTERS}
         component={SearchFilters}
@@ -278,8 +279,8 @@ function MainNavigator() {
       screenOptions={({route}) => getDrawerOptions(route)}
       drawerContent={props => <CustomDrawer {...props} />}>
       <Drawer.Screen
-        name={SCREENS.MAIN_STACK}
-        component={MainStackNavigator}
+        name={SCREENS.MAIN_TABS}
+        component={TabNavigator}
         options={{drawerItemStyle: {display: 'none'}}}
       />
 
@@ -292,11 +293,11 @@ function MainNavigator() {
               goBack: true,
             }}
           />
-          <Drawer.Screen name={SCREENS.MY_CLIENTS} component={MyClients} />
           <Drawer.Screen
             name={SCREENS.MY_PROPERTIES}
             component={MyProperties}
           />
+          <Drawer.Screen name={SCREENS.MY_CLIENTS} component={MyClients} />
         </>
       )}
 

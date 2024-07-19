@@ -43,11 +43,11 @@ export default function MyReferralsCard({item}: IProps) {
           <Text size="xs" color="gray8">
             {item.name}
           </Text>
-          <Text size="xs" color="gray8">
-            Referred To:
-          </Text>
-          <Text color="primary" size="xs">
-            {item.referredTo}
+          <Text size="xxs" color="gray8">
+            Referred To:{' '}
+            <Text color="primary" size="xxs">
+              {item.referredTo}
+            </Text>
           </Text>
         </View>
 

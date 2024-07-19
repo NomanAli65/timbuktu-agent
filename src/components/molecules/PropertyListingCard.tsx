@@ -2,7 +2,7 @@ import React from 'react';
 import {ShadowContainer, Text, View} from '../atoms';
 import {Image, Pressable, PressableProps} from 'react-native';
 import {IPropertyDetails} from '../types';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import {MainStackNavigation} from '../../navigation/types';
 import SCREENS from '../../constants/screens';
 
@@ -12,6 +12,7 @@ interface IProps {
 
 export default function PropertyListingCard({item}: IProps) {
   const navigation = useNavigation<MainStackNavigation>();
+
   const onPress = () => navigation.navigate(SCREENS.PROPERTY_DETAILS);
   return (
     <Pressable onPress={onPress}>

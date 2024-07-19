@@ -1,13 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Text, View} from '../atoms';
 import {Switch} from 'react-native';
 import {NotificationCard, PropertyListingCard, AgentCard} from '../molecules';
 import {useAppSelector} from '../../hooks/useAppSelector';
 import IMAGES from '../../constants/images';
 import {IAgentDetails, Notification} from '../types';
+import useTheme from '../../hooks/useTheme';
 
 export default function TimbuktuPageListing() {
   const {properties} = useAppSelector(state => state.listings);
+  const [notificationOn, setNotificationOn] = useState(false);
+  const theme = useTheme();
   const notifications: Notification[] = [
     {
       id: 1,
@@ -65,8 +68,24 @@ export default function TimbuktuPageListing() {
           flexDirection="row"
           alignItems="center"
           justifyContent="space-between">
-          <Text variant="bold">Notifications</Text>
-          <Switch />
+          <View flex={1}>
+            <Text variant="bold">Notifications</Text>
+            <Text size="xs" style={{width: '90%'}}>
+              Auto Update/Notification Of New Listings That Match Their Search
+              Criteria(S)
+            </Text>
+          </View>
+          <Switch
+            trackColor={{
+              true: theme.colors.success,
+              false: theme.colors.gray5,
+            }}
+            thumbColor={
+              notificationOn ? theme.colors.success : theme.colors.gray
+            }
+            value={notificationOn}
+            onValueChange={val => setNotificationOn(val)}
+          />
         </View>
 
         {notifications.map(notification => (

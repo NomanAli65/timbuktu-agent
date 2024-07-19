@@ -12,11 +12,6 @@ export default function EditProfileForm() {
       </View>
       <View gap={20} mv="md">
         <LabeledIconInput
-          label="User ID"
-          placeholder="User ID"
-          showLabel={false}
-        />
-        <LabeledIconInput
           label="Phone Number"
           placeholder="Phone Number"
           showLabel={false}

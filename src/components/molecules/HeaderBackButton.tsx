@@ -5,10 +5,14 @@ import useTheme from '../../hooks/useTheme';
 import {TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-export default function HeaderBackButton() {
+interface IProps {
+  onBack?: () => any;
+}
+
+export default function HeaderBackButton({onBack}: IProps) {
   const theme = useTheme();
   const navigation = useNavigation();
-  const onPress = () => navigation.goBack();
+  const onPress = () => (onBack ? onBack() : navigation.goBack());
   return (
     <TouchableOpacity
       onPress={onPress}

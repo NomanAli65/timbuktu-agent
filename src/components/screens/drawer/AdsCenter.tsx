@@ -51,7 +51,10 @@ export default function AdsCenter() {
   return (
     <ScreenContainer backgroundColor="white">
       <SafeAreaContainer>
-        <Header title="My ads" />
+        <Header
+          title="My ads"
+          onBack={() => navigation.navigate(SCREENS.HOME)}
+        />
 
         <ScrollView style={{padding: theme.spacing.md}}>
           <View>

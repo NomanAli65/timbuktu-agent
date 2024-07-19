@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View} from '../atoms';
 import {ProfileSettingItem, ProfileSettingSwitchItem} from '../molecules';
 import {ISetting} from '../types';
@@ -10,6 +10,7 @@ import {useAppSelector} from '../../hooks/useAppSelector';
 import {UserTypes} from '../../constants/values';
 
 export default function ProfileSettingsList() {
+  const [notificationsOn, setNotificationsOn] = useState(false);
   const navigation = useNavigation<MainStackNavigation>();
   const {type} = useAppSelector(state => state.auth);
   const items: ISetting[] = [
@@ -51,6 +52,8 @@ export default function ProfileSettingsList() {
           borderBottomWidth: 1,
           borderColor: theme.colors.gray,
         }}
+        value={notificationsOn}
+        onValueChange={val => setNotificationsOn(val)}
       />
 
       {items.map((item, idx) => (

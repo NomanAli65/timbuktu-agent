@@ -1,25 +1,27 @@
 import React from 'react';
-import { Icon, Text, TextInput, View } from '../atoms';
+import {Icon, Text, TextInput, View} from '../atoms';
 import {
   ImageBackground,
   Pressable,
   TouchableOpacity,
   useWindowDimensions,
 } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import IMAGES from '../../constants/images';
-import { moderateScale } from '../../helpers/metrics';
+import {moderateScale} from '../../helpers/metrics';
 import useTheme from '../../hooks/useTheme';
-import { TabHeaderHeight } from '../../constants/values';
-import { useNavigation } from '@react-navigation/native';
+import {TabHeaderHeight, UserTypes} from '../../constants/values';
+import {useNavigation} from '@react-navigation/native';
 import SCREENS from '../../constants/screens';
+import {useAppSelector} from '../../hooks/useAppSelector';
 
 export default function TabHeader() {
   const insets = useSafeAreaInsets();
-  const { width } = useWindowDimensions();
+  const {width} = useWindowDimensions();
   const theme = useTheme();
   const radius = 40;
   const navigation = useNavigation();
+  const {type} = useAppSelector(state => state.auth);
 
   return (
     <View
@@ -64,7 +66,7 @@ export default function TabHeader() {
           <TouchableOpacity
             //@ts-ignore
             onPress={() => navigation.toggleDrawer()}
-            style={{ flex: 0.2 }}>
+            style={{flex: 0.2}}>
             <Icon
               name="menu"
               size={moderateScale(30)}
@@ -74,7 +76,7 @@ export default function TabHeader() {
           <Text
             color="white"
             variant="bold"
-            style={{ flex: 0.6 }}
+            style={{flex: 0.6}}
             textAlign="center">
             TIMBUKTU
           </Text>
@@ -103,24 +105,31 @@ export default function TabHeader() {
         </View>
       </ImageBackground>
 
-      <Pressable style={{
-        position: 'absolute',
-        bottom: 0,
-        zIndex: 999,
-        shadowColor: '#00000047',
-        shadowOffset: { width: 0, height: 3 },
-        shadowOpacity: 0.5,
-        shadowRadius: 6,
-        backgroundColor: theme.colors.white,
-        elevation: 20,
+      <Pressable
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          zIndex: 999,
+          shadowColor: '#00000047',
+          shadowOffset: {width: 0, height: 3},
+          shadowOpacity: 0.5,
+          shadowRadius: 6,
+          backgroundColor: theme.colors.white,
+          elevation: 20,
 
-        width: '80%',
-        borderRadius: 10,
-      }} onPress={() => navigation.navigate(SCREENS.SEARCH_FILTERS)}>
-        <View pointerEvents='none'>
+          width: '80%',
+          borderRadius: 10,
+        }}
+        onPress={
+          type === UserTypes.Agent
+            ? () => navigation.navigate(SCREENS.SEARCH_FILTERS)
+            : null
+        }>
+        <View pointerEvents={type === UserTypes.Member ? 'auto' : 'none'}>
           <TextInput
             placeholder="Search..."
-            editable={false}
+            placeholderTextColor={theme.colors.primary}
+            editable={type === UserTypes.Member}
             style={{
               padding: theme.spacing.lg,
             }}

@@ -33,6 +33,13 @@ export default function SignupForm() {
       vector: 'FontAwesome',
     },
     {
+      name: 'referralCode',
+      label: 'Referral Code',
+      placeholder: 'Enter referral code',
+      leftIconName: 'drivers-license',
+      vector: 'FontAwesome',
+    },
+    {
       name: 'state',
       label: 'State(s)',
       placeholder: 'Enter state(s)',
@@ -41,7 +48,7 @@ export default function SignupForm() {
     },
     {
       name: 'city',
-      label: 'City(s)',
+      label: 'City(ies)',
       placeholder: 'Enter city(ies)',
       leftIconName: 'location-arrow',
       vector: 'FontAwesome5',
@@ -66,6 +73,7 @@ export default function SignupForm() {
       placeholder: 'Enter password',
       leftIconName: 'lock-closed',
       vector: 'Ionicons',
+      rightIconName: 'eye',
     },
     {
       name: 'confirmPassword',
@@ -73,6 +81,7 @@ export default function SignupForm() {
       placeholder: 'Enter confirm password',
       leftIconName: 'lock-closed',
       vector: 'Ionicons',
+      rightIconName: 'eye',
     },
   ];
 
@@ -95,7 +104,7 @@ export default function SignupForm() {
             },
             {
               id: 2,
-              title: 'Register',
+              title: 'Sign Up',
               onPress: () => {},
             },
           ]}
@@ -108,6 +117,7 @@ export default function SignupForm() {
           justifyContent="space-evenly"
           scrollEnabled
           gap={10}
+          formType="signup"
         />
       </View>
     </BlurContainer>

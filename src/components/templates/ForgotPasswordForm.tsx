@@ -3,9 +3,11 @@ import SCREENS from '../../constants/screens';
 import {AuthStackNavigationProp} from '../../navigation/types';
 import {BlurContainer, Button, Text, View} from '../atoms';
 import {ActiveLineText, LabeledIconInput} from '../molecules';
+import useKeyboard from '../../hooks/useKeyboard';
 
 export default function ForgotPasswordForm() {
   const navigation = useNavigation<AuthStackNavigationProp>();
+  const {isOpen} = useKeyboard();
 
   const onPress = () => {
     navigation.navigate(SCREENS.CHANGE_PASSWORD);
@@ -13,7 +15,7 @@ export default function ForgotPasswordForm() {
   return (
     <BlurContainer>
       <View p="lg" flex={1}>
-        <View justifyContent="space-between" flex={0.7}>
+        <View justifyContent="space-between" flex={isOpen ? 1 : 0.7}>
           <ActiveLineText active size="lg">
             Forgot Password
           </ActiveLineText>

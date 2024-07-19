@@ -46,6 +46,7 @@ const SCREENS = {
   DOCUMENTS: 'Documents',
   POTENTIAL_AGENT_PROFILE: 'PotentialAgentProfile',
   POTENTIAL_AGENTS_FILTER: 'PotentialAgentsFilter',
+  DRAWER: 'Drawer',
 } as const;
 
 export default SCREENS;

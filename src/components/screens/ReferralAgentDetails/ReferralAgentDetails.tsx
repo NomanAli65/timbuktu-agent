@@ -121,11 +121,22 @@ export default function ReferralAgentDetails() {
             </View>
           </View>
 
-          <View>
-            <Text size="sm">Most recent sale</Text>
-            <Text size="sm" variant="bold">
-              15-April-2023
-            </Text>
+          <View
+            flexDirection="row"
+            alignItems="center"
+            justifyContent="space-between">
+            <View>
+              <Text size="sm">Most recent sale</Text>
+              <Text size="sm" variant="bold">
+                15-April-2023
+              </Text>
+            </View>
+
+            <View>
+              <Text size="sm" variant="bold" color="primary">
+                Save
+              </Text>
+            </View>
           </View>
 
           <ShadowContainer p="md" rounded>

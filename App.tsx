@@ -10,7 +10,7 @@ export default function App() {
     <GestureHandlerRootView style={{flex: 1}}>
       <Provider store={store}>
         <ThemeProvider>
-          <StatusBar hidden />
+          {/* <StatusBar hidden /> */}
           <AppNavigation />
         </ThemeProvider>
       </Provider>

@@ -11,11 +11,7 @@ export default function AdPostedSuccess() {
   const theme = useTheme();
 
   const navigation = useNavigation<DrawerNavigation>();
-  const onPress = () =>
-    navigation.reset({
-      index: 0,
-      routes: [{name: SCREENS.ADS_CENTER}],
-    });
+
   return (
     <ScreenContainer>
       <View
@@ -47,7 +43,10 @@ export default function AdPostedSuccess() {
           </Text>
         </View>
 
-        <Button label="View Ad" onPress={onPress} />
+        <Button
+          label="View Ad"
+          onPress={() => navigation.navigate(SCREENS.ADS_CENTER)}
+        />
       </View>
     </ScreenContainer>
   );

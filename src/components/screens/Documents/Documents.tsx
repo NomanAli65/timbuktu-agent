@@ -17,7 +17,7 @@ export default function Documents() {
   return (
     <ScreenContainer backgroundColor="white">
       <SafeAreaContainer>
-        <Header title="Documents" />
+        <Header title="Document" />
 
         <ScrollView
           contentContainerStyle={{

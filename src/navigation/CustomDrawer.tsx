@@ -10,6 +10,7 @@ import SCREENS from '../constants/screens';
 import {RatingBox} from '../components/molecules';
 import {useAppDispatch} from '../hooks/useAppDispatch';
 import {logout} from '../redux/slices/auth/authSlice';
+import {TouchableOpacity} from 'react-native';
 
 export default function CustomDrawer({
   navigation,
@@ -19,13 +20,15 @@ export default function CustomDrawer({
   const dispatch = useAppDispatch();
   return (
     <DrawerContentScrollView {...rest}>
-      <View justifyContent="center" alignItems="center" mb="md">
-        <Avatar width={80} />
-        <Text variant="bold" size="lg">
-          Stellar Kane
-        </Text>
-        <RatingBox />
-      </View>
+      <TouchableOpacity onPress={() => navigation.navigate(SCREENS.PROFILE)}>
+        <View justifyContent="center" alignItems="center" mb="md">
+          <Avatar width={80} />
+          <Text variant="bold" size="lg">
+            Stellar Kane
+          </Text>
+          <RatingBox />
+        </View>
+      </TouchableOpacity>
       <DrawerItemList navigation={navigation} {...rest} />
       <View mt="xxl">
         <DrawerItem

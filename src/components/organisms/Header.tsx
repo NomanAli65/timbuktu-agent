@@ -11,11 +11,12 @@ interface IProps {
   title: string;
   transparent?: boolean;
   options?: IHeaderOption[];
+  onBack?: () => any;
 }
 
 export default function Header({
   goBack = true,
-
+  onBack,
   title,
   transparent = false,
   options = [],
@@ -28,7 +29,7 @@ export default function Header({
       alignItems="center"
       justifyContent="center"
       p="md">
-      {goBack && <HeaderBackButton />}
+      {goBack && <HeaderBackButton onBack={onBack} />}
       <Text textAlign="center" variant="semibold" size="sm">
         {title.toUpperCase()}
       </Text>

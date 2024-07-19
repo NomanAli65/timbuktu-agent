@@ -54,6 +54,7 @@ export type MainStackParamsList = {
   Documents: undefined;
   PotentialAgentProfile: undefined;
   PotentialAgentsFilter: undefined;
+  Drawer: undefined;
 };
 
 export type MainStackScreensProp = StackScreenProps<MainStackParamsList>;
@@ -65,6 +66,7 @@ export type DrawerParmasList = {
   MyTransactions: {
     goBack: boolean;
   };
+  MainTabs: undefined;
   MyProperties: undefined;
   MyClients: undefined;
   MyDocuments: undefined;

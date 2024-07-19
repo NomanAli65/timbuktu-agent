@@ -49,7 +49,10 @@ export default function CreateAdForm() {
 
       <UnderlinedLabeledInput label="Ad Title" />
       <UnderlinedLabeledInput label="Ad Description" multiline />
-      <UnderlinedLabeledInput label="Number of days to run Ad" />
+      <UnderlinedLabeledInput
+        label="Number of days to run Ad"
+        keyboardType="numeric"
+      />
 
       <DashedBorderContainer>
         <Text color="primary" variant="bold" size="lg">
@@ -67,7 +70,7 @@ export default function CreateAdForm() {
         </Text>
       </View>
 
-      <Button label="Continue" onPress={onPress} />
+      <Button label="Create Ad" onPress={onPress} />
     </ScrollView>
   );
 }

@@ -21,6 +21,7 @@ import Video, {VideoRef} from 'react-native-video';
 import {useNavigation} from '@react-navigation/native';
 import {MainStackNavigation} from '../../../navigation/types';
 import SCREENS from '../../../constants/screens';
+import {IHeaderOption} from '../../types';
 
 export default function PotentialAgentProfile() {
   const insets = useSafeAreaInsets();
@@ -30,6 +31,15 @@ export default function PotentialAgentProfile() {
   const background = require('../../../assets/sample.mp4');
 
   const navigation = useNavigation<MainStackNavigation>();
+
+  const headerOptions: IHeaderOption[] = [
+    {
+      id: 1,
+      icon: 'edit',
+      iconVector: 'FontAwesome6',
+      onPress: () => {},
+    },
+  ];
 
   return (
     <ScreenContainer backgroundColor="white">
@@ -44,7 +54,7 @@ export default function PotentialAgentProfile() {
             zIndex: 10,
             width: '100%',
           }}>
-          <Header title="" goBack transparent />
+          <Header title="" goBack transparent options={headerOptions} />
         </View>
 
         <View
