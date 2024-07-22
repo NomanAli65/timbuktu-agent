@@ -20,7 +20,8 @@ export default function CustomDrawer({
   const dispatch = useAppDispatch();
   return (
     <DrawerContentScrollView {...rest}>
-      <TouchableOpacity onPress={() => navigation.navigate(SCREENS.PROFILE)}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate(SCREENS.MY_PROFILE_DETAILS)}>
         <View justifyContent="center" alignItems="center" mb="md">
           <Avatar width={80} />
           <Text variant="bold" size="lg">

@@ -34,6 +34,7 @@ import {
   Documents,
   MyAgent,
   PotentialAgents,
+  MyProfileDetails,
   PotentialAgentProfile,
   PotentialAgentsFilter,
 } from '../components/screens';
@@ -239,6 +240,10 @@ export const MainStackNavigator = () => {
       <Stack.Screen
         name={SCREENS.POTENTIAL_AGENTS_FILTER}
         component={PotentialAgentsFilter}
+      />
+      <Stack.Screen
+        name={SCREENS.MY_PROFILE_DETAILS}
+        component={MyProfileDetails}
       />
     </Stack.Navigator>
   );

@@ -47,6 +47,7 @@ const SCREENS = {
   POTENTIAL_AGENT_PROFILE: 'PotentialAgentProfile',
   POTENTIAL_AGENTS_FILTER: 'PotentialAgentsFilter',
   DRAWER: 'Drawer',
+  MY_PROFILE_DETAILS: 'MyProfileDetails',
 } as const;
 
 export default SCREENS;

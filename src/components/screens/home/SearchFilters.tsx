@@ -10,7 +10,7 @@ import {IFilter} from '../../types';
 import Filters from '../../templates/Filters';
 import {moderateScale} from '../../../helpers/metrics';
 import {TouchableOpacity} from 'react-native';
-import {useNavigation, useRoute} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import {useAppSelector} from '../../../hooks/useAppSelector';
 import useTheme from '../../../hooks/useTheme';
 
@@ -105,6 +105,14 @@ const agentsFilter: IFilter[] = [
     type: 'slider',
   },
   {
+    title: 'Location',
+    type: 'input',
+  },
+  {
+    title: 'Primary Service areas',
+    type: 'input',
+  },
+  {
     title: 'Years in service',
     values: [0, 100000],
     min: 0,
@@ -118,14 +126,9 @@ const agentsFilter: IFilter[] = [
     max: 100000,
     type: 'slider',
   },
-
   {
-    title: 'Location',
-    type: 'input',
-  },
-  {
-    title: 'Primary Service areas',
-    type: 'input',
+    title: 'Specialty(ies)',
+    type: 'dropdown',
   },
 ];
 

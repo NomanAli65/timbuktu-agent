@@ -5,7 +5,7 @@ import ForgotPassword from './auth/ForgotPassword';
 import ChangePassword from './auth/ChangePassword';
 
 import {Home, SearchFilters} from './home';
-import Listings from './Listings';
+import Listings from './listings';
 import MyTransactionsTab from './MyTransactionsTab';
 import Profile from './Profile';
 import PostProperty from './PostProperty';
@@ -36,6 +36,7 @@ import PotentialAgents from './PotentialAgents';
 import MyAgent from './MyAgent';
 import PotentialAgentProfile from './PotentialAgentProfile';
 import PotentialAgentsFilter from './PotentialAgentsFilter';
+import MyProfileDetails from './MyProfileDetails';
 
 export {
   // AUTH
@@ -79,6 +80,7 @@ export {
   MyTimbuktu,
   EditProfile,
   ChangePasswordProfile,
+  MyProfileDetails,
   Documents,
   AddClient,
   PotentialAgentProfile,

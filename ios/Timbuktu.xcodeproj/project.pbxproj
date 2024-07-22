@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* TimbuktuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TimbuktuTests.m */; };
+		13593883EBA86D1CFB729B81 /* libPods-Timbuktu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A745B24AA54E6BBBD98CF2D /* libPods-Timbuktu.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -30,6 +31,7 @@
 		226C02E22C2D6B9E00F99F01 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 226C02CF2C2D6B9E00F99F01 /* SimpleLineIcons.ttf */; };
 		226C02E32C2D6B9E00F99F01 /* FontAwesome6_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 226C02D02C2D6B9E00F99F01 /* FontAwesome6_Brands.ttf */; };
 		226C02E42C2D6B9E00F99F01 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 226C02D12C2D6B9E00F99F01 /* MaterialIcons.ttf */; };
+		3D7BBB2C1BAFE83CA9BB6148 /* libPods-Timbuktu-TimbuktuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AE16139D6E4EF0D6C48160 /* libPods-Timbuktu-TimbuktuTests.a */; };
 		3EB919F61EEA43A89D26CC07 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE85924B28024376B87F0EBF /* Poppins-Thin.ttf */; };
 		46D3D59250FC4417B3B107AD /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37A12FB590B8486EA5D92170 /* Poppins-Bold.ttf */; };
 		5CDEA7E59F0D4C0CA0972DB4 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9D74E840A744ECEAD57FF3A /* Poppins-Light.ttf */; };
@@ -37,11 +39,9 @@
 		6BCC7E35CE0B4B9C93289518 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC1ABB7FE84B4A4A8591CB29 /* Poppins-ExtraLight.ttf */; };
 		75BCD6F43DFC4E68946D4727 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C02D70C8FB9942FDB662278C /* Poppins-ExtraBold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		86C5DA94F3ECC4527D3F4D68 /* Pods_Timbuktu_TimbuktuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE8DAD2D5971E27548A5097 /* Pods_Timbuktu_TimbuktuTests.framework */; };
 		87A40F434C0A4F0BB598E7B2 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B53501D261F489085AEC59D /* Poppins-Black.ttf */; };
 		AEF18853DE194C8DB38BAF98 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACCA21F692634958A60DA04A /* Poppins-SemiBold.ttf */; };
 		D8514C51FDC949C6BF6AF0A9 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEAA1341559041E7BE359943 /* Poppins-Medium.ttf */; };
-		E0D8AD34088FCB5FD24D3375 /* Pods_Timbuktu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE5A4520C4783E307F668DE /* Pods_Timbuktu.framework */; };
 		FFA189F75347451880E32BD7 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45900CF5F76E4F1082616FCE /* Poppins-Regular.ttf */; };
 /* End PBXBuildFile section */
 
@@ -84,22 +84,22 @@
 		226C02CF2C2D6B9E00F99F01 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		226C02D02C2D6B9E00F99F01 /* FontAwesome6_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Brands.ttf; sourceTree = "<group>"; };
 		226C02D12C2D6B9E00F99F01 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		2669A71CDB71CB685EF8277D /* Pods-Timbuktu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timbuktu.debug.xcconfig"; path = "Target Support Files/Pods-Timbuktu/Pods-Timbuktu.debug.xcconfig"; sourceTree = "<group>"; };
 		37A12FB590B8486EA5D92170 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		4303A25405494B919BEFC25E /* Pods-Timbuktu-TimbuktuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timbuktu-TimbuktuTests.debug.xcconfig"; path = "Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		45900CF5F76E4F1082616FCE /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		5C41AE4BCA9021BA6D15761E /* Pods-Timbuktu-TimbuktuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timbuktu-TimbuktuTests.release.xcconfig"; path = "Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests.release.xcconfig"; sourceTree = "<group>"; };
-		5CE5A4520C4783E307F668DE /* Pods_Timbuktu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Timbuktu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6132EF172BDFF13200BBE14D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Timbuktu/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		69A29FEC28B9811F8D4C6864 /* Pods-Timbuktu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timbuktu.release.xcconfig"; path = "Target Support Files/Pods-Timbuktu/Pods-Timbuktu.release.xcconfig"; sourceTree = "<group>"; };
 		6B53501D261F489085AEC59D /* Poppins-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Black.ttf"; path = "../src/assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; };
+		80AE16139D6E4EF0D6C48160 /* libPods-Timbuktu-TimbuktuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Timbuktu-TimbuktuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Timbuktu/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		95A2F522F0551C224DEC0994 /* Pods-Timbuktu-TimbuktuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timbuktu-TimbuktuTests.debug.xcconfig"; path = "Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9DE8DAD2D5971E27548A5097 /* Pods_Timbuktu_TimbuktuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Timbuktu_TimbuktuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A18B84893044EBAE088BBC98 /* Pods-Timbuktu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timbuktu.debug.xcconfig"; path = "Target Support Files/Pods-Timbuktu/Pods-Timbuktu.debug.xcconfig"; sourceTree = "<group>"; };
+		8A745B24AA54E6BBBD98CF2D /* libPods-Timbuktu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Timbuktu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCA21F692634958A60DA04A /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		B9D74E840A744ECEAD57FF3A /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		BC1ABB7FE84B4A4A8591CB29 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLight.ttf"; path = "../src/assets/fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		BC9DD5EFD618B855E84237B5 /* Pods-Timbuktu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timbuktu.release.xcconfig"; path = "Target Support Files/Pods-Timbuktu/Pods-Timbuktu.release.xcconfig"; sourceTree = "<group>"; };
 		C02D70C8FB9942FDB662278C /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBold.ttf"; path = "../src/assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 		CEAA1341559041E7BE359943 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		DCF4C79FDAC988A2AEBCA991 /* Pods-Timbuktu-TimbuktuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timbuktu-TimbuktuTests.release.xcconfig"; path = "Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests.release.xcconfig"; sourceTree = "<group>"; };
 		DE85924B28024376B87F0EBF /* Poppins-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -109,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86C5DA94F3ECC4527D3F4D68 /* Pods_Timbuktu_TimbuktuTests.framework in Frameworks */,
+				3D7BBB2C1BAFE83CA9BB6148 /* libPods-Timbuktu-TimbuktuTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0D8AD34088FCB5FD24D3375 /* Pods_Timbuktu.framework in Frameworks */,
+				13593883EBA86D1CFB729B81 /* libPods-Timbuktu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,8 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5CE5A4520C4783E307F668DE /* Pods_Timbuktu.framework */,
-				9DE8DAD2D5971E27548A5097 /* Pods_Timbuktu_TimbuktuTests.framework */,
+				8A745B24AA54E6BBBD98CF2D /* libPods-Timbuktu.a */,
+				80AE16139D6E4EF0D6C48160 /* libPods-Timbuktu-TimbuktuTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,10 +244,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A18B84893044EBAE088BBC98 /* Pods-Timbuktu.debug.xcconfig */,
-				69A29FEC28B9811F8D4C6864 /* Pods-Timbuktu.release.xcconfig */,
-				95A2F522F0551C224DEC0994 /* Pods-Timbuktu-TimbuktuTests.debug.xcconfig */,
-				5C41AE4BCA9021BA6D15761E /* Pods-Timbuktu-TimbuktuTests.release.xcconfig */,
+				2669A71CDB71CB685EF8277D /* Pods-Timbuktu.debug.xcconfig */,
+				BC9DD5EFD618B855E84237B5 /* Pods-Timbuktu.release.xcconfig */,
+				4303A25405494B919BEFC25E /* Pods-Timbuktu-TimbuktuTests.debug.xcconfig */,
+				DCF4C79FDAC988A2AEBCA991 /* Pods-Timbuktu-TimbuktuTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -259,12 +259,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TimbuktuTests" */;
 			buildPhases = (
-				F2A3DE7780A6E64C820427C8 /* [CP] Check Pods Manifest.lock */,
+				F830DAA4AAA47AE68BEA9686 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				7BA66C8FAEF2B8FA57B822A1 /* [CP] Embed Pods Frameworks */,
-				B019686E933D807AD9DE86C1 /* [CP] Copy Pods Resources */,
+				51F5119D4E87E3A72422374E /* [CP] Embed Pods Frameworks */,
+				50470FB6DDBC3D693BA3FB2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,13 +280,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Timbuktu" */;
 			buildPhases = (
-				20AFA6CA7F1ED0FDC0461D43 /* [CP] Check Pods Manifest.lock */,
+				375920CD5FAB98B39524074C /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				D56F489C15BBC4E75665809D /* [CP] Embed Pods Frameworks */,
-				6247D9921D5A4F837FD11BAC /* [CP] Copy Pods Resources */,
+				3AA2408039F646ED952CC895 /* [CP] Embed Pods Frameworks */,
+				7083119681B9857DF5F5A202 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -398,7 +398,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		20AFA6CA7F1ED0FDC0461D43 /* [CP] Check Pods Manifest.lock */ = {
+		375920CD5FAB98B39524074C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -420,58 +420,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6247D9921D5A4F837FD11BAC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Timbuktu/Pods-Timbuktu-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Timbuktu/Pods-Timbuktu-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Timbuktu/Pods-Timbuktu-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7BA66C8FAEF2B8FA57B822A1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B019686E933D807AD9DE86C1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D56F489C15BBC4E75665809D /* [CP] Embed Pods Frameworks */ = {
+		3AA2408039F646ED952CC895 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -488,7 +437,58 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Timbuktu/Pods-Timbuktu-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F2A3DE7780A6E64C820427C8 /* [CP] Check Pods Manifest.lock */ = {
+		50470FB6DDBC3D693BA3FB2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51F5119D4E87E3A72422374E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Timbuktu-TimbuktuTests/Pods-Timbuktu-TimbuktuTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7083119681B9857DF5F5A202 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Timbuktu/Pods-Timbuktu-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Timbuktu/Pods-Timbuktu-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Timbuktu/Pods-Timbuktu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F830DAA4AAA47AE68BEA9686 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -543,7 +543,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95A2F522F0551C224DEC0994 /* Pods-Timbuktu-TimbuktuTests.debug.xcconfig */;
+			baseConfigurationReference = 4303A25405494B919BEFC25E /* Pods-Timbuktu-TimbuktuTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -570,7 +570,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C41AE4BCA9021BA6D15761E /* Pods-Timbuktu-TimbuktuTests.release.xcconfig */;
+			baseConfigurationReference = DCF4C79FDAC988A2AEBCA991 /* Pods-Timbuktu-TimbuktuTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -594,7 +594,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A18B84893044EBAE088BBC98 /* Pods-Timbuktu.debug.xcconfig */;
+			baseConfigurationReference = 2669A71CDB71CB685EF8277D /* Pods-Timbuktu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -621,7 +621,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69A29FEC28B9811F8D4C6864 /* Pods-Timbuktu.release.xcconfig */;
+			baseConfigurationReference = BC9DD5EFD618B855E84237B5 /* Pods-Timbuktu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

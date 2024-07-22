@@ -55,6 +55,7 @@ export type MainStackParamsList = {
   PotentialAgentProfile: undefined;
   PotentialAgentsFilter: undefined;
   Drawer: undefined;
+  MyProfileDetails: undefined;
 };
 
 export type MainStackScreensProp = StackScreenProps<MainStackParamsList>;

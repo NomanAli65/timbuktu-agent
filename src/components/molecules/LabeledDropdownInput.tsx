@@ -75,6 +75,7 @@ export default function LabledDropdownInput({
             onFocus={onFocus}
             onBlur={onBlur}
             multiline={multiline}
+            editable={false}
             style={[
               style,
               multiline

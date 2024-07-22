@@ -65,7 +65,7 @@ export interface IFilterOption {
 export interface IFilter {
   title: string;
   options?: IFilterOption[];
-  type?: 'slider' | 'default' | 'input';
+  type?: 'slider' | 'default' | 'input' | 'dropdown';
   values?: number[];
   min?: number;
   max?: number;

@@ -5,6 +5,8 @@ import FilterOptionsContainer from './FilterOptionsContainer';
 import useTheme from '../../../hooks/useTheme';
 import LabeledIconInput from '../LabeledIconInput';
 import {CustomSlider} from '../CustomSlider';
+import {LabeledDropdownInput} from '..';
+import {TouchableOpacity} from 'react-native';
 
 interface IProps {
   item: IFilter;
@@ -17,6 +19,19 @@ export default function FilterContainer({item}: IProps) {
 
   const onSelect = (item: IFilterOption) => setActiveValue(item);
   const theme = useTheme();
+
+  // ==================================================
+  // TODO: This needs to be corrected in BETA.
+  // A quick fix for the QA. Need to make this reusable.
+  const [isVisible, setIsVisible] = useState(false);
+  const toggleVisible = () => setIsVisible(!isVisible);
+  const [dropdownValue, setDropdownValue] = useState('');
+  const handleSelect = (item: string) => {
+    setDropdownValue(item);
+    toggleVisible();
+  };
+  console.log({dropdownValue});
+  // ====================================================
 
   const renderFilters = () => {
     switch (item.type) {
@@ -49,6 +64,24 @@ export default function FilterContainer({item}: IProps) {
               labelColor="black"
             />
           </View>
+        );
+      }
+
+      case 'dropdown': {
+        return (
+          <TouchableOpacity onPress={toggleVisible}>
+            <LabeledDropdownInput
+              placeholder={item.title}
+              label={item.title}
+              name={item.title}
+              labelColor="black"
+              handleChange={(name, value) => handleSelect(value)}
+              options={['Buyer', 'Seller', 'Residential', 'Commercial']}
+              value={dropdownValue}
+              isVisible={isVisible}
+              close={toggleVisible}
+            />
+          </TouchableOpacity>
         );
       }
 
