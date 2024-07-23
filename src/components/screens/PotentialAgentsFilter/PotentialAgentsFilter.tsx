@@ -14,16 +14,32 @@ export default function PotentialAgentsFilter() {
         <Header title="Filter" />
         <View flex={1} p="md" justifyContent="space-between">
           <View gap={12}>
-            <CustomRadioInput label="All" selected onSelect={() => {}} />
+            <CustomRadioInput
+              label="All"
+              selected
+              onSelect={() => {}}
+              containerStyles={{
+                flexDirection: 'row-reverse',
+                justifyContent: 'space-between',
+              }}
+            />
             <CustomRadioInput
               label="Buyer's agent"
               selected={false}
               onSelect={() => {}}
+              containerStyles={{
+                flexDirection: 'row-reverse',
+                justifyContent: 'space-between',
+              }}
             />
             <CustomRadioInput
               label="Seller's agent"
               selected={false}
               onSelect={() => {}}
+              containerStyles={{
+                flexDirection: 'row-reverse',
+                justifyContent: 'space-between',
+              }}
             />
 
             <LabeledIconInput

@@ -5,7 +5,7 @@ import MainNavigator, {MainStackNavigator} from './MainNavigator';
 import {useAppSelector} from '../hooks/useAppSelector';
 
 const AppNavigation = () => {
-  const {isLoggedIn} = useAppSelector(state => state.auth);
+  const {isLoggedIn, type} = useAppSelector(state => state.auth);
 
   return (
     <NavigationContainer>

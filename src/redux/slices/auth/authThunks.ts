@@ -9,13 +9,27 @@ export const loginAsync = createAsyncThunk(authActions.LOGIN, async () => {
   }
 });
 
-export const signupAsync = createAsyncThunk(authActions.REGISTER, async () => {
-  try {
-    return true;
-  } catch (err) {
-    console.log(err);
-  }
-});
+export const signupAsNonMemberOrGuestAync = createAsyncThunk(
+  authActions.REGISTER_AS_NON_MEMBER_OR_GUEST,
+  async () => {
+    try {
+      return true;
+    } catch (err) {
+      console.log(err);
+    }
+  },
+);
+
+export const signupAsAgentOrMemberAync = createAsyncThunk(
+  authActions.REGISTER_AS_AGENT_OR_MEMBER,
+  async () => {
+    try {
+      return true;
+    } catch (err) {
+      console.log(err);
+    }
+  },
+);
 
 export const changePasswordAsync = createAsyncThunk(
   authActions.CHANGE_PASSWORD,

@@ -70,17 +70,19 @@ export default function FilterContainer({item}: IProps) {
       case 'dropdown': {
         return (
           <TouchableOpacity onPress={toggleVisible}>
-            <LabeledDropdownInput
-              placeholder={item.title}
-              label={item.title}
-              name={item.title}
-              labelColor="black"
-              handleChange={(name, value) => handleSelect(value)}
-              options={['Buyer', 'Seller', 'Residential', 'Commercial']}
-              value={dropdownValue}
-              isVisible={isVisible}
-              close={toggleVisible}
-            />
+            <View pointerEvents="none">
+              <LabeledDropdownInput
+                placeholder={item.title}
+                label={item.title}
+                name={item.title}
+                labelColor="black"
+                handleChange={(name, value) => handleSelect(value)}
+                options={['Buyer', 'Seller', 'Residential', 'Commercial']}
+                value={dropdownValue}
+                isVisible={isVisible}
+                close={toggleVisible}
+              />
+            </View>
           </TouchableOpacity>
         );
       }

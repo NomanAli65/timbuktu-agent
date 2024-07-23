@@ -1,9 +1,9 @@
-import { verticalScale } from "../helpers/metrics";
+import {verticalScale} from '../helpers/metrics';
 
 export const TabHeaderHeight = verticalScale(140);
 export const BottomTabBarHeight = 80;
 
 export const UserTypes = {
-  Agent: 'Agent',
-  Member: 'Member',
+  AgentOrMember: 'AgentOrMember',
+  NonMemberOrGuest: 'NonMemberOrGuest',
 } as const;

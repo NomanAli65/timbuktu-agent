@@ -11,7 +11,7 @@ import IMAGES from '../../constants/images';
 import {moderateScale} from '../../helpers/metrics';
 import useTheme from '../../hooks/useTheme';
 import {TabHeaderHeight, UserTypes} from '../../constants/values';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import SCREENS from '../../constants/screens';
 import {useAppSelector} from '../../hooks/useAppSelector';
 
@@ -22,6 +22,8 @@ export default function TabHeader() {
   const radius = 40;
   const navigation = useNavigation();
   const {type} = useAppSelector(state => state.auth);
+
+  const route = useRoute();
 
   return (
     <View
@@ -121,19 +123,31 @@ export default function TabHeader() {
           borderRadius: 10,
         }}
         onPress={
-          type === UserTypes.Agent
+          type === UserTypes.AgentOrMember
             ? () => navigation.navigate(SCREENS.SEARCH_FILTERS)
             : null
         }>
-        <View pointerEvents={type === UserTypes.Member ? 'auto' : 'none'}>
+        <View
+          pointerEvents={type === UserTypes.NonMemberOrGuest ? 'auto' : 'none'}
+          flexDirection="row"
+          alignItems="center"
+          justifyContent="space-between"
+          p="lg">
           <TextInput
-            placeholder="Search..."
+            placeholder={
+              route.name === 'Listings' ? 'Search & Filters' : 'Search...'
+            }
             placeholderTextColor={theme.colors.primary}
-            editable={type === UserTypes.Member}
-            style={{
-              padding: theme.spacing.lg,
-            }}
+            editable={type === UserTypes.NonMemberOrGuest}
           />
+          {route.name === 'Listings' && (
+            <Icon
+              name="filter"
+              vector="AntDesign"
+              color={theme.colors.primary}
+              size={moderateScale(24)}
+            />
+          )}
         </View>
       </Pressable>
     </View>

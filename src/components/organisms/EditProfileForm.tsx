@@ -1,7 +1,13 @@
+import {useNavigation} from '@react-navigation/native';
 import {Button, ShadowContainer, Text, View} from '../atoms';
 import {LabelWithIcon, LabeledIconInput} from '../molecules';
+import {MainStackNavigation} from '../../navigation/types';
+import SCREENS from '../../constants/screens';
 
 export default function EditProfileForm() {
+  const navigation = useNavigation<MainStackNavigation>();
+
+  const onSubmit = () => navigation.navigate(SCREENS.MY_PROFILE_DETAILS);
   return (
     <ShadowContainer p="md" mt="md" rounded style={{width: '90%'}}>
       <View>
@@ -50,7 +56,7 @@ export default function EditProfileForm() {
           multiline={true}
         />
 
-        <Button label="Update profile" />
+        <Button label="Update profile" onPress={onSubmit} />
       </View>
     </ShadowContainer>
   );

@@ -1,4 +1,4 @@
-import React, {PropsWithChildren} from 'react';
+import React, {PropsWithChildren, useState} from 'react';
 import {Button, Icon, Text, View} from '../atoms';
 import {ScrollView} from 'react-native';
 import useTheme from '../../hooks/useTheme';
@@ -31,6 +31,11 @@ export default function CreateAdForm() {
   const theme = useTheme();
   const navigation = useNavigation<MainStackNavigation>();
   const onPress = () => navigation.navigate(SCREENS.AD_PREVIEW);
+  const [title, setTitle] = useState('My Ad 1');
+  const [description, setDescription] = useState(
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+  );
+
   return (
     <ScrollView
       contentContainerStyle={{
@@ -47,10 +52,21 @@ export default function CreateAdForm() {
         <Text size="sm">Upload Ad Image / Video</Text>
       </DashedBorderContainer>
 
-      <UnderlinedLabeledInput label="Ad Title" />
-      <UnderlinedLabeledInput label="Ad Description" multiline />
+      <UnderlinedLabeledInput
+        label="Ad Title"
+        value={title}
+        onChangeText={text => setTitle(text)}
+      />
+      <UnderlinedLabeledInput
+        label="Ad Description"
+        multiline
+        value={description}
+        onChangeText={text => setDescription(text)}
+      />
       <UnderlinedLabeledInput
         label="Number of days to run Ad"
+        placeholder="Please Select"
+        placeholderTextColor={theme.colors.black}
         keyboardType="numeric"
       />
 

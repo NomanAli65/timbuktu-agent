@@ -12,10 +12,17 @@ interface IProps {
   containerStyles?: ViewStyle;
 }
 
-const CustomRadioInput = ({label, selected, onSelect}: IProps) => {
+const CustomRadioInput = ({
+  label,
+  selected,
+  onSelect,
+  containerStyles,
+}: IProps) => {
   const theme = useTheme();
   return (
-    <TouchableOpacity style={[styles.container]} onPress={onSelect}>
+    <TouchableOpacity
+      style={[styles.container, containerStyles]}
+      onPress={onSelect}>
       <View
         style={[
           styles.radioButton,

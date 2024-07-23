@@ -8,6 +8,9 @@ import {
 import {Button, Text, View} from '../atoms';
 import {Field} from '../types';
 import Form from './Form';
+import {useNavigation} from '@react-navigation/native';
+import {MainStackNavigation} from '../../navigation/types';
+import SCREENS from '../../constants/screens';
 
 export default function AddClientForm() {
   const addClientForm: Field[] = [
@@ -33,10 +36,12 @@ export default function AddClientForm() {
     },
     {
       name: 'purpose',
-      label: 'Purpose/Occasion',
+      label: '*Purpose/Occasion',
       placeholder: 'Select Purpose',
       isDropdown: true,
       dropdownOptions: ['Buying', 'Selling'],
+      rightIconName: 'keyboard-arrow-down',
+      vector: 'MaterialIcons',
     },
     {
       name: 'why',
@@ -53,6 +58,8 @@ export default function AddClientForm() {
     },
   ];
 
+  const navigation = useNavigation<MainStackNavigation>();
+
   return (
     <ScrollView>
       <UploadImagePlaceholder showBtn={false} />
@@ -62,7 +69,7 @@ export default function AddClientForm() {
           fields={addClientForm}
           submitButtonLabel="Add Client"
           labelColor="black"
-          onSubmit={state => console.log({state})}
+          onSubmit={state => navigation.navigate(SCREENS.LEAD_DETAILS)}
         />
       </View>
     </ScrollView>

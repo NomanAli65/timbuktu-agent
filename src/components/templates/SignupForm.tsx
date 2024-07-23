@@ -6,18 +6,22 @@ import {Field} from '../types';
 import {useNavigation} from '@react-navigation/native';
 import {AuthStackNavigationProp} from '../../navigation/types';
 import {useAppDispatch} from '../../hooks/useAppDispatch';
-import {signupAsync} from '../../redux/slices/auth/authThunks';
+import {
+  signupAsAgentOrMemberAync,
+  signupAsNonMemberOrGuestAync,
+} from '../../redux/slices/auth/authThunks';
+import {UserTypes} from '../../constants/values';
 
 export default function SignupForm() {
   const registerFields: Field[] = [
     {
       name: 'type',
       label: 'Select as a ',
-      placeholder: 'Member / Agent',
+      placeholder: 'Member/Agent/Non Member',
       rightIconName: 'keyboard-arrow-down',
       vector: 'MaterialIcons',
       isDropdown: true,
-      dropdownOptions: ['Member', 'Agent'],
+      dropdownOptions: ['Member/Agent', 'Non Member User/Guest'],
     },
     {
       name: 'name',
@@ -88,8 +92,12 @@ export default function SignupForm() {
   const navigation = useNavigation<AuthStackNavigationProp>();
   const dispatch = useAppDispatch();
 
-  const onSubmit = () => {
-    dispatch(signupAsync());
+  const onSubmit = (states: any) => {
+    if (states.type === 'Member/Agent') {
+      dispatch(signupAsAgentOrMemberAync());
+    } else {
+      dispatch(signupAsNonMemberOrGuestAync());
+    }
   };
 
   return (

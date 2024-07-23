@@ -1,5 +1,9 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {loginAsync, signupAsync} from './authThunks';
+import {
+  loginAsync,
+  signupAsAgentOrMemberAync,
+  signupAsNonMemberOrGuestAync,
+} from './authThunks';
 import {isPendingAction, isRejectedAction} from '../utils';
 import {UserTypes} from '../../../constants/values';
 
@@ -7,7 +11,7 @@ type InitialState = {
   loading: boolean;
   isLoggedIn: boolean;
   error: string | null | undefined;
-  type: 'Agent' | 'Member' | null;
+  type: 'AgentOrMember' | 'NonMemberOrGuest' | null;
 };
 
 const initialState: InitialState = {
@@ -31,12 +35,17 @@ const authSlice = createSlice({
       .addCase(loginAsync.fulfilled, state => {
         state.loading = false;
         state.isLoggedIn = true;
-        state.type = UserTypes.Agent;
+        state.type = UserTypes.AgentOrMember;
       })
-      .addCase(signupAsync.fulfilled, state => {
+      .addCase(signupAsNonMemberOrGuestAync.fulfilled, state => {
         state.loading = false;
         state.isLoggedIn = true;
-        state.type = UserTypes.Member;
+        state.type = UserTypes.NonMemberOrGuest;
+      })
+      .addCase(signupAsAgentOrMemberAync.fulfilled, state => {
+        state.loading = false;
+        state.isLoggedIn = true;
+        state.type = UserTypes.AgentOrMember;
       })
       .addMatcher(isPendingAction, state => {
         state.loading = true;

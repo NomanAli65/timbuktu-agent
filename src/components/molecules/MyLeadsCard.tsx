@@ -35,7 +35,11 @@ export default function MyLeadsCard({details}: IProps) {
         </View>
         <View gap={6} justifyContent="center" ml="md">
           <Text variant="medium">
-            {details.type === 'buyer' ? 'Buyer' : 'Seller'}{' '}
+            {details.type === 'buyer'
+              ? 'Buyer'
+              : details.type === 'seller'
+              ? 'Seller'
+              : details.type}
           </Text>
           <View flexDirection="row" alignItems="center">
             <Icon name="location" size={14} color={theme.colors.gray8} />

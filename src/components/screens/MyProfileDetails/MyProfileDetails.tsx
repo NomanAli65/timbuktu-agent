@@ -7,24 +7,25 @@ import {
   View,
 } from '../../atoms';
 import {Header} from '../../organisms';
-import {
-  Image,
-  ImageBackground,
-  ScrollView,
-  useWindowDimensions,
-} from 'react-native';
+import {Image, ScrollView, useWindowDimensions} from 'react-native';
 import IMAGES from '../../../constants/images';
-import {
-  LabelWithIcon,
-  RatingBox,
-  ReferralAgentStatsCard,
-} from '../../molecules';
+import {LabelWithIcon} from '../../molecules';
 import useTheme from '../../../hooks/useTheme';
+import {IHeaderOption} from '../../types';
 
 export default function MyProfileDetails() {
   const insets = useSafeAreaInsets();
   const {height} = useWindowDimensions();
   const theme = useTheme();
+
+  const headerOptions: IHeaderOption[] = [
+    {
+      id: 1,
+      icon: 'user-circle',
+      iconVector: 'FontAwesome5',
+      onPress: () => {},
+    },
+  ];
   return (
     <ScreenContainer backgroundColor="white">
       <View
@@ -34,7 +35,7 @@ export default function MyProfileDetails() {
           zIndex: 10,
           width: '100%',
         }}>
-        <Header title="" goBack transparent />
+        <Header title="" goBack transparent options={headerOptions} />
       </View>
 
       <View
@@ -193,7 +194,7 @@ export default function MyProfileDetails() {
                 </Text>
               </View>
 
-              <Button label="Message" />
+              <Button label="Edit Profile" />
             </ShadowContainer>
           </ScrollView>
         </View>

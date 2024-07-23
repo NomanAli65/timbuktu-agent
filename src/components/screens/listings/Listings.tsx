@@ -75,7 +75,7 @@ export default function Listings() {
       {activeId === 2 && <PropertyListingTemplate listings={properties} />}
       <BottomTabBarPadding />
 
-      {type === UserTypes.Member && Platform.OS === 'ios' && (
+      {type === UserTypes.NonMemberOrGuest && Platform.OS === 'ios' && (
         <BlurView
           style={{
             position: 'absolute',
@@ -95,7 +95,7 @@ export default function Listings() {
         </BlurView>
       )}
 
-      {type === UserTypes.Member && Platform.OS === 'android' && (
+      {type === UserTypes.NonMemberOrGuest && Platform.OS === 'android' && (
         <View
           style={{
             position: 'absolute',

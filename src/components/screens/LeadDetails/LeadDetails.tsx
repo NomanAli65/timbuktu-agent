@@ -7,7 +7,6 @@ import IMAGES from '../../../constants/images';
 import {Dropdown, LabelWithIcon} from '../../molecules';
 import useTheme from '../../../hooks/useTheme';
 import {useNavigation} from '@react-navigation/native';
-import SCREENS from '../../../constants/screens';
 
 export default function LeadDetails() {
   const insets = useSafeAreaInsets();
@@ -16,7 +15,7 @@ export default function LeadDetails() {
   const [purpose, setPurpose] = useState<string>('');
   const navigation = useNavigation();
 
-  const onBack = () => navigation.navigate(SCREENS.MY_TRANSACTIONS_TAB);
+  const onBack = () => navigation.goBack();
   return (
     <ScreenContainer backgroundColor="white">
       <ScrollView

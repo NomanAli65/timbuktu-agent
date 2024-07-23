@@ -116,7 +116,7 @@ export interface IAgentDetails {
 }
 export interface IMyLead {
   id: number;
-  type: 'buyer' | 'seller';
+  type: 'buyer' | 'seller' | string;
   address: string;
   image: ImageSourcePropType | string;
 }

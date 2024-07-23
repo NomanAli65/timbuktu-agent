@@ -224,6 +224,8 @@ export default function PropertyDetails({navigation}: MainStackScreensProp) {
               dolores et ea rebum
             </Text>
           </View>
+
+          <Button label="Contact Agent" />
         </View>
       </ScrollView>
     </ScreenContainer>

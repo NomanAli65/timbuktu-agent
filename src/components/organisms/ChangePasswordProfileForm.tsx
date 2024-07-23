@@ -9,8 +9,8 @@ export default function ChangePasswordProfileForm() {
   return (
     <View p="md" gap={16}>
       <LabeledIconInput
-        label="Current Passowrd"
-        placeholder="Enter Passowrd"
+        label="Current Password"
+        placeholder="Enter Password"
         leftIconName="lock"
         rightIconName="eye"
         labelColor="black"

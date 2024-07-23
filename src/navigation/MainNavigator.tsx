@@ -37,6 +37,7 @@ import {
   MyProfileDetails,
   PotentialAgentProfile,
   PotentialAgentsFilter,
+  MyTransactions,
 } from '../components/screens';
 import {
   DrawerParmasList,
@@ -154,11 +155,11 @@ function TabNavigator() {
         name={SCREENS.LISTINGS}
         component={Listings}
         options={{
-          headerShown: type === UserTypes.Agent,
+          headerShown: type === UserTypes.AgentOrMember,
         }}
       />
 
-      {type === UserTypes.Agent && (
+      {type === UserTypes.AgentOrMember && (
         <>
           <Tab.Screen
             name={SCREENS.POST_PROPERTY}
@@ -175,7 +176,7 @@ function TabNavigator() {
         </>
       )}
 
-      {type === UserTypes.Member && (
+      {type === UserTypes.NonMemberOrGuest && (
         <Tab.Screen
           name={SCREENS.MY_AGENT}
           component={MyAgent}
@@ -289,11 +290,11 @@ function MainNavigator() {
         options={{drawerItemStyle: {display: 'none'}}}
       />
 
-      {type === UserTypes.Agent && (
+      {type === UserTypes.AgentOrMember && (
         <>
           <Drawer.Screen
             name={SCREENS.MY_TRANSACTIONS}
-            component={MyTransactionsTab}
+            component={MyTransactions}
             initialParams={{
               goBack: true,
             }}
@@ -306,13 +307,12 @@ function MainNavigator() {
         </>
       )}
 
-      <Drawer.Screen name={SCREENS.MY_DOCUMENTS} component={MyDocuments} />
-
-      {type === UserTypes.Member && (
+      {type === UserTypes.NonMemberOrGuest && (
         <Drawer.Screen name={SCREENS.MY_AGENTS} component={PotentialAgents} />
       )}
+      <Drawer.Screen name={SCREENS.MY_DOCUMENTS} component={MyDocuments} />
 
-      {type === UserTypes.Agent && (
+      {type === UserTypes.AgentOrMember && (
         <Drawer.Screen name={SCREENS.ADS_CENTER} component={AdsCenter} />
       )}
 

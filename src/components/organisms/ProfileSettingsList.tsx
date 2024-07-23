@@ -8,11 +8,14 @@ import {MainStackNavigation} from '../../navigation/types';
 import SCREENS from '../../constants/screens';
 import {useAppSelector} from '../../hooks/useAppSelector';
 import {UserTypes} from '../../constants/values';
+import {useAppDispatch} from '../../hooks/useAppDispatch';
+import {logout} from '../../redux/slices/auth/authSlice';
 
 export default function ProfileSettingsList() {
   const [notificationsOn, setNotificationsOn] = useState(false);
   const navigation = useNavigation<MainStackNavigation>();
   const {type} = useAppSelector(state => state.auth);
+  const dispatch = useAppDispatch();
   const items: ISetting[] = [
     {
       title: 'Edit Profile',
@@ -38,6 +41,7 @@ export default function ProfileSettingsList() {
       title: 'Logout',
       iconName: 'logout',
       iconVector: 'MaterialCommunityIcons',
+      onPress: () => dispatch(logout()),
     },
   ];
 
@@ -67,7 +71,7 @@ export default function ProfileSettingsList() {
             borderColor: theme.colors.gray,
             display:
               idx === 1
-                ? type === UserTypes.Member
+                ? type === UserTypes.NonMemberOrGuest
                   ? 'none'
                   : 'flex'
                 : 'flex',
