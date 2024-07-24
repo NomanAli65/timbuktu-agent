@@ -5,8 +5,6 @@ import {
   LabeledDropdownInput,
   LabeledIconInput,
 } from '../molecules';
-import {Form} from '../organisms';
-import {Field} from '../types';
 import {useNavigation} from '@react-navigation/native';
 import {AuthStackNavigationProp} from '../../navigation/types';
 import {useAppDispatch} from '../../hooks/useAppDispatch';
@@ -14,90 +12,10 @@ import {
   signupAsAgentOrMemberAync,
   signupAsNonMemberOrGuestAync,
 } from '../../redux/slices/auth/authThunks';
-import {UserTypes} from '../../constants/values';
-import {useAppSelector} from '../../hooks/useAppSelector';
 import {ScrollView, TouchableOpacity} from 'react-native';
 import SCREENS from '../../constants/screens';
 
 export default function SignupForm() {
-  const registerFields: Field[] = [
-    {
-      name: 'type',
-      label: 'Select as a ',
-      placeholder: 'Member/Agent/Non Member',
-      rightIconName: 'keyboard-arrow-down',
-      vector: 'MaterialIcons',
-      isDropdown: true,
-      dropdownOptions: ['Member/Agent', 'Non Member User/Guest'],
-    },
-    {
-      name: 'name',
-      label: 'Full Name',
-      placeholder: 'Enter full name',
-      leftIconName: 'person',
-    },
-
-    {
-      name: 'license',
-      label: 'License Number(s)',
-      placeholder: 'Enter license number(s)',
-      leftIconName: 'drivers-license',
-      vector: 'FontAwesome',
-    },
-    {
-      name: 'referralCode',
-      label: 'Referral Code',
-      placeholder: 'Enter referral code',
-      leftIconName: 'drivers-license',
-      vector: 'FontAwesome',
-    },
-
-    {
-      name: 'state',
-      label: 'State(s)',
-      placeholder: 'Enter state(s)',
-      leftIconName: 'location-arrow',
-      vector: 'FontAwesome5',
-    },
-    {
-      name: 'city',
-      label: 'City(ies)',
-      placeholder: 'Enter city(ies)',
-      leftIconName: 'location-arrow',
-      vector: 'FontAwesome5',
-    },
-    {
-      name: 'phone',
-      label: 'Mobile phone number',
-      placeholder: 'Mobile phone number',
-      leftIconName: 'call',
-      vector: 'Ionicons',
-    },
-    {
-      name: 'email',
-      label: 'Email address',
-      placeholder: 'Enter email address',
-      leftIconName: 'mail',
-      vector: 'Ionicons',
-    },
-    {
-      name: 'password',
-      label: 'Password',
-      placeholder: 'Enter password',
-      leftIconName: 'lock',
-      vector: 'Feather',
-      rightIconName: 'eye',
-    },
-    {
-      name: 'confirmPassword',
-      label: 'Confirm password',
-      placeholder: 'Enter confirm password',
-      leftIconName: 'lock',
-      vector: 'Feather',
-      rightIconName: 'eye',
-    },
-  ];
-
   const [toggleDropdown, setToggleDropdown] = useState(false);
 
   const navigation = useNavigation<AuthStackNavigationProp>();
@@ -132,21 +50,14 @@ export default function SignupForm() {
           ]}
           activeId={2}
         />
-        {/* <Form
-          fields={registerFields}
-          onSubmit={onSubmit}
-          submitButtonLabel="Sign up"
-          justifyContent="space-evenly"
-          scrollEnabled
-          gap={10}
-          formType="signup"
-        /> */}
 
         <ScrollView
           contentContainerStyle={{
             gap: 12,
           }}
-          showsVerticalScrollIndicator={false}>
+          showsVerticalScrollIndicator={false}
+          keyboardDismissMode="interactive"
+          keyboardShouldPersistTaps="always">
           <TouchableOpacity onPress={() => setToggleDropdown(true)}>
             <View pointerEvents="none">
               <LabeledDropdownInput

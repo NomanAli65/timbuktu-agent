@@ -66,7 +66,9 @@ const Form = ({
       contentContainerStyle={{flexGrow: 1}}
       style={{flex: 1}}
       scrollEnabled={scrollEnabled}
-      showsVerticalScrollIndicator={false}>
+      showsVerticalScrollIndicator={false}
+      keyboardShouldPersistTaps="always"
+      keyboardDismissMode="interactive">
       <View flex={1} {...rest} gap={8}>
         <View gap={10}>
           {fields.map(field =>
