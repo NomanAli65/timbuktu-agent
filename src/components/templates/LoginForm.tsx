@@ -23,7 +23,7 @@ export default function LoginForm() {
       placeholder: 'Enter your password',
       leftIconName: 'lock',
       vector: 'Feather',
-      rightIconName: 'eye',
+      secure: true,
     },
   ];
 

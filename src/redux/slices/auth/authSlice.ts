@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {
   loginAsync,
   signupAsAgentOrMemberAync,
@@ -12,6 +12,7 @@ type InitialState = {
   isLoggedIn: boolean;
   error: string | null | undefined;
   type: 'AgentOrMember' | 'NonMemberOrGuest' | null;
+  formType: 'agent/member' | 'guest/non-member' | null;
 };
 
 const initialState: InitialState = {
@@ -19,6 +20,7 @@ const initialState: InitialState = {
   isLoggedIn: false,
   error: null,
   type: null,
+  formType: null,
 };
 
 const authSlice = createSlice({
@@ -28,6 +30,12 @@ const authSlice = createSlice({
     logout: state => {
       state.isLoggedIn = false;
       state.type = null;
+    },
+    setFormType: (
+      state,
+      action: PayloadAction<'agent/member' | 'guest/non-member'>,
+    ) => {
+      state.formType = action.payload;
     },
   },
   extraReducers: builder => {
@@ -57,5 +65,5 @@ const authSlice = createSlice({
   },
 });
 
-export const {logout} = authSlice.actions;
+export const {logout, setFormType} = authSlice.actions;
 export default authSlice.reducer;

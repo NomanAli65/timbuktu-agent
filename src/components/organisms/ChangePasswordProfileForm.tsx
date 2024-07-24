@@ -12,7 +12,6 @@ export default function ChangePasswordProfileForm() {
         label="Current Password"
         placeholder="Enter Password"
         leftIconName="lock"
-        rightIconName="eye"
         labelColor="black"
         vector="FontAwesome"
         secureTextEntry
@@ -23,7 +22,6 @@ export default function ChangePasswordProfileForm() {
         secureTextEntry
         placeholder="Enter Password"
         leftIconName="lock"
-        rightIconName="eye"
         labelColor="black"
       />
       <LabeledIconInput
@@ -32,7 +30,6 @@ export default function ChangePasswordProfileForm() {
         secureTextEntry
         placeholder="Enter Confirm Password"
         leftIconName="lock"
-        rightIconName="eye"
         labelColor="black"
       />
 

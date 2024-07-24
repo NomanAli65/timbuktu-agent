@@ -10,13 +10,16 @@ import {Header} from '../../organisms';
 import {Image, ScrollView, useWindowDimensions} from 'react-native';
 import IMAGES from '../../../constants/images';
 import {LabelWithIcon} from '../../molecules';
-import useTheme from '../../../hooks/useTheme';
+
 import {IHeaderOption} from '../../types';
+import {useNavigation} from '@react-navigation/native';
+import {MainStackNavigation} from '../../../navigation/types';
+import SCREENS from '../../../constants/screens';
 
 export default function MyProfileDetails() {
   const insets = useSafeAreaInsets();
   const {height} = useWindowDimensions();
-  const theme = useTheme();
+  const navigation = useNavigation<MainStackNavigation>();
 
   const headerOptions: IHeaderOption[] = [
     {
@@ -194,7 +197,10 @@ export default function MyProfileDetails() {
                 </Text>
               </View>
 
-              <Button label="Edit Profile" />
+              <Button
+                label="Edit Profile"
+                onPress={() => navigation.navigate(SCREENS.EDIT_PROFILE)}
+              />
             </ShadowContainer>
           </ScrollView>
         </View>

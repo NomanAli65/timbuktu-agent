@@ -20,11 +20,15 @@ import {
   ReferralAgentStatsCard,
 } from '../../molecules';
 import useTheme from '../../../hooks/useTheme';
+import {useNavigation} from '@react-navigation/native';
+import {MainStackNavigation} from '../../../navigation/types';
+import SCREENS from '../../../constants/screens';
 
 export default function ReferralAgentDetails() {
   const insets = useSafeAreaInsets();
   const {height} = useWindowDimensions();
   const theme = useTheme();
+  const navigation = useNavigation<MainStackNavigation>();
   return (
     <ScreenContainer backgroundColor="white">
       <ScrollView
@@ -173,7 +177,10 @@ export default function ReferralAgentDetails() {
             </Text>
           </ShadowContainer>
 
-          <Button label="Message" />
+          <Button
+            label="Message"
+            onPress={() => navigation.navigate(SCREENS.MESSAGES)}
+          />
         </View>
       </ScrollView>
     </ScreenContainer>

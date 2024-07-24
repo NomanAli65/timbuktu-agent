@@ -21,6 +21,7 @@ export default function PropertyDetails({navigation}: MainStackScreensProp) {
   const {height} = useWindowDimensions();
   const {savable} = useAppSelector(state => state.listings);
   const theme = useTheme();
+
   const insets = useSafeAreaInsets();
 
   const interiorFeatures: IHomeFeature[] = [
@@ -225,7 +226,10 @@ export default function PropertyDetails({navigation}: MainStackScreensProp) {
             </Text>
           </View>
 
-          <Button label="Contact Agent" />
+          <Button
+            label="Contact Agent"
+            onPress={() => navigation.navigate(SCREENS.MESSAGES)}
+          />
         </View>
       </ScrollView>
     </ScreenContainer>

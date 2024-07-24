@@ -23,14 +23,14 @@ export default function ChangePasswordAuthForm() {
             label="Password"
             placeholder="Enter new password"
             leftIconName="lock"
-            rightIconName="eye"
+            secureTextEntry
             vector="Feather"
           />
           <LabeledIconInput
             label="Confirm password"
             placeholder="Enter confirm password"
             leftIconName="lock"
-            rightIconName="eye"
+            secureTextEntry
             vector="Feather"
           />
           <Button

@@ -24,11 +24,12 @@ export default function LabeledIconInput({
   multiline,
   labelColor = 'white',
   style,
-
+  secureTextEntry = false,
   ...rest
 }: IProps) {
   const theme = useTheme();
   const [isFocused, setIsFocused] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
 
   const onFocus = () => setIsFocused(true);
   const onBlur = () => setIsFocused(false);
@@ -64,6 +65,7 @@ export default function LabeledIconInput({
             onFocus={onFocus}
             onBlur={onBlur}
             multiline={multiline}
+            secureTextEntry={secureTextEntry && !passwordVisible}
             style={[
               style,
               multiline
@@ -83,6 +85,22 @@ export default function LabeledIconInput({
               name={rightIconName}
               size={moderateScale(20)}
               color={theme.colors.gray2}
+            />
+          )}
+
+          {secureTextEntry && (
+            <Icon
+              vector="Feather"
+              size={moderateScale(20)}
+              color={theme.colors.gray2}
+              name={!passwordVisible ? 'eye' : 'eye-off'}
+              onPress={() => {
+                if (!passwordVisible) {
+                  setPasswordVisible(true);
+                } else {
+                  setPasswordVisible(false);
+                }
+              }}
             />
           )}
         </View>

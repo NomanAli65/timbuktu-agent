@@ -8,6 +8,8 @@ import {useNavigation} from '@react-navigation/native';
 import {AuthStackNavigationProp} from '../../navigation/types';
 import SCREENS from '../../constants/screens';
 import Apptheme from '../../styles/theme/theme';
+import {useAppDispatch} from '../../hooks/useAppDispatch';
+import {setFormType} from '../../redux/slices/auth/authSlice';
 
 interface IProps extends IView {
   fields: Field[];
@@ -39,8 +41,16 @@ const Form = ({
   );
 
   const navigation = useNavigation<AuthStackNavigationProp>();
+  const dispatch = useAppDispatch();
 
   const handleChange = (name: string, value: string | boolean) => {
+    if (formType === 'signup' && name === 'type') {
+      if (value === 'Member/Agent') {
+        dispatch(setFormType('agent/member'));
+      } else {
+        dispatch(setFormType('guest/non-member'));
+      }
+    }
     if (name.endsWith('Open')) {
       setFormState({...formState, [name]: value});
     } else {
@@ -98,6 +108,7 @@ const Form = ({
                 rightIconName={field.rightIconName}
                 labelColor={labelColor}
                 multiline={field.multiline}
+                secureTextEntry={field.secure}
               />
             ),
           )}

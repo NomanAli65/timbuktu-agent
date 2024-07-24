@@ -31,6 +31,7 @@ export type Field = {
   isDropdown?: boolean;
   dropdownOptions?: string[];
   multiline?: boolean;
+  secure?: boolean;
 };
 
 export type TFormTabHeader = {
